@@ -1,5 +1,5 @@
 $# LS-DYNA Keyword file created by LS-PrePost(R) V4.8.25 - 04Jan2022
-$# Created on Feb-10-2022 (14:03:30)
+$# Created on Feb-10-2022 (14:10:49)
 *KEYWORD
 *TITLE
 $#                                                                         title
@@ -262,11 +262,11 @@ $#      e0        v0
 $#                                                                         title
 Wall
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-         2         1         4         2         0         0         0         0
+         2         1         4         0         0         0         0         0
 *MAT_ENHANCED_COMPOSITE_DAMAGE_TITLE
 mat54
 $#     mid        ro        ea        eb      (ec)      prba    (prca)    (prcb)
-         43.15100E-8   59540.0   54950.0    9600.0     0.032     0.052     0.056
+         43.15100E-8   59540.0     549.5    9600.0     0.032     0.052     0.056
 $#     gab       gbc       gca      (kf)      aopt      2way        ti  
     5214.0    5000.0    5000.0       0.0       2.0       0.0       0.0
 $#      xp        yp        zp        a1        a2        a3    mangle      
@@ -299,7 +299,7 @@ $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
 $#                                                                         title
 Particle Wall
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-        20         1         4         2         0         0         0         0
+        20         1         4         0         0         0         0         0
 *PART
 $#                                                                         title
 Particle Ball
