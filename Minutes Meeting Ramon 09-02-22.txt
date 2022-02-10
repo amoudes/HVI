@@ -8,7 +8,7 @@ why do the failure criteria matter?
  - 
 
 
-material coordinates 
+material coordinates ++
 
 
 Do the EOS matter for comp? 
