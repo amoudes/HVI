@@ -1,0 +1,41 @@
+what material did you send us? -UD/woven
+ - 
+
+
+why do the failure criteria matter?
+ - failure parameter 55
+ - directional fibres A1 & D2?
+ - 
+
+
+material coordinates 
+
+
+Do the EOS matter for comp? 
+ - EOS in LS-DYNA manual
+ - p470 / 1986
+ - 
+
+how to model multiple ply and directions
+ - fibres are rotated in y-z plane
+ - 90 degrees of each other
+ - modify the direction
+
+what is 2WAY and TI parameter?
+ - depends on the yarns
+ - if using shells this matters, don't modify when using solids
+ - not a good idea to modify these parameters
+ - 
+
+How to proceed with 
+ - three elements for each layer
+ - layered composites
+ - tie brakes between elements - automatic surface to surface tiebrake
+ - each surface plie segment set - then select master slave, segment ID (tiebrake)
+ - 
+
+
+How is contact modeled?
+ - automatic to surface
+ - if problems - contact option 9
+ - softg material factor set to 1
