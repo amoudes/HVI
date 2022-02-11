@@ -105,3 +105,126 @@ save keywordabsolute 0
 save keywordbylongfmt 0
 save keywordbyi10fmt 0
 save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\8kms_052cm_medium.k"
+KEYWORD INPUT 4
+*MAT_ENHANCED_COMPOSITE_DAMAGE_TITLE
+mat54
+$#     mid        ro        ea        eb      (ec)      prba    (prca)    (prcb)
+         43.15100E-8   59540.0     549.5    9600.0     0.032     0.052     0.056
+$#     gab       gbc       gca      (kf)      aopt      2way        ti  
+    5214.0    5000.0    5000.0       0.0       2.0       0.0       0.0
+$#      xp        yp        zp        a1        a2        a3    mangle      
+       0.0       0.0       0.0       1.0       0.0       0.0       0.0
+$#      v1        v2        v3        d1        d2        d3    dfailm    dfails
+       0.0       0.0       0.0       0.0       1.0       0.0       0.3       0.3
+$#   tfail      alph      soft      fbrt     ycfac    dfailt    dfailc       efs
+5.00000E-8       0.0       1.0       0.0       2.0       0.0       3.0       0.3
+$#      xc        xt        yc        yt        sc      crit      beta    
+     531.0     804.0     534.0     773.0     129.0      55.0       0.9
+$#     pel      epsf      epsr      tsmd     soft2     
+       0.0       0.0       0.0       0.0       1.0
+$#  slimt1    slimc1    slimt2    slimc2     slims    ncyred     softg     
+       0.0       0.0       0.0       0.0       0.0       0.0       1.0
+*END
+keyword updatekind
+MAT_ENHANCED_COMPOSITE_DAMAGE
+KEYWORD INPUT 2
+*PART
+$#                                                                         title
+Wall
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         2         1         4         0         0         0         0         0
+*SECTION_SOLID_TITLE
+Target_Wall_Particles
+$#   secid    elform       aet    unused    unused    unused    cohoff    unused
+         1         1         0                                       0          
+*MAT_ENHANCED_COMPOSITE_DAMAGE_TITLE
+mat54
+$#     mid        ro        ea        eb      (ec)      prba    (prca)    (prcb)
+         43.15100E-8   59540.0     549.5    9600.0     0.032     0.052     0.056
+$#     gab       gbc       gca      (kf)      aopt      2way        ti  
+    5214.0    5000.0    5000.0       0.0       2.0       0.0       0.0
+$#      xp        yp        zp        a1        a2        a3    mangle      
+       0.0       0.0       0.0       1.0       0.0       0.0       0.0
+$#      v1        v2        v3        d1        d2        d3    dfailm    dfails
+       0.0       0.0       0.0       0.0       1.0       0.0       0.3       0.3
+$#   tfail      alph      soft      fbrt     ycfac    dfailt    dfailc       efs
+5.00000E-8       0.0       1.0       0.0       2.0       0.0       3.0       0.3
+$#      xc        xt        yc        yt        sc      crit      beta    
+     531.0     804.0     534.0     773.0     129.0      55.0       0.9
+$#     pel      epsf      epsr      tsmd     soft2     
+       0.0       0.0       0.0       0.0       1.0
+$#  slimt1    slimc1    slimt2    slimc2     slims    ncyred     softg     
+       0.0       0.0       0.0       0.0       0.0       0.0       1.0
+*END
+keyword updatekind
+PART_PART
+KEYWORD INPUT 20
+*PART
+$#                                                                         title
+Particle Wall
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+        20         1         4         0         0         0         0         0
+*SECTION_SOLID_TITLE
+Target_Wall_Particles
+$#   secid    elform       aet    unused    unused    unused    cohoff    unused
+         1         1         0                                       0          
+*MAT_ENHANCED_COMPOSITE_DAMAGE_TITLE
+mat54
+$#     mid        ro        ea        eb      (ec)      prba    (prca)    (prcb)
+         43.15100E-8   59540.0     549.5    9600.0     0.032     0.052     0.056
+$#     gab       gbc       gca      (kf)      aopt      2way        ti  
+    5214.0    5000.0    5000.0       0.0       2.0       0.0       0.0
+$#      xp        yp        zp        a1        a2        a3    mangle      
+       0.0       0.0       0.0       1.0       0.0       0.0       0.0
+$#      v1        v2        v3        d1        d2        d3    dfailm    dfails
+       0.0       0.0       0.0       0.0       1.0       0.0       0.3       0.3
+$#   tfail      alph      soft      fbrt     ycfac    dfailt    dfailc       efs
+5.00000E-8       0.0       1.0       0.0       2.0       0.0       3.0       0.3
+$#      xc        xt        yc        yt        sc      crit      beta    
+     531.0     804.0     534.0     773.0     129.0      55.0       0.9
+$#     pel      epsf      epsr      tsmd     soft2     
+       0.0       0.0       0.0       0.0       1.0
+$#  slimt1    slimc1    slimt2    slimc2     slims    ncyred     softg     
+       0.0       0.0       0.0       0.0       0.0       0.0       1.0
+*END
+keyword updatekind
+PART_PART
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\8kms_052cm_medium.k" 
+genselect target shell
+genselect target solid
+genselect solid add solid 843/F5/0 
+genselect clear all
+genselect solid add part 2/0 
+occview wireframe
+occview shadewithedge
+mesh
+wire
+elemedit eldir solid vectors 0 0 1 0 -1 0
+elemedit eldir accept
+genselect clear
+genselect target solid
+genselect target solid
+KEYWORD INPUT 4
+*MAT_ENHANCED_COMPOSITE_DAMAGE_TITLE
+mat54
+$#     mid        ro        ea        eb      (ec)      prba    (prca)    (prcb)
+         43.15100E-8   59540.0   54950.0    9600.0     0.032     0.052     0.056
+$#     gab       gbc       gca      (kf)      aopt      2way        ti  
+    5214.0    5000.0    5000.0       0.0       2.0       0.0       0.0
+$#      xp        yp        zp        a1        a2        a3    mangle      
+       0.0       0.0       0.0       1.0       0.0       0.0       0.0
+$#      v1        v2        v3        d1        d2        d3    dfailm    dfails
+       0.0       0.0       0.0       0.0       1.0       0.0       0.3       0.3
+$#   tfail      alph      soft      fbrt     ycfac    dfailt    dfailc       efs
+5.00000E-8       0.0       1.0       0.0       2.0       0.0       3.0       0.3
+$#      xc        xt        yc        yt        sc      crit      beta    
+     531.0     804.0     534.0     773.0     129.0      55.0       0.9
+$#     pel      epsf      epsr      tsmd     soft2     
+       0.0       0.0       0.0       0.0       1.0
+$#  slimt1    slimc1    slimt2    slimc2     slims    ncyred     softg     
+       0.0       0.0       0.0       0.0       0.0       0.0       1.0
+*END
+keyword updatekind
+MAT_ENHANCED_COMPOSITE_DAMAGE
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\8kms_052cm_medium.k" 
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\8kms_052cm_medium.k" 
