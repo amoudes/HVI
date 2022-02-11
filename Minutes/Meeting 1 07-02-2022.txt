@@ -1,0 +1,35 @@
+Meeting 07-02-2022
+
+Thijs 
+Tore
+Kayleigh
+Rannveig
+
+DISCUSSION
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+SUMMARY MEETING
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+ - Goal of project is not yet defined. Sort of goal is to experiment with different settings in LS-DYNA (sims) and see whether we are
+   able to find a pattern in the simulations. Since actual testing takes a while and is expensive most experiments will be performed
+   numerically.
+ - We can think of several parameters we think of a lot of possibilities within the project, for instance:
+	- Composite material - find material cards
+	- Additive manufactures materials
+	- Changing density
+	- Changing projectile material, Alu foam
+ - We can peform some tests to have some kind of comparison between numerics and experiments.
+   Sort of simulate HVI using lower velocities by changing the impactor material. 
+   Most important is the debris cloud after impact
+ - Thesis Rannveig showed that non-linear Equations of State (EOS) are mostly not necessary and linear equations suffice in HVI. 
+
+
+ - The goal of the project is open ended at the moment. I should first get acquainted with LS-DYNA
+ - Secondly we can dive into different material properties of the shields. The outer shield is always made of aluminium.
+   Later shields can be made of composite or something else...
+
+ - Basically we have quite some freedom to do what we would like to do at the moment. What is can do right now is:
+	- Literature study on different materials, ID cards etc.
+	- Study LS-DYNA
+	- Think about project set-up
