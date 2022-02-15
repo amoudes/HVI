@@ -4,10 +4,12 @@ Meeting 02
 DISCUSSION
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
- Q - What numerical method to use for non-HVI simulations?
+ Q - What numerical method to use for non-HVI simulations? 
      We would like to do some lower velocity IS to validate the model with. We think there is more experimetal
      data available for lower velocity IS OR we could run our own experiments - to validate the model.
      Why dont we need an EOS for the composite material?
+     Energy release rates in tiebreak card, shear & normal components
+
 
 SUMMARY MEETING
 ---------------------------------------------------------------------------------------------------------------------------------------------
