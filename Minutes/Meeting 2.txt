@@ -5,10 +5,16 @@ DISCUSSION
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
  Q - What numerical method to use for non-HVI simulations? 
-     We would like to do some lower velocity IS to validate the model with. We think there is more experimetal
+
+ Q - We would like to do some lower velocity IS to validate the model with. We think there is more experimetal
      data available for lower velocity IS OR we could run our own experiments - to validate the model.
-     Why dont we need an EOS for the composite material?
-     Energy release rates in tiebreak card, shear & normal components
+
+ Q - Why dont we need an EOS for the composite material?
+
+ Q - Energy release rates in tiebreak card, shear & normal components
+
+ Q - Material parameters of reference paper do not work with LS-DYNA, why? [Error 20397 (+397) prob. something
+     with poisson ratios].
 
 
 SUMMARY MEETING
