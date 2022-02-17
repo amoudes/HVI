@@ -16,6 +16,8 @@ DISCUSSION
  Q - Material parameters of reference paper do not work with LS-DYNA, why? [Error 20397 (+397) prob. something
      with poisson ratios].
 
+ Q - How to change time step in LS-DYNA
+
 
 SUMMARY MEETING
 ---------------------------------------------------------------------------------------------------------------------------------------------
