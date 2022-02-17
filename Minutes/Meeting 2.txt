@@ -41,13 +41,14 @@ SUMMARY MEETING
    from literature in LS-DYNA.
 
  - Discussion about material parameters from Ramon.
-   Conclusion: ask Ramon about material parameters he used.
+   Conclusion: ask Ramon about material parameters he used. - density way smaller than on the paper we found
 
  - Further discussion about testing on composites.
    We do not necessarily have to restrict ourselves to HVI testing on composites. To gain more understanding of composite behaviour under
    impact we could also study lower velocity impacts and attempt to model these using LS-DYNA to see what the important material parameters.
+   For lower impact - experiments possible, impact tests, for modelling start with DES then figure out FEM stuff
 
- - The structure of the project is not well defined at the moment yet and is open ended. Compositese is one of the routes we can take for the
+ - The structure of the project is not well defined at the moment yet and is open ended. Composites is one of the routes we can take for the
    project, if it turns out to be too difficult we can change back to isotropic materials (aluminium).
  - We could run a parameters study on the model to verify which parameters are actually of importance for correct simulations of HVI. For
    example, Tore adressed that the density is either the most or an important factor for HVI. We could can change the material card to steel
