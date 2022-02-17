@@ -1,23 +1,62 @@
-Meeting 02
+Meeting 02 17-02-2022
 
 
 DISCUSSION
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
- Q - What numerical method to use for non-HVI simulations? 
+ Q - What numerical method to use for non-HVI simulations?
+
+	- material tests and composite material to use for calibration - non necessarily HVI 
 
  Q - We would like to do some lower velocity IS to validate the model with. We think there is more experimetal
      data available for lower velocity IS OR we could run our own experiments - to validate the model.
 
- Q - Why dont we need an EOS for the composite material?
+ Q - Why dont we need an EOS for the composite material? - 
 
  Q - Energy release rates in tiebreak card, shear & normal components
+	- We should inverse calibrate experiments from literature (or our own) to find values for the energy release rate - both shear
+          and normal.
 
  Q - Material parameters of reference paper do not work with LS-DYNA, why? [Error 20397 (+397) prob. something
      with poisson ratios].
+	- Ask Ramon about the low values of the Poisson's ratio. It appears that he used some foam like material based on the (very) low
+          values of the Poisson's ratio - ask what material he actually used?
 
  Q - How to change time step in LS-DYNA
 
+  -- Material change for both the projectile and the target plate - to validate whether density matters in 
+     impact simulations
+
+   - lower poisson ratio -
+	- find material with lot of calibrations to use in LS-DYNA
+	- 
+
+   - Think about report structure
 
 SUMMARY MEETING
 ---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ - First we explained how we set up the model as of now. We are investigating whether we were able to recreate experiments on composites
+   from literature in LS-DYNA.
+
+ - Discussion about material parameters from Ramon.
+   Conclusion: ask Ramon about material parameters he used.
+
+ - Further discussion about testing on composites.
+   We do not necessarily have to restrict ourselves to HVI testing on composites. To gain more understanding of composite behaviour under
+   impact we could also study lower velocity impacts and attempt to model these using LS-DYNA to see what the important material parameters.
+
+ - The structure of the project is not well defined at the moment yet and is open ended. Compositese is one of the routes we can take for the
+   project, if it turns out to be too difficult we can change back to isotropic materials (aluminium).
+ - We could run a parameters study on the model to verify which parameters are actually of importance for correct simulations of HVI. For
+   example, Tore adressed that the density is either the most or an important factor for HVI. We could can change the material card to steel
+   for both the plate and the projectile to see what the effect is on the damage. - Hydrostatic part is much bigger than deviatoric.
+ 
+   Other parameter studies could also be considered. e.g.: shear strength, Young's modulus, ultimate strength, ..... ?
+
+ - Tore & Rannveig proposed a systematic approach to modelling HVI (or IS). Start off easy and gradually increaes complexity. For instance
+   for IS on orthotropic material we could test on something very orthotropic before using actual complex material.
+
+ - For monday we might think about the structure of the report we want to deliver. What goes in the report, what is important, what are
+   topics and subtopics.
