@@ -1,0 +1,20 @@
+
+ Q - How to find important parameters for comparison from LS-DYNA?
+
+  - residual velocity
+
+ - solid material in debris cloud
+ 
+  - conversion from elements to particles due to temperature
+
+  - debris cloud diameter
+ 
+  - hole diameter
+
+alu  
+    Ekin diff = 75.8%
+    hole diam = 12.3mm
+
+Steel 
+    Ekin diff = 93.75% 
+    hole diam = 13.3mm
