@@ -18,3 +18,8 @@ alu
 Steel 
     Ekin diff = 93.75% 
     hole diam = 13.3mm
+
+
+To discuss:
+- how to go forward in terms of report structure, experiments/validation
+- 
