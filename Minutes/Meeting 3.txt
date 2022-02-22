@@ -3,7 +3,7 @@
 
   - residual velocity
 
- - solid material in debris cloud
+  - solid material in debris cloud
  
   - conversion from elements to particles due to temperature
 
