@@ -2,10 +2,9 @@ clc; close all; clear all;
 %%
 DIR = dir;
 %%
-text = ' Element deleted due';
+iPart  = 0;
+iPartT = 0;
 %%
-
-iPart = 0;
 for i = 1:length(DIR)
     file = DIR(i).name;
     
@@ -17,8 +16,12 @@ for i = 1:length(DIR)
        tline = fgetl(fid);
        while ischar(tline)
 %            disp(tline)
-           if contains(tline, text)
+           if contains(tline,'Element deleted due')
                iPart = iPart + 1;
+           end
+           
+           if contains(tline,'Element deleted due to temperature')
+               iPartT = iPartT + 1;
            end
            % Read next line
            tline = fgetl(fid);
@@ -27,7 +30,11 @@ for i = 1:length(DIR)
        fclose(fid);
     end    
 end
+
+%% displaying
 fprintf('\n');
-fprintf('-------------------------------------------------\n');
-fprintf(['      # of converted particles: ',num2str(iPart),'\n']);
-fprintf('-------------------------------------------------\n');
+fprintf('----------------------------------------------------------\n');
+fprintf(['  # of converted particles:                    ',num2str(iPart),'\n']);
+fprintf(['  # of converted particles due to temperature: ',num2str(iPartT),'\n']);
+fprintf(['    perc converted due to temperature:         ',num2str(iPartT/iPart*100,3),'\n']);
+fprintf('----------------------------------------------------------\n');
