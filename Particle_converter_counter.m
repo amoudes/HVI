@@ -9,7 +9,7 @@ for i = 1:length(DIR)
     file = DIR(i).name;
     
     if contains(file,'mes')
-       file
+       disp(file);
              
        fid = fopen(file,'r');    
        
