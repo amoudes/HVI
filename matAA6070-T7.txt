@@ -1,7 +1,7 @@
 *MAT_USER_DEFINED_MATERIAL_MODELS_TITLE
-AA6070-T4
+AA6070-T6
 $#     mid        ro        mt       lmc       nhv    iortho     ibulk        ig
-         12.70000E-9        47        48        20         0         1         2
+         22.70000E-9        47        48        20         0         1         2
 $#   ivect     ifail    itherm    ihyper      ieos      lmca    unused    unused
          1         1         0         0         1         0                    
 $        k         g         e        pr      beta       xsi    cp*rho     alpha
@@ -12,13 +12,13 @@ $#      p1        p2        p3        p4        p5        p6        p7        p8
 1.00000E-4     293.0     893.0     293.0         0       0.0       0.0       0.0
 $        a         b         n         c         m
 $#      p1        p2        p3        p4        p5        p6        p7        p8
-     172.7      2.99     0.166     0.117       1.0         0       0.0       0.0
+     292.5      2.69     0.036     0.105       1.0         0       0.0       0.0
 $       q1        c1        q2        c2
 $#      p1        p2        p3        p4        p5        p6        p7        p8
-      35.6      80.6     247.7       6.5         0       0.0       0.0       0.0
+      55.3     317.2      31.1        10         0       0.0       0.0       0.0
 $       dc        wc
 $#      p1        p2        p3        p4        p5        p6        p7        p8
-       1.0       211         0       0.0       0.0       0.0       0.0       0.0
+       1.0       128         0       0.0       0.0       0.0       0.0       0.0
 $       tc      tauc       pco
 $#      p1        p2        p3        p4        p5        p6        p7        p8
      804.01.00000E20     -1000         0       0.0       0.0       0.0       0.0
