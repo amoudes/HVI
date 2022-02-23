@@ -1,5 +1,5 @@
 *MAT_USER_DEFINED_MATERIAL_MODELS_TITLE
-AA6070-T6
+AA6070-T7
 $#     mid        ro        mt       lmc       nhv    iortho     ibulk        ig
          22.70000E-9        47        48        20         0         1         2
 $#   ivect     ifail    itherm    ihyper      ieos      lmca    unused    unused
