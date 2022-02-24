@@ -1,0 +1,93 @@
+$# LS-PrePost command file created by LS-PrePost(R) V4.8.26 - 010Feb2022 -64bit-Window
+$# Created on Feb-24-2022 (13:27:29)
+openc keyword "C:\Users\andrieso\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\k-files\A2.k"
+Message 1
+save keywordversion 2
+save keywordversion 12
+Message 0
+KEYWORD INPUT 3
+*MAT_JOHNSON_COOK_TITLE
+VT6
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         34.43000E-9   38000.0  114500.0     0.345       0.0       0.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     900.0    509.75     0.506      0.03       0.0    1941.0     293.0    0.0098
+$#      cp        pc     spall        it        d1        d2        d3        d4
+7.200000E8       0.0       2.0       0.0     -0.81      1.18     -15.0     -0.02
+$#      d5      c2/p      erod     efmin    numint      
+       0.0       0.0         01.00000E-6       0.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+KEYWORD INPUT 3
+*MAT_JOHNSON_COOK_TITLE
+VT6
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         34.43000E-9   38000.0  114500.0     0.345       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     900.0    509.75     0.506      0.03       0.0    1941.0     293.0    0.0098
+$#      cp        pc     spall        it        d1        d2        d3        d4
+7.200000E8    1000.0       2.0       0.0     -0.81      1.18     -15.0     -0.02
+$#      d5      c2/p      erod     efmin    numint      
+       0.0       0.0         01.00000E-6       0.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+KEYWORD INPUT 3
+*MAT_JOHNSON_COOK_TITLE
+VT6
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         34.43000E-9   38000.0  114500.0     0.345       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     900.0    509.75     0.506      0.03       0.0    1941.0     293.0    0.0098
+$#      cp        pc     spall        it        d1        d2        d3        d4
+7.200000E8    1000.0       2.0       0.0     -0.81      1.18     -15.0     -0.02
+$#      d5      c2/p      erod     efmin    numint      
+       0.0       0.0         01.00000E-6       0.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+refcheck output
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+refcheck outputfile "C:\Users\andrieso\OneDrive\Documenten\Internship\Project\Data\Test_Data\Bumper\Ti\Ti.k"
+refcheck outputfileclear
+KEYWORD INPUT 3
+*MAT_JOHNSON_COOK_TITLE
+VT6
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         34.43000E-9   38000.0  114500.0     0.345       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     900.0    509.75     0.506      0.03       0.0    1941.0     293.0    0.0098
+$#      cp        pc     spall        it        d1        d2        d3        d4
+7.200000E8    1000.0       2.0       0.0     -0.81      1.18     -15.0     -0.02
+$#      d5      c2/p      erod     efmin    numint      
+       0.0       0.0         01.00000E-6       0.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+refcheck output
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+refcheck outputfile "C:\Users\andrieso\OneDrive\Documenten\Internship\Project\Data\Test_Data\Bumper\Ti\Ti.k"
+refcheck outputfileclear
+KEYWORD INPUT 3
+*MAT_JOHNSON_COOK_TITLE
+VT6
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         34.43000E-9   38000.0  114500.0     0.345       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     900.0    509.75     0.506      0.03       0.0    1941.0     293.0    0.0098
+$#      cp        pc     spall        it        d1        d2        d3        d4
+7.200000E8    1000.0       2.0       0.0     -0.81      1.18     -15.0     -0.02
+$#      d5      c2/p      erod     efmin    numint      
+       0.0       0.0         01.00000E-6       0.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+save keyword "C:\Users\andrieso\OneDrive\Documenten\Internship\Project\Data\Test_Data\Bumper\Ti\Ti.k"
