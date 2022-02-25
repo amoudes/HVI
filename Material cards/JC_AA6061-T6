@@ -1,0 +1,10 @@
+*MAT_JOHNSON_COOK_TITLE
+JC_Aluminium
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         42.70000E-9   26920.0   70000.0       0.3       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     270.0     154.3      0.22      0.02       1.0     893.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+9.100000E8       0.0       2.0       1.0     -0.77      1.45     -0.47       0.0
+$#      d5      c2/p      erod     efmin    numint      
+       1.6       0.0         01.00000E-6       1.0

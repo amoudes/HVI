@@ -1,13 +1,13 @@
 *MAT_JOHNSON_COOK_TITLE
 VT6
 $#     mid        ro         g         e        pr       dtf        vp    rateop
-         24.43000E-9   38000.0  114500.0     0.345       0.0       1.0       0.0
+         34.43000E-9   38000.0  114500.0     0.345       0.0       1.0       0.0
 $#       a         b         n         c         m        tm        tr      epso
      900.0    509.75     0.506      0.03       0.0    1941.0     293.0    0.0098
 $#      cp        pc     spall        it        d1        d2        d3        d4
-7.200000E8    1000.0       2.0       0.0     -0.81      1.18     -0.15     -0.02
+7.200000E8       0.0       2.0       1.0     -0.81      1.18     -0.15     -0.02
 $#      d5      c2/p      erod     efmin    numint      
-       0.0       0.0         01.00000E-6       0.0
+       0.0       0.0         01.00000E-6       1.0
 *EOS_LINEAR_POLYNOMIAL_TITLE
 Linear Ti
 $#   eosid        c0        c1        c2        c3        c4        c5        c6
