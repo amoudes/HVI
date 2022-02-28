@@ -1,0 +1,16 @@
+*MAT_JOHNSON_COOK_TITLE
+Al 2024-O
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         32.71000E-9    2.67E4     7.1E4      0.33       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+       265       426      0.34     0.015     1.000       893     293.01.00000E-4
+$#      cp        pc     spall        it        d1        d2        d3        d4
+8.750000E8       0.0       2.0       1.0      0.13      0.13      -1.5     0.011
+$#      d5      c2/p      erod     efmin    numint      
+         0       0.0         01.00000E-6       1.0
+*EOS_LINEAR_POLYNOMIAL_TITLE
+Al 2024-O
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         3       0.0    6.96E4       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       0.0
