@@ -1,0 +1,16 @@
+*MAT_JOHNSON_COOK_TITLE
+Weldox 900 E
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         37.85000E-9    7.89E4  210000.0      0.33       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     992.0     364.0     0.586    0.0087     1.131    1800.0     293.05.00000E-4
+$#      cp        pc     spall        it        d1        d2        d3        d4
+4.520000E8       0.0       2.0       1.0     0.294     5.149    -5.583    0.0023
+$#      d5      c2/p      erod     efmin    numint      
+     0.951       0.0         01.00000E-6       1.0
+*EOS_LINEAR_POLYNOMIAL_TITLE
+Weldox 900 E
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         3       0.0  206000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       0.0
