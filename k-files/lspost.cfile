@@ -9,3 +9,532 @@ save keywordabsolute 0
 save keywordbylongfmt 0
 save keywordbyi10fmt 0
 save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\M1.k"
+KEYWORD INPUT 6
+*MAT_JOHNSON_COOK_TITLE
+OFHC COPPER
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         68.96000E-9   46300.0  124000.0      0.34       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+      90.0     292.0      0.31     0.025      1.09    1356.0     293.05.00000E-4
+$#      cp        pc     spall        it        d1        d2        d3        d4
+4.520000E8       0.0       2.0       1.0     0.636     1.936    -2.969    -0.014
+$#      d5      c2/p      erod     efmin    numint      
+     1.014       0.0         01.00000E-6       1.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+KEYWORD INPUT 6
+*MAT_JOHNSON_COOK_TITLE
+OFHC COPPER
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         68.96000E-9   46300.0  124000.0      0.34       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+      90.0     292.0      0.31     0.025      1.09    1356.0     293.05.00000E-4
+$#      cp        pc     spall        it        d1        d2        d3        d4
+4.520000E8       0.0       2.0       1.0     0.636     1.936    -2.969    -0.014
+$#      d5      c2/p      erod     efmin    numint      
+     1.014       0.0         01.00000E-6       1.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+KEYWORD INPUT 6
+*MAT_JOHNSON_COOK_TITLE
+OFHC COPPER
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         68.96000E-9   46300.0  124000.0      0.34       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+      90.0     292.0      0.31     0.025      1.09    1356.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+3.830000E8       0.0       2.0       1.0     0.636     1.936    -2.969    -0.014
+$#      d5      c2/p      erod     efmin    numint      
+     1.014       0.0         01.00000E-6       1.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+KEYWORD INPUT 6
+*MAT_JOHNSON_COOK_TITLE
+OFHC COPPER
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         68.96000E-9   46300.0  124000.0      0.34       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+      90.0     292.0      0.31     0.025      1.09    1356.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+3.830000E8       0.0       2.0       1.0      0.54      4.89     -3.03     0.014
+$#      d5      c2/p      erod     efmin    numint      
+      1.12       0.0         01.00000E-6       1.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+KEYWORD INPUT 6
+*MAT_JOHNSON_COOK_TITLE
+OFHC COPPER
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         68.96000E-9   46300.0  124000.0      0.34       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+      90.0     292.0      0.31     0.025      1.09    1356.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+3.830000E8       0.0       2.0       1.0      0.54      4.89     -3.03     0.014
+$#      d5      c2/p      erod     efmin    numint      
+      1.12       0.0         01.00000E-6       1.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+KEYWORD INPUT 4
+*EOS_LINEAR_POLYNOMIAL_TITLE
+OFHC COPPER
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         4       0.0  129000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+EOS_LINEAR_POLYNOMIAL
+KEYWORD INPUT 1
+*PART
+$#                                                                         title
+Target
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         1         1         6         4         0         0         0         0
+*SECTION_SOLID_TITLE
+Target and particles
+$#   secid    elform       aet    unused    unused    unused    cohoff    unused
+         1         1         0                                       0          
+*MAT_JOHNSON_COOK_TITLE
+OFHC COPPER
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         68.96000E-9   46300.0  124000.0      0.34       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+      90.0     292.0      0.31     0.025      1.09    1356.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+3.830000E8       0.0       2.0       1.0      0.54      4.89     -3.03     0.014
+$#      d5      c2/p      erod     efmin    numint      
+      1.12       0.0         01.00000E-6       1.0
+*EOS_LINEAR_POLYNOMIAL_TITLE
+OFHC COPPER
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         4       0.0  129000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+PART_PART
+KEYWORD INPUT 10
+*PART
+$#                                                                         title
+Particle Target
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+        10         1         6         4         0         0         0         0
+*SECTION_SOLID_TITLE
+Target and particles
+$#   secid    elform       aet    unused    unused    unused    cohoff    unused
+         1         1         0                                       0          
+*MAT_JOHNSON_COOK_TITLE
+OFHC COPPER
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         68.96000E-9   46300.0  124000.0      0.34       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+      90.0     292.0      0.31     0.025      1.09    1356.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+3.830000E8       0.0       2.0       1.0      0.54      4.89     -3.03     0.014
+$#      d5      c2/p      erod     efmin    numint      
+      1.12       0.0         01.00000E-6       1.0
+*EOS_LINEAR_POLYNOMIAL_TITLE
+OFHC COPPER
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         4       0.0  129000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+PART_PART
+KEYWORD INPUT 10
+*PART
+$#                                                                         title
+Particle Target
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+        10         1         6         4         0         0         0         0
+*SECTION_SOLID_TITLE
+Target and particles
+$#   secid    elform       aet    unused    unused    unused    cohoff    unused
+         1         1         0                                       0          
+*MAT_JOHNSON_COOK_TITLE
+OFHC COPPER
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         68.96000E-9   46300.0  124000.0      0.34       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+      90.0     292.0      0.31     0.025      1.09    1356.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+3.830000E8       0.0       2.0       1.0      0.54      4.89     -3.03     0.014
+$#      d5      c2/p      erod     efmin    numint      
+      1.12       0.0         01.00000E-6       1.0
+*EOS_LINEAR_POLYNOMIAL_TITLE
+OFHC COPPER
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         4       0.0  129000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+PART_PART
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\M1.k" 
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\M2.k"
+KEYWORD INPUT 7
+*MAT_JOHNSON_COOK_TITLE
+ARMOC IRON
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         77.89000E-9   80200.0  207000.0      0.29       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     175.0     380.0      0.32      0.06      0.55    1811.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+4.520000E8       0.0       2.0       1.0      -2.2      5.43     -0.47     0.016
+$#      d5      c2/p      erod     efmin    numint      
+      0.63       0.0         01.00000E-6       1.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+KEYWORD INPUT 7
+*MAT_JOHNSON_COOK_TITLE
+ARMOC IRON
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         77.89000E-9   80200.0  207000.0      0.29       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     175.0     380.0      0.32      0.06      0.55    1811.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+4.520000E8       0.0       2.0       1.0      -2.2      5.43     -0.47     0.016
+$#      d5      c2/p      erod     efmin    numint      
+      0.63       0.0         01.00000E-6       1.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+KEYWORD INPUT 5
+*EOS_LINEAR_POLYNOMIAL_TITLE
+ARMOC IRON
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         5       0.0  164000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+EOS_LINEAR_POLYNOMIAL
+KEYWORD INPUT 1
+*PART
+$#                                                                         title
+Target
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         1         1         7         5         0         0         0         0
+*SECTION_SOLID_TITLE
+Target and particles
+$#   secid    elform       aet    unused    unused    unused    cohoff    unused
+         1         1         0                                       0          
+*MAT_JOHNSON_COOK_TITLE
+ARMOC IRON
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         77.89000E-9   80200.0  207000.0      0.29       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     175.0     380.0      0.32      0.06      0.55    1811.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+4.520000E8       0.0       2.0       1.0      -2.2      5.43     -0.47     0.016
+$#      d5      c2/p      erod     efmin    numint      
+      0.63       0.0         01.00000E-6       1.0
+*EOS_LINEAR_POLYNOMIAL_TITLE
+ARMOC IRON
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         5       0.0  164000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+PART_PART
+KEYWORD INPUT 1
+*PART
+$#                                                                         title
+Target
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         1         1         7         5         0         0         0         0
+*SECTION_SOLID_TITLE
+Target and particles
+$#   secid    elform       aet    unused    unused    unused    cohoff    unused
+         1         1         0                                       0          
+*MAT_JOHNSON_COOK_TITLE
+ARMOC IRON
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         77.89000E-9   80200.0  207000.0      0.29       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     175.0     380.0      0.32      0.06      0.55    1811.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+4.520000E8       0.0       2.0       1.0      -2.2      5.43     -0.47     0.016
+$#      d5      c2/p      erod     efmin    numint      
+      0.63       0.0         01.00000E-6       1.0
+*EOS_LINEAR_POLYNOMIAL_TITLE
+ARMOC IRON
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         5       0.0  164000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+PART_PART
+KEYWORD INPUT 10
+*PART
+$#                                                                         title
+Particle Target
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+        10         1         7         5         0         0         0         0
+*SECTION_SOLID_TITLE
+Target and particles
+$#   secid    elform       aet    unused    unused    unused    cohoff    unused
+         1         1         0                                       0          
+*MAT_JOHNSON_COOK_TITLE
+ARMOC IRON
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         77.89000E-9   80200.0  207000.0      0.29       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     175.0     380.0      0.32      0.06      0.55    1811.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+4.520000E8       0.0       2.0       1.0      -2.2      5.43     -0.47     0.016
+$#      d5      c2/p      erod     efmin    numint      
+      0.63       0.0         01.00000E-6       1.0
+*EOS_LINEAR_POLYNOMIAL_TITLE
+ARMOC IRON
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         5       0.0  164000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+PART_PART
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\M2.k" 
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\M2.k" 
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\T4.k"
+KEYWORD INPUT 8
+*MAT_JOHNSON_COOK_TITLE
+Ti-6Al-4V
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         84.43000E-9   42200.0  113000.0      0.34       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+    1098.0    1092.0      0.93     0.014       1.1       0.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+4.520000E8       0.0       2.0       1.0     0.636     1.936    -2.969    -0.014
+$#      d5      c2/p      erod     efmin    numint      
+     1.014       0.0         01.00000E-6       1.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+KEYWORD INPUT 8
+*MAT_JOHNSON_COOK_TITLE
+Ti-6Al-4V
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         84.43000E-9   42200.0  113000.0      0.34       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+    1098.0    1092.0      0.93     0.014       1.1       0.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+6.210000E8       0.0       2.0       1.0     -0.09      0.27      0.48     0.014
+$#      d5      c2/p      erod     efmin    numint      
+      3.87       0.0         01.00000E-6       1.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+KEYWORD INPUT 8
+*MAT_JOHNSON_COOK_TITLE
+Ti-6Al-4V
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         84.43000E-9   42200.0  113000.0      0.34       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+    1098.0    1092.0      0.93     0.014       1.1       0.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+6.210000E8       0.0       2.0       1.0     -0.09      0.27      0.48     0.014
+$#      d5      c2/p      erod     efmin    numint      
+      3.87       0.0         01.00000E-6       1.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+KEYWORD INPUT 8
+*MAT_JOHNSON_COOK_TITLE
+Ti-6Al-4V
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         84.43000E-9   42200.0  113000.0      0.34       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+    1098.0    1092.0      0.93     0.014       1.1    1650.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+6.210000E8       0.0       2.0       1.0     -0.09      0.27      0.48     0.014
+$#      d5      c2/p      erod     efmin    numint      
+      3.87       0.0         01.00000E-6       1.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+KEYWORD INPUT 6
+*EOS_LINEAR_POLYNOMIAL_TITLE
+Ti-6Al-4V
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         6       0.0  118000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+EOS_LINEAR_POLYNOMIAL
+KEYWORD INPUT 1
+*PART
+$#                                                                         title
+Target
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         1         1         8         6         0         0         0         0
+*SECTION_SOLID_TITLE
+Target and particles
+$#   secid    elform       aet    unused    unused    unused    cohoff    unused
+         1         1         0                                       0          
+*MAT_JOHNSON_COOK_TITLE
+Ti-6Al-4V
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         84.43000E-9   42200.0  113000.0      0.34       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+    1098.0    1092.0      0.93     0.014       1.1    1650.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+6.210000E8       0.0       2.0       1.0     -0.09      0.27      0.48     0.014
+$#      d5      c2/p      erod     efmin    numint      
+      3.87       0.0         01.00000E-6       1.0
+*EOS_LINEAR_POLYNOMIAL_TITLE
+Ti-6Al-4V
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         6       0.0  118000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+PART_PART
+KEYWORD INPUT 10
+*PART
+$#                                                                         title
+Particle Target
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+        10         1         8         6         0         0         0         0
+*SECTION_SOLID_TITLE
+Target and particles
+$#   secid    elform       aet    unused    unused    unused    cohoff    unused
+         1         1         0                                       0          
+*MAT_JOHNSON_COOK_TITLE
+Ti-6Al-4V
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         84.43000E-9   42200.0  113000.0      0.34       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+    1098.0    1092.0      0.93     0.014       1.1    1650.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+6.210000E8       0.0       2.0       1.0     -0.09      0.27      0.48     0.014
+$#      d5      c2/p      erod     efmin    numint      
+      3.87       0.0         01.00000E-6       1.0
+*EOS_LINEAR_POLYNOMIAL_TITLE
+Ti-6Al-4V
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         6       0.0  118000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+PART_PART
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\T4.k" 
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\S6.k"
+KEYWORD INPUT 9
+*MAT_JOHNSON_COOK_TITLE
+MILD STEEL
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         97.85000E-9   76300.0  203000.0      0.33       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     304.0    422.01     0.345    0.0156      0.87    1800.0     293.05.00000E-4
+$#      cp        pc     spall        it        d1        d2        d3        d4
+4.520000E8       0.0       2.0       1.0    0.1152    1.0116   -1.7684  -0.05279
+$#      d5      c2/p      erod     efmin    numint      
+    0.5262       0.0         01.00000E-6       1.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+KEYWORD INPUT 9
+*MAT_JOHNSON_COOK_TITLE
+MILD STEEL
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         97.85000E-9   76300.0  203000.0      0.33       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     304.0    422.01     0.345    0.0156      0.87    1800.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+4.520000E8       0.0       2.0       1.0    0.1152    1.0116   -1.7684  -0.05279
+$#      d5      c2/p      erod     efmin    numint      
+    0.5262       0.0         01.00000E-6       1.0
+*END
+keyword updatekind
+MAT_JOHNSON_COOK
+KEYWORD INPUT 7
+*EOS_LINEAR_POLYNOMIAL_TITLE
+MILD STEEL
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         7       0.0  199000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+EOS_LINEAR_POLYNOMIAL
+KEYWORD INPUT 1
+*PART
+$#                                                                         title
+Target
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         1         1         9         7         0         0         0         0
+*SECTION_SOLID_TITLE
+Target and particles
+$#   secid    elform       aet    unused    unused    unused    cohoff    unused
+         1         1         0                                       0          
+*MAT_JOHNSON_COOK_TITLE
+MILD STEEL
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         97.85000E-9   76300.0  203000.0      0.33       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     304.0    422.01     0.345    0.0156      0.87    1800.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+4.520000E8       0.0       2.0       1.0    0.1152    1.0116   -1.7684  -0.05279
+$#      d5      c2/p      erod     efmin    numint      
+    0.5262       0.0         01.00000E-6       1.0
+*EOS_LINEAR_POLYNOMIAL_TITLE
+MILD STEEL
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         7       0.0  199000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+PART_PART
+KEYWORD INPUT 10
+*PART
+$#                                                                         title
+Particle Target
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+        10         1         9         7         0         0         0         0
+*SECTION_SOLID_TITLE
+Target and particles
+$#   secid    elform       aet    unused    unused    unused    cohoff    unused
+         1         1         0                                       0          
+*MAT_JOHNSON_COOK_TITLE
+MILD STEEL
+$#     mid        ro         g         e        pr       dtf        vp    rateop
+         97.85000E-9   76300.0  203000.0      0.33       0.0       1.0       0.0
+$#       a         b         n         c         m        tm        tr      epso
+     304.0    422.01     0.345    0.0156      0.87    1800.0     293.0       1.0
+$#      cp        pc     spall        it        d1        d2        d3        d4
+4.520000E8       0.0       2.0       1.0    0.1152    1.0116   -1.7684  -0.05279
+$#      d5      c2/p      erod     efmin    numint      
+    0.5262       0.0         01.00000E-6       1.0
+*EOS_LINEAR_POLYNOMIAL_TITLE
+MILD STEEL
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         7       0.0  199000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+PART_PART
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\S6.k" 
