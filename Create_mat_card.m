@@ -2,7 +2,7 @@ clc; close all; clear all;
 %% Read excel file
 copyfile Results.xlsx Results2.xlsx;
 
-T = readcell('Results2.xlsx','Sheet','Sheet4','Range','D7:BB44');
+T = readcell('Results2.xlsx','Sheet','mat_param','Range','D7:BB44');
 
 delete Results2.xlsx;
 %% Input parameters
@@ -16,6 +16,7 @@ for i = 1:length(T)
 end
 
 %% Create txt file
+fprintf('Writing file\n');
 fid = fopen('matfile.txt','wt');
 
 if strcmp(Damage_model,'JC')
@@ -75,6 +76,9 @@ else
 end
 
 fclose(fid);
-
+fprintf('Mat file written\n\n');
+fprintf('----------------\n');
+fprintf('----- Done -----\n');
+fprintf('----------------\n');
 
 
