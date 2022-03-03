@@ -7,7 +7,7 @@ T = readcell('Results2.xlsx','Sheet','Sheet4','Range','D7:BB44');
 delete Results2.xlsx;
 %% Input parameters
 Damage_model = 'JC';
-Material_card = 'A11';
+Material_card = 'M4';
 %% identify column
 for i = 1:length(T)
     if strcmp(T{1,i},Material_card)
