@@ -131,3 +131,46 @@ save keywordabsolute 0
 save keywordbylongfmt 0
 save keywordbyi10fmt 0
 save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\A9.k"
+open d3plot "E:\Parameter Study\S7\d3plot"
+ac
+anim forward
+state 1;
+home
+anim forward
+open d3plot "E:\Parameter Study\S8\d3plot"
+ac
+anim forward
+state 1;
+home
+anim stop; state 1;
+anim forward
+open d3plot "E:\Parameter Study\S10\d3plot"
+ac
+anim forward
+home
+state 1;
+anim forward
+state 1;
+anim forward
+open d3plot "E:\Parameter Study\S12\d3plot"
+ac
+anim forward
+home
+state 21;
+state 31;
+state 1;
+anim forward
+home
+front
+measure select 1
+measure dist N302966/7 N359097/7 ;
+clearpick
+measure type 9
+measure 3pt-radius N297428/7 N335480/7 N339812/7 ;
+clearpick
+clearpick
+measure 3pt-radius N286652/7 N29529/7 N393414/7 ;
+clearpick
+measure select 0
+measure type 0
+measure type 0
