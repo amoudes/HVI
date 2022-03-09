@@ -27,3 +27,45 @@ save keywordabsolute 0
 save keywordbylongfmt 0
 save keywordbyi10fmt 0
 save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\S3_x2elements.k"
+open keyword "F:\Piekutowski-setup\SPH_td_0049\SPH_td_0049.k"
+Message 1
+Message 0
+open keyword "F:\Piekutowski-setup\SPH_td_0102\SPH_td_0102.k"
+Message 1
+Message 0
+new
+open keyword "F:\Piekutowski-setup\SPH_td_0424\SPH_td_0424.k"
+Message 1
+Message 0
+front
+top
+measure select 1
+clearpick
+measure dist N47776/3 N47776/3 ;
+clearpick
+measure dist N635836/3 N635836/3 ;
+measure type 4
+clearpick
+clearpick
+measure select 0
+measure type 0
+measure type 0
+measure select 1
+measure type 1
+ident node 636232/3;
+ident node 48172/3;
+clearpick
+measure type 4
+clearpick
+measure type 2
+measure dist N28746/3 N30/3 ;
+measure dist N48172/3 N636232/3 ;
+measure select 0
+measure type 0
+measure type 0
+open keyword "F:\Piekutowski-setup\SPH_td_0049\SPH_td_0049.k"
+Message 1
+Message 0
+open keyword "F:\Piekutowski-setup\SPH_Vel_7.38kms\SPH_Vel_738kms.k"
+Message 1
+Message 0
