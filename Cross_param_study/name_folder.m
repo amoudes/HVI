@@ -9,6 +9,8 @@ td = t./d;
 
 v = [5.5, 6.7, 7.5];
 %%
+fid = fopen('k_file_names.txt','w');
+
 count = 0;
 for i = 1:length(material)
     for j = 1:length(td)
@@ -16,12 +18,14 @@ for i = 1:length(material)
             count = count + 1;
             name = [num2str(count),'_',material{i},'_td',num2str(td(j),3),'_v',num2str(v(k))];
             fprintf('%s\n',name);
-
+            
             if ~exist(name, 'dir')
                 mkdir(name)
             end
-
+    
+            fprintf(fid,'%s\n',name);
         end
     end
 end
 
+fclose(fid);
