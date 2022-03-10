@@ -17,7 +17,7 @@ echo "dir created"
 cd Cross_parameter_study_results
 
 #for i in ${!myArray[@]};
-for i in {0..8}; 
+for i in {9..17}; 
 
 do
   #echo "element $i is ${name[$i]}"
