@@ -1,7 +1,8 @@
 clc; close all; clear all;
 %%
 material = {'A2','S2','T4','M4'};
-t = [0.4, 0.8, 1.2];
+
+t = [0.8/3*2, 0.8, 0.8/3*4];
 
 d = 9.58;
 td = t./d;
