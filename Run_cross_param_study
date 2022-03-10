@@ -17,7 +17,7 @@ echo "dir created"
 cd Cross_parameter_study_results
 
 #for i in ${!myArray[@]};
-for i in {0..17}; 
+for i in {0..3}; 
 
 do
   #echo "element $i is ${name[$i]}"
@@ -26,7 +26,7 @@ do
   mkdir ${name[$i]}
   
   # go to k-file directory
-  cd ../Cross_parameter_study_v2
+  cd ../Cross_parameter_study
   
   # copy essential files
   cp -r ${name[$i]}".k" ../Cross_parameter_study_results/${name[$i]}
@@ -39,6 +39,8 @@ do
   sed -i -- 's|'"XXX"'|'"${name[$i]}"'|g' jobdyna;
   
   #sbatch jobdyna  
+  
+  #go back to results directory
   cd ..
   
   
