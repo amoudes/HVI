@@ -48,3 +48,102 @@ save keywordabsolute 0
 save keywordbylongfmt 0
 save keywordbyi10fmt 0
 save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\4_A2_td0.0835_v5.5.k"
+open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\S2.k"
+Message 1
+Message 0
+KEYWORD INPUT 1
+*INITIAL_VELOCITY_GENERATION
+$#      id      styp     omega        vx        vy        vz     ivatn      icid
+         2         2       0.0   5500000       0.0       0.0         0         0
+$#      xc        yc        zc        nx        ny        nz     phase    irigid
+       0.0       0.0       0.0       0.0       0.0       0.0         0         0
+*END
+keyword updatekind
+INITIAL_VELOCITY_GENERATION
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\13_S2_td0.0835_v5.5.k"
+KEYWORD INPUT 1
+*INITIAL_VELOCITY_GENERATION
+$#      id      styp     omega        vx        vy        vz     ivatn      icid
+         2         2       0.0   7500000       0.0       0.0         0         0
+$#      xc        yc        zc        nx        ny        nz     phase    irigid
+       0.0       0.0       0.0       0.0       0.0       0.0         0         0
+*END
+keyword updatekind
+INITIAL_VELOCITY_GENERATION
+KEYWORD INPUT 1
+*INITIAL_VELOCITY_GENERATION
+$#      id      styp     omega        vx        vy        vz     ivatn      icid
+         2         2       0.0   7500000       0.0       0.0         0         0
+$#      xc        yc        zc        nx        ny        nz     phase    irigid
+       0.0       0.0       0.0       0.0       0.0       0.0         0         0
+*END
+keyword updatekind
+INITIAL_VELOCITY_GENERATION
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\15_S2_td0.0835_v7.5.k"
+open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\T4.k"
+Message 1
+Message 0
+KEYWORD INPUT 1
+*INITIAL_VELOCITY_GENERATION
+$#      id      styp     omega        vx        vy        vz     ivatn      icid
+         2         2       0.0   5500000       0.0       0.0         0         0
+$#      xc        yc        zc        nx        ny        nz     phase    irigid
+       0.0       0.0       0.0       0.0       0.0       0.0         0         0
+*END
+keyword updatekind
+INITIAL_VELOCITY_GENERATION
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\22_T4_td0.0835_v5.5.k"
+KEYWORD INPUT 1
+*INITIAL_VELOCITY_GENERATION
+$#      id      styp     omega        vx        vy        vz     ivatn      icid
+         2         2       0.0   7500000       0.0       0.0         0         0
+$#      xc        yc        zc        nx        ny        nz     phase    irigid
+       0.0       0.0       0.0       0.0       0.0       0.0         0         0
+*END
+keyword updatekind
+INITIAL_VELOCITY_GENERATION
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\24_T4_td0.0835_v7.5.k"
+open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\M4_2.k"
+Message 1
+Message 0
+open keyword "F:\Parameter Study\M4\MJC.k"
+Message 1
+Message 0
+KEYWORD INPUT 1
+*INITIAL_VELOCITY_GENERATION
+$#      id      styp     omega        vx        vy        vz     ivatn      icid
+         2         2       0.0   5500000       0.0       0.0         0         0
+$#      xc        yc        zc        nx        ny        nz     phase    irigid
+       0.0       0.0       0.0       0.0       0.0       0.0         0         0
+*END
+keyword updatekind
+INITIAL_VELOCITY_GENERATION
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\31_M4_td0.0835_v5.5.k"
+KEYWORD INPUT 1
+*INITIAL_VELOCITY_GENERATION
+$#      id      styp     omega        vx        vy        vz     ivatn      icid
+         2         2       0.0   7500000       0.0       0.0         0         0
+$#      xc        yc        zc        nx        ny        nz     phase    irigid
+       0.0       0.0       0.0       0.0       0.0       0.0         0         0
+*END
+keyword updatekind
+INITIAL_VELOCITY_GENERATION
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\33_M4_td0.0835_v7.5.k"
