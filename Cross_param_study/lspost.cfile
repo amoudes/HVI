@@ -1,10 +1,11 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Mar-10-2022 (10:36:00)
-open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\2_A2_td0.0557_v6.7.k"
+$# Created on Mar-10-2022 (10:53:41)
+open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\19_T4_td0.0557_v5.5.k"
 Message 1
 save keywordversion 2
 save keywordversion 12
 Message 0
-open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\2_A2_td0.0557_v6.7.k"
-Message 1
-Message 0
+assembly off all  1
+assembly on all  1
+partdata delete 1 
+delelement unrefn 1
