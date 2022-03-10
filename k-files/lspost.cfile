@@ -1,50 +1,7 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Mar-10-2022 (08:48:08)
-open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\A2.k"
+$# Created on Mar-10-2022 (09:11:58)
+openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\k-files\A2.k"
 Message 1
 save keywordversion 2
 save keywordversion 12
 Message 0
-KEYWORD INPUT 1
-*INITIAL_VELOCITY_GENERATION
-$#      id      styp     omega        vx        vy        vz     ivatn      icid
-         2         2       0.0   5500000       0.0       0.0         0         0
-$#      xc        yc        zc        nx        ny        nz     phase    irigid
-       0.0       0.0       0.0       0.0       0.0       0.0         0         0
-*END
-keyword updatekind
-INITIAL_VELOCITY_GENERATION
-save keywordabsolute 0
-save keywordbylongfmt 0
-save keywordbyi10fmt 0
-save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\A2_4_0.8_5.5"
-KEYWORD INPUT 1
-*INITIAL_VELOCITY_GENERATION
-$#      id      styp     omega        vx        vy        vz     ivatn      icid
-         2         2       0.0   7500000       0.0       0.0         0         0
-$#      xc        yc        zc        nx        ny        nz     phase    irigid
-       0.0       0.0       0.0       0.0       0.0       0.0         0         0
-*END
-keyword updatekind
-INITIAL_VELOCITY_GENERATION
-save keywordabsolute 0
-save keywordbylongfmt 0
-save keywordbyi10fmt 0
-save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\A2_4_0.8_7.5"
-save keywordabsolute 0
-save keywordbylongfmt 0
-save keywordbyi10fmt 0
-save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\6_A2_td0.0835_v7.5.k"
-KEYWORD INPUT 1
-*INITIAL_VELOCITY_GENERATION
-$#      id      styp     omega        vx        vy        vz     ivatn      icid
-         2         2       0.0   5500000       0.0       0.0         0         0
-$#      xc        yc        zc        nx        ny        nz     phase    irigid
-       0.0       0.0       0.0       0.0       0.0       0.0         0         0
-*END
-keyword updatekind
-INITIAL_VELOCITY_GENERATION
-save keywordabsolute 0
-save keywordbylongfmt 0
-save keywordbyi10fmt 0
-save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\4_A2_td0.0835_v5.5.k"
