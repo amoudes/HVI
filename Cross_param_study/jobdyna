@@ -24,4 +24,4 @@ export I_MPI_DEBUG_OUTPUT=jobstat
 echo $SLURM_NTASKS 
 echo $SLURM_NPROCS
 
-mpirun -prefork -np $SLURM_NTASKS /opt/lstc/mppdyna-eos-v2 i=8_A2_td0.111_v6.7.k
+mpirun -prefork -np $SLURM_NTASKS /opt/lstc/mppdyna-eos-v2 i=XXX.k

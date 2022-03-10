@@ -19,11 +19,11 @@ for i = 1:length(material)
             name = [num2str(count),'_',material{i},'_td',num2str(td(j),3),'_v',num2str(v(k))];
             fprintf('%s\n',name);
             
-            if ~exist(name, 'dir')
-                mkdir(name)
-            end
+%             if ~exist(name, 'dir')
+%                 mkdir(name)
+%             end
     
-            fprintf(fid,'%s\n',name);
+            fprintf(fid,'"%s" ',name);
         end
     end
 end
