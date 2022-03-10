@@ -31,3 +31,20 @@ save keywordabsolute 0
 save keywordbylongfmt 0
 save keywordbyi10fmt 0
 save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\A2_4_0.8_7.5"
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\6_A2_td0.0835_v7.5.k"
+KEYWORD INPUT 1
+*INITIAL_VELOCITY_GENERATION
+$#      id      styp     omega        vx        vy        vz     ivatn      icid
+         2         2       0.0   5500000       0.0       0.0         0         0
+$#      xc        yc        zc        nx        ny        nz     phase    irigid
+       0.0       0.0       0.0       0.0       0.0       0.0         0         0
+*END
+keyword updatekind
+INITIAL_VELOCITY_GENERATION
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\4_A2_td0.0835_v5.5.k"
