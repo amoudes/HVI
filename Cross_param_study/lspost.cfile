@@ -1,105 +1,10 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Mar-10-2022 (09:39:21)
+$# Created on Mar-10-2022 (10:36:00)
 open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\2_A2_td0.0557_v6.7.k"
 Message 1
 save keywordversion 2
 save keywordversion 12
 Message 0
-KEYWORD INPUT 1
-*INITIAL_VELOCITY_GENERATION
-$#      id      styp     omega        vx        vy        vz     ivatn      icid
-         2         2       0.0   5500000       0.0       0.0         0         0
-$#      xc        yc        zc        nx        ny        nz     phase    irigid
-       0.0       0.0       0.0       0.0       0.0       0.0         0         0
-*END
-keyword updatekind
-INITIAL_VELOCITY_GENERATION
-save keywordabsolute 0
-save keywordbylongfmt 0
-save keywordbyi10fmt 0
-save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\1_A2_td0.0557_v5.5.k"
-KEYWORD INPUT 1
-*INITIAL_VELOCITY_GENERATION
-$#      id      styp     omega        vx        vy        vz     ivatn      icid
-         2         2       0.0   7500000       0.0       0.0         0         0
-$#      xc        yc        zc        nx        ny        nz     phase    irigid
-       0.0       0.0       0.0       0.0       0.0       0.0         0         0
-*END
-keyword updatekind
-INITIAL_VELOCITY_GENERATION
-save keywordabsolute 0
-save keywordbylongfmt 0
-save keywordbyi10fmt 0
-save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\3_A2_td0.0557_v7.5.k"
-open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\8_A2_td0.111_v6.7.k"
+open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\2_A2_td0.0557_v6.7.k"
 Message 1
 Message 0
-KEYWORD INPUT 1
-*INITIAL_VELOCITY_GENERATION
-$#      id      styp     omega        vx        vy        vz     ivatn      icid
-         2         2       0.0   5500000       0.0       0.0         0         0
-$#      xc        yc        zc        nx        ny        nz     phase    irigid
-       0.0       0.0       0.0       0.0       0.0       0.0         0         0
-*END
-keyword updatekind
-INITIAL_VELOCITY_GENERATION
-save keywordabsolute 0
-save keywordbylongfmt 0
-save keywordbyi10fmt 0
-save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\7_A2_td0.111_v5.5.k"
-KEYWORD INPUT 1
-*INITIAL_VELOCITY_GENERATION
-$#      id      styp     omega        vx        vy        vz     ivatn      icid
-         2         2       0.0   7500000       0.0       0.0         0         0
-$#      xc        yc        zc        nx        ny        nz     phase    irigid
-       0.0       0.0       0.0       0.0       0.0       0.0         0         0
-*END
-keyword updatekind
-INITIAL_VELOCITY_GENERATION
-save keywordabsolute 0
-save keywordbylongfmt 0
-save keywordbyi10fmt 0
-save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\9_A2_td0.111_v7.5.k"
-open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\T4.k"
-Message 1
-Message 0
-genselect target node
-genselect clear
-top
-meshing boxsolid create 0.000000 0.000000 0.000000 100.000000 100.000000 100.000000 10 10 10 0.000000
-ac
-meshing boxsolid reject
-meshing boxsolid create 0.000000 0.000000 0.000000 0.533300 20.000000 20.000000 10 10 10 0.000000
-ac
-meshing boxsolid reject
-meshing boxsolid create 0.000000 -20.000000 -20.000000 0.533300 20.000000 20.000000 10 10 10 0.000000
-ac
-top
-top
-home
-top
-front
-meshing boxsolid reject
-meshing boxsolid create 0.000000 -20.000000 -20.000000 0.533300 20.000000 20.000000 2 50 50 0.000000
-ac
-meshing boxsolid reject
-meshing boxsolid create 0.000000 -20.000000 -20.000000 0.533300 20.000000 20.000000 2 100 100 0.000000
-ac
-meshing boxsolid reject
-meshing boxsolid create 0.000000 -20.000000 -20.000000 0.533300 20.000000 20.000000 2 153 153 0.000000
-ac
-meshing boxsolid reject
-meshing boxsolid create 0.000000 -20.000000 -20.000000 0.533300 20.000000 20.000000 2 150 150 0.000000
-ac
-front
-home
-meshing boxsolid reject
-meshing boxsolid create 0.000000 -20.000000 -20.000000 0.533300 20.000000 20.000000 2 150 150 0.000000
-ac
-meshing boxsolid accept 21 233954 260830 target_thin
-genselect clear
-ac
--M 1
-+M 1
-partdata delete 1 
-delelement unrefn 1
