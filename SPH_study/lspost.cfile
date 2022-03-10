@@ -1,0 +1,144 @@
+$# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
+$# Created on Mar-10-2022 (14:15:16)
+open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\SPH_study\S2_SPH.k"
+Message 1
+Message 0
+KEYWORD INPUT 4
+*MAT_USER_DEFINED_MATERIAL_MODELS_TITLE
+A2
+$#     mid        ro        mt       lmc       nhv    iortho     ibulk        ig
+         42.70000E-9        47        48        20         0         1         2
+$#   ivect     ifail    itherm    ihyper      ieos      lmca    unused    unused
+         1         1         0         0         1         0                    
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+  58333.33  26923.08   70000.0       0.3       0.0       0.9     2.4572.32000E-5
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+1.00000E-4     293.0     893.0     293.0         0       0.0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+      38.8      3.63     0.213     0.142       1.0         0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+      79.5      56.9      88.2         4         0       0.0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+       1.0       151         0       0.0       0.0       0.0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+     804.01.00000E20     -1000         0       0.0       0.0       0.0       0.0
+*END
+keyword updatekind
+MAT_USER_DEFINED_MATERIAL_MODELS
+KEYWORD INPUT 1
+*PART
+$#                                                                         title
+Ball
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         1         2         1         4         0         0         0         0
+*SECTION_SPH_TITLE
+SPH Ball
+$#   secid      cslh      hmin      hmax    sphini     death     start   sphkern
+         2       1.2       0.2       4.0       0.01.00000E20       0.0         0
+*MAT_USER_DEFINED_MATERIAL_MODELS_TITopen keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\A3.k"
+Message 1
+Message 0
+        ig
+         12.70000E-9        47        48        20         0         1         2
+$#   ivect     ifail    itherm    ihyper      ieos      lmca    unused    unused
+         1         1         0         0         1         0                    
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+  58333.33  26923.08   70000.0       0.3       0.0       0.9     2.4572.32000E-5
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+1.00000E-4     293.0     893.0     293.0         0       0.0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+     270.0       0.0       0.0      0.02       1.0         0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+       2.7    2160.7     707.6      8.94         0       0.0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+       1.0     100.0         0       0.0       0.0       0.0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+     804.01.00000E20     -1000         0       0.0       0.0       0.0       0.0
+*EOS_LINEAR_POLYNOMIAL_TITLE
+Al ball
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         4       0.0   58330.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+PART_PART
+KEYWORD INPUT 2
+*PART
+$#                                                                         title
+Target
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         2         1         4         3         0         0         0         0
+*SECTION_SPH_TITLE
+SPH Target
+$#   secid      cslh      hmin      hmax    sphini     death     start   sphkern
+         1       1.2       0.2       4.0       0.01.00000E20       0.0         0
+*MAT_USER_DEFINED_MATERIAL_MODELS_TITLE
+A2
+$#     mid        ro        mt       lmc       nhv    iortho     ibulk        ig
+         42.70000E-9        47        48        20         0         1         2
+$#   ivect     ifail    itherm    ihyper      ieos      lmca    unused    unused
+         1         1         0         0         1         0                    
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+  58333.33  26923.08   70000.0       0.3       0.0       0.9     2.4572.32000E-5
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+1.00000E-4     293.0     893.0     293.0         0       0.0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+      38.8      3.63     0.213     0.142       1.0         0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+      79.5      56.9      88.2         4         0       0.0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+       1.0       151         0       0.0       0.0       0.0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+     804.01.00000E20     -1000         0       0.0       0.0       0.0       0.0
+*EOS_LINEAR_POLYNOMIAL_TITLE
+AISI 4340
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         3       0.0  175000.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       0.0
+*END
+keyword updatekind
+PART_PART
+KEYWORD INPUT 2
+*PART
+$#                                                                         title
+Target
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         2         1         4         4         0         0         0         0
+*SECTION_SPH_TITLE
+SPH Target
+$#   secid      cslh      hmin      hmax    sphini     death     start   sphkern
+         1       1.2       0.2       4.0       0.01.00000E20       0.0         0
+*MAT_USER_DEFINED_MATERIAL_MODELS_TITLE
+A2
+$#     mid        ro        mt       lmc       nhv    iortho     ibulk        ig
+         42.70000E-9        47        48        20         0         1         2
+$#   ivect     ifail    itherm    ihyper      ieos      lmca    unused    unused
+         1         1         0         0         1         0                    
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+  58333.33  26923.08   70000.0       0.3       0.0       0.9     2.4572.32000E-5
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+1.00000E-4     293.0     893.0     293.0         0       0.0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+      38.8      3.63     0.213     0.142       1.0         0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+      79.5      56.9      88.2         4         0       0.0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+       1.0       151         0       0.0       0.0       0.0       0.0       0.0
+$#      p1        p2        p3        p4        p5        p6        p7        p8
+     804.01.00000E20     -1000         0       0.0       0.0       0.0       0.0
+*EOS_LINEAR_POLYNOMIAL_TITLE
+Al ball
+$#   eosid        c0        c1        c2        c3        c4        c5        c6
+         4       0.0   58330.0       0.0       0.0       0.0       0.0       0.0
+$#      e0        v0  
+       0.0       1.0
+*END
+keyword updatekind
+PART_PART
+save keywordabsolute 0
+save keywordbylongfmt 0
+save keywordbyi10fmt 0
+save outversion 10
+save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\SPH_study\M2_SPH.k"
