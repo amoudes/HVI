@@ -2,12 +2,12 @@ clc; close all; clear all;
 %% Read excel file
 copyfile Results.xlsx Results2.xlsx;
 
-T = readcell('Results2.xlsx','Sheet','mat_param','Range','D7:BB44');
+T = readcell('Results2.xlsx','Sheet','mat_param','Range','D7:BB46');
 
 delete Results2.xlsx;
 %% Input parameters
 Damage_model = 'JC';
-Material_card = 'S2';
+Material_card = 'T4';
 %% identify column
 for i = 1:length(T)
     if strcmp(T{1,i},Material_card)
@@ -31,36 +31,36 @@ if strcmp(Damage_model,'JC')
     fprintf(fid,'$#      cp        pc     spall        it        d1        d2        d3        d4\n');
     fprintf(fid,' %.3E       0.0       2.0       1.0',T{10,matID});
     
-    if T{30,matID} < 0 % d1
-        fprintf(fid,'%.3E',T{30,matID});
-    else
-        fprintf(fid,' %.3E',T{30,matID});
-    end
-    
-    if T{31,matID} < 0 % d2
-        fprintf(fid,'%.3E',T{31,matID});
-    else
-        fprintf(fid,' %.3E',T{31,matID});
-    end
-    
-    if T{32,matID} < 0 % d3
+    if T{32,matID} < 0 % d1
         fprintf(fid,'%.3E',T{32,matID});
     else
         fprintf(fid,' %.3E',T{32,matID});
     end
     
-    if T{33,matID} < 0 % d4
-        fprintf(fid,'%.3E\n',T{33,matID});
+    if T{33,matID} < 0 % d2
+        fprintf(fid,'%.3E',T{33,matID});
     else
-        fprintf(fid,' %.3E\n',T{33,matID});
+        fprintf(fid,' %.3E',T{33,matID});
+    end
+    
+    if T{34,matID} < 0 % d3
+        fprintf(fid,'%.3E',T{34,matID});
+    else
+        fprintf(fid,' %.3E',T{34,matID});
+    end
+    
+    if T{35,matID} < 0 % d4
+        fprintf(fid,'%.3E\n',T{35,matID});
+    else
+        fprintf(fid,' %.3E\n',T{35,matID});
     end
     
     fprintf(fid,'$#      d5      c2/p      erod     efmin    numint\n');
     
-    if T{34,matID} < 0 % d5
-        fprintf(fid,'%.3E',T{34,matID});
+    if T{36,matID} < 0 % d5
+        fprintf(fid,'%.3E',T{36,matID});
     else
-        fprintf(fid,' %.3E',T{34,matID});
+        fprintf(fid,' %.3E',T{36,matID});
     end
     fprintf(fid,'       0.0         01.00000E-6       1.0\n');
     fprintf(fid,'*EOS_LINEAR_POLYNOMIAL_TITLE\n');
