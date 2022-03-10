@@ -4,3 +4,5 @@ Time to read keyword file = 1.188 seconds
 Message 0
 Time to read keyword file = 1.219 seconds
 Message 0
+Time to read keyword file = 1.375 seconds
+Message 0

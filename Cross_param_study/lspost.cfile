@@ -60,3 +60,46 @@ save keywordabsolute 0
 save keywordbylongfmt 0
 save keywordbyi10fmt 0
 save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\Cross_param_study\9_A2_td0.111_v7.5.k"
+open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\T4.k"
+Message 1
+Message 0
+genselect target node
+genselect clear
+top
+meshing boxsolid create 0.000000 0.000000 0.000000 100.000000 100.000000 100.000000 10 10 10 0.000000
+ac
+meshing boxsolid reject
+meshing boxsolid create 0.000000 0.000000 0.000000 0.533300 20.000000 20.000000 10 10 10 0.000000
+ac
+meshing boxsolid reject
+meshing boxsolid create 0.000000 -20.000000 -20.000000 0.533300 20.000000 20.000000 10 10 10 0.000000
+ac
+top
+top
+home
+top
+front
+meshing boxsolid reject
+meshing boxsolid create 0.000000 -20.000000 -20.000000 0.533300 20.000000 20.000000 2 50 50 0.000000
+ac
+meshing boxsolid reject
+meshing boxsolid create 0.000000 -20.000000 -20.000000 0.533300 20.000000 20.000000 2 100 100 0.000000
+ac
+meshing boxsolid reject
+meshing boxsolid create 0.000000 -20.000000 -20.000000 0.533300 20.000000 20.000000 2 153 153 0.000000
+ac
+meshing boxsolid reject
+meshing boxsolid create 0.000000 -20.000000 -20.000000 0.533300 20.000000 20.000000 2 150 150 0.000000
+ac
+front
+home
+meshing boxsolid reject
+meshing boxsolid create 0.000000 -20.000000 -20.000000 0.533300 20.000000 20.000000 2 150 150 0.000000
+ac
+meshing boxsolid accept 21 233954 260830 target_thin
+genselect clear
+ac
+-M 1
++M 1
+partdata delete 1 
+delelement unrefn 1
