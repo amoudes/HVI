@@ -7,7 +7,7 @@ name=("1_A2_td0.0557_v5.5" "2_A2_td0.0557_v6.7" "3_A2_td0.0557_v7.5" "4_A2_td0.0
 cd Cross_parameter_study_results
 
 #for i in ${!myArray[@]};
-for i in {0..17}; 
+for i in {27..35}; 
 
 do 
 	# go into subfolder
