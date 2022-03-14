@@ -1,0 +1,20 @@
+Meeting 14-03-2022
+
+Attending:
+ Kayleigh
+ Rannveig
+ Thijs
+
+SUMMARY MEETING
+------------------------------------------------------------------------------------------------------------
+
+ - MJC mat card doesn't work with SPH. We can pick a similar aluminium card instead with JC.
+ - Flip the excel order of t/d and velocity to see if the sensitivity changes in the PCA analysis.
+ - Cloud shape is also affected by material and parameter choices. We can dedicate a section in the report
+   to a qualitive study of the cloud shape. (Maybe nicely summarize it with a table).
+ 
+ - Prepare some slides for next week Monday's meeting with Tore with PCA etc. with clear conclusions. 
+ - For now we can start writing on the home reports about what the simulations that we have done in the past
+   couple of weeks.
+
+
