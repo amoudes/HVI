@@ -1,6 +1,6 @@
 # RMF 02 Running script simulations friction 05.19.2021.r
 
-setwd("C:/Users/Kayleigh/Documents/Multiparameter analysis in R (Rannveig)")
+#setwd("C:/Users/s148946/OneDrive/Documenten/Internship/Project/Shared folder/HVI/GitHub/Multiparameter analysis in R (Rannveig)")
 getwd()
 
 #################
@@ -64,8 +64,8 @@ idc1      <- which(colnames(Imp)=='A.123');     idc1
 idc2      <- which(colnames(Imp)=='B.123');    idc2
 idc3      <- which(colnames(Imp)=='C.123');idc3
 idc4      <- which(colnames(Imp)=='Material');   idc4 
-idc5      <- which(colnames(Imp)=='t/d');   idc5
-idc6      <- which(colnames(Imp)=='Velocity');   idc6
+idc6      <- which(colnames(Imp)=='t/d');   idc6
+idc5      <- which(colnames(Imp)=='Velocity');   idc5
 idc7      <- which(colnames(Imp)=='R1'); idc7
 k         <- dim(Imp)[2];k
 D         <- Imp[,idc1:idc3]
@@ -76,7 +76,7 @@ rm(Imp)
 
 
 # Define colors
-cls.3       <- c('red','cyan','blue') 
+cls.3       <- c('red','cyan','blue','black') 
 points.3    <- c(2,15,22) 
 
 #################
@@ -117,11 +117,11 @@ plot(loadings[,1:2],cex=0.0001,
      ylim=my.ylim,
      xlim=my.xlim)
 abline(h=0,v=0,lty=1,col='gray50')
-axis(1,at=c(1:6),labels=rownames(loadings),las=2)
+axis(1,at=c(1:5),labels=rownames(loadings),las=2)
 text(loadings[,1:2], labels=rownames(loadings))
 
-#PC 3 og 4
-#my.xlim <- c(-4,3)
+# # PC 3 og 4
+# my.xlim <- c(-4,3)
 # my.ylim <- c(-5,5)
 # plot(scores[,3:4],
 #      main=paste0('PCA scores'),
@@ -138,7 +138,7 @@ text(loadings[,1:2], labels=rownames(loadings))
 #      ylab=paste0('PC4:',expl.var[4],'%'),
 #      ylim=my.ylim)
 # abline(h=0,v=0,lty=1,col='gray50')
-# axis(1,at=c(1:6),labels=rownames(loadings),las=2)
+# axis(1,at=c(1:5),labels=rownames(loadings),las=2)
 # text(loadings[,3:4], labels=rownames(loadings))
 
 
@@ -159,7 +159,7 @@ plot(loadings[,2],xaxt='n',
      ylab=paste0('PC2:',expl.var[2],'%'),
      ylim=my.ylim)
 abline(h=0,v=0,lty=1,col='gray50')
-axis(1,at=c(1:6),labels=rownames(loadings),las=2)
+axis(1,at=c(1:5),labels=rownames(loadings),las=2)
 
 my.ylim <- c(-4,4)
 plot(scores[,3],
@@ -177,7 +177,7 @@ plot(loadings[,3],xaxt='n',
      ylab=paste0('PC2:',expl.var[3],'%'),
      ylim=my.ylim)
 abline(h=0,v=0,lty=1,col='gray50')
-axis(1,at=c(1:6),labels=rownames(loadings),las=2)
+axis(1,at=c(1:5),labels=rownames(loadings),las=2)
 
 my.ylim <- c(-4,4)
 plot(scores[,4],
@@ -195,7 +195,7 @@ plot(loadings[,4],xaxt='n',
      ylab=paste0('PC2:',expl.var[4],'%'),
      ylim=my.ylim)
 abline(h=0,v=0,lty=1,col='gray50')
-axis(1,at=c(1:6),labels=rownames(loadings),las=2)
+axis(1,at=c(1:5),labels=rownames(loadings),las=2)
 dev.off()
 
 
