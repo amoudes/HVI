@@ -1,36 +1,42 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Mar-14-2022 (08:56:54)
+$# Created on Mar-14-2022 (14:19:57)
 open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\SPH_study\S2_SPH_2.k"
 Message 1
 Message 0
-front
-open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\SPH_study\A2_SPH_2.k"
-Message 1
-Message 0
-KEYWORD INPUT 167
-*CONTROL_SPH
-$#    ncbs     boxid        dt      idim   nmneigh      form     start      maxv
-         1         01.00000E20         3      1500         0       0.01.00000E15
-$#    cont     deriv       ini     ishow     ierod     icont     iavis     isymp
-         0         0         0         0         0         0         0       100
-$#    ithk     istab        ql         -   sphsort       
-         0         0      0.01                   0
-*END
-keyword updatekind
-CONTROL_SPH
-KEYWORD INPUT 167
-*CONTROL_SPH
-$#    ncbs     boxid        dt      idim   nmneigh      form     start      maxv
-         1         01.00000E20         3      1500         0       0.01.00000E15
-$#    cont     deriv       ini     ishow     ierod     icont     iavis     isymp
-         0         0         0         0         0         0         0       100
-$#    ithk     istab        ql         -   sphsort       
-         0         0      0.01                   0
-*END
-keyword updatekind
-CONTROL_SPH
-save keywordabsolute 0
-save keywordbylongfmt 0
-save keywordbyi10fmt 0
-save outversion 10
-save keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\SPH_study\A2_SPH_2.k"
+home
+open d3plot "E:\SPH_STUDY_RESULTS\S2_SPH\d3plot"
+ac
+home
+anim forward
+open d3plot "E:\SPH_STUDY_RESULTS\T4_SPH\d3plot"
+ac
+anim forward
+home
+state 1;
+anim forward
+open d3plot "E:\SPH_STUDY_RESULTS\M4_SPH\d3plot"
+ac
+home
+anim forward
+home
+open d3plot "E:\Cross_param_study\36_M4_td0.111_v7.5\d3plot"
+ac
+home
+anim forward
+open d3plot "E:\Cross_param_study\28_M4_td0.0557_v5.5\d3plot"
+ac
+anim forward
+home
+open d3plot "E:\Cross_param_study\21_T4_td0.0557_v7.5\d3plot"
+ac
+anim forward
+home
+open d3plot "E:\Cross_param_study\1_A2_td0.0557_v5.5\d3plot"
+ac
+anim forward
+home
+home
+open d3plot "E:\Cross_param_study\12_S2_td0.0557_v7.5\d3plot"
+ac
+anim forward
+home
