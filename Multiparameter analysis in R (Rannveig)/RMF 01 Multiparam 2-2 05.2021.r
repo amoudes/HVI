@@ -1,6 +1,6 @@
 # RMF 02 Running script simulations friction 05.19.2021.r
 
-#setwd("C:/Users/s148946/OneDrive/Documenten/Internship/Project/Shared folder/HVI/GitHub/Multiparameter analysis in R (Rannveig)")
+setwd("C:/Users/s148946/OneDrive/Documenten/Internship/Project/Shared folder/HVI/GitHub/Multiparameter analysis in R (Rannveig)")
 getwd()
 
 #################
