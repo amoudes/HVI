@@ -1,42 +1,25 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Mar-14-2022 (14:19:57)
+$# Created on Mar-21-2022 (09:16:50)
 open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\SPH_study\S2_SPH_2.k"
 Message 1
 Message 0
+front
 home
-open d3plot "E:\SPH_STUDY_RESULTS\S2_SPH\d3plot"
-ac
-home
-anim forward
-open d3plot "E:\SPH_STUDY_RESULTS\T4_SPH\d3plot"
-ac
-anim forward
-home
-state 1;
-anim forward
-open d3plot "E:\SPH_STUDY_RESULTS\M4_SPH\d3plot"
-ac
-home
-anim forward
-home
-open d3plot "E:\Cross_param_study\36_M4_td0.111_v7.5\d3plot"
-ac
-home
-anim forward
-open d3plot "E:\Cross_param_study\28_M4_td0.0557_v5.5\d3plot"
-ac
-anim forward
-home
-open d3plot "E:\Cross_param_study\21_T4_td0.0557_v7.5\d3plot"
-ac
-anim forward
-home
-open d3plot "E:\Cross_param_study\1_A2_td0.0557_v5.5\d3plot"
-ac
-anim forward
-home
-home
-open d3plot "E:\Cross_param_study\12_S2_td0.0557_v7.5\d3plot"
-ac
-anim forward
-home
+clearpick
+genselect target shell
+genselect target shell
+clearpick
+genselect target solid
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.512000;
+loadpan 1.375111 0.096259;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect solid add region in 0.318182 0.734671 0.552661 0.254181
+activelabel clearhilighttag
+activelabel clearhilighttag
+activelabel clearhilighttag
+genselect target part
+genselect clear
