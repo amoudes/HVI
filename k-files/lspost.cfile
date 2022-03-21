@@ -1,7 +1,28 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Mar-16-2022 (11:12:28)
-openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\k-files\M9.k"
+$# Created on Mar-21-2022 (09:57:53)
+openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\k-files\A9.k"
 Message 1
 save keywordversion 2
 save keywordversion 12
 Message 0
+partdata readlist 1 
+clearid part
+clearid part
+partdata readlist 1 
+clearid part
+clearid part
+partdata readlist 1 
+clearid part
+partdata readlist 2 
+clearid part
+clearid part
+partdata readlist 2 
+clearid part
+partdata readlist 1 
+clearid part
+displayentity Set Part off all
+displayentity Set Part on 12
+clearpick
+selectentity None
+partdata readlist 2 
+clearid part
