@@ -1,0 +1,9 @@
+cemptymodel
+openc command "para01.cfile"
+genselect target node
+genselect clear
+meshing
+cylindershell create 0,&radius &c_length &elerad &elelength 0.000000 0.000000,0.000000,1.000000,0.000000,0.000000
+meshing cylindershell accept 1 1 1 cylindershell
+ac
+output "lsppout" 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1.000000

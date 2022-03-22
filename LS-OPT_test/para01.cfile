@@ -1,0 +1,4 @@
+parameter radius 75.0
+parameter c_length 200.0
+parameter elerad 190
+parameter elelength 80
