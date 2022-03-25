@@ -69,16 +69,16 @@ $#  dt2msf   dt2mslc     imscl    unused    unused     rmscl    unused      ihdo
        0.0         0         0                           0.0                   0
 *DATABASE_GLSTAT
 $#      dt    binary      lcur     ioopt     
-1.00000E-8         0         0         1
+1.00000E-8         3         0         1
 *DATABASE_GLSTAT_MASS_PROPERTIES
 $#      dt    binary      lcur     ioopt     
-1.00000E-8         0         0         1
+1.00000E-8         3         0         1
 *DATABASE_MATSUM
 $#      dt    binary      lcur     ioopt     
-1.00000E-8         0         0         1
+1.00000E-8         3         0         1
 *DATABASE_SLEOUT
 $#      dt    binary      lcur     ioopt     
-1.00000E-8         0         0         1
+1.00000E-8         3         0         1
 *DATABASE_BINARY_D3PLOT
 $#      dt      lcdt      beam     npltc    psetid      
        0.0         0         0        30         0

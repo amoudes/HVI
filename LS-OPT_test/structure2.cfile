@@ -205,9 +205,9 @@ delelement unrefn 0
 //
 //
 // CREATE BALL
-meshing cylindersolid create 4.780000 &hmax 100 1 -7.000000 0.000000,0.000000,0.000000,0.000000,1.000000,20,0.000000
+meshing cylindersolid create 4.780000 0.255560 100 1 -7.000000 0.000000,0.000000,0.000000,0.000000,1.000000,20,0.000000
 ac
-meshing cylindersolid accept 2 14818 12077 cylindersolid
+meshing cylindersolid accept 2 24826 22093 cylindersolid
 ac
 home
 //
@@ -264,3 +264,6 @@ genselect node add part 2/0
 setnode createset 3 1 0 0 0 0 
 genselect clear
 setnode none
+//
+output "lsppout" 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1.000000
+exit
