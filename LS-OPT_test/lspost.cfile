@@ -1,15 +1,15 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Mar-25-2022 (13:31:09)
+$# Created on Mar-25-2022 (14:54:31)
 openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\structure2_test.key"
 save keywordversion 2
 save keywordversion 12
+displayentity Set Node off all
+displayentity Set Node on 2
+displayentity Set Node off all
+displayentity Set Node on 1
 home
 displayentity Set Node off all
-displayentity Set Node on 51
-home
+displayentity Set Node on 2
 displayentity Set Node off all
-displayentity Set Node on 50
-displayentity Set Node off all
-displayentity Set Node off all
-displayentity Set Node on 51
+displayentity Set Node on 1
 displayentity Set Node off all
