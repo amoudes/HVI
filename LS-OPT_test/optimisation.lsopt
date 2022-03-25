@@ -4,27 +4,27 @@
   <head>
     <title/>
     <meta name="author" content=""/>
-    <meta name="save_date" content="2022-03-25 09:41:34"/>
+    <meta name="save_date" content="2022-03-25 11:31:25"/>
     <meta name="save_exe" content="lsoptui"/>
     <meta name="save_version" content="7.0.0 revision 111699"/>
     <meta name="save_os" content="rhel8"/>
-  <meta name="dpi" content="74"/></head><variables><variable name="x_hmax" type="constant" value="0.16"/><variable name="x_t" type="constant" value="0.5"/><variable name="x_x1" value="7.5" min="5" max="10"/><variable name="x_y1" value="0" min="-5" max="5"/></variables>
+  <meta name="dpi" content="96"/></head><variables><variable name="x_hmax" type="constant" value="0.16"/><variable name="x_t" type="constant" value="0.5"/><variable name="x_x1" value="7.5" min="5" max="10"/><variable name="x_y1" value="0" min="-5" max="5"/></variables>
   <samplings>
     <sampling name="e_Sampling1"><design type="maximin_distance"><levels><level name="x_x1" numValues="2"/><level name="x_y1" numValues="2"/></levels></design><metamodel type="rbf"/><myvars><varref src="x_x1"/><varref src="x_y1"/><varref src="x_t"/><varref src="x_hmax"/></myvars>
       <stages>
         <stage name="s_CREATE_FE" type="prepro_lsprepost">
           <guidata>
-            <position y="139" x="612"/>
+            <position y="180" x="777"/>
           </guidata>
-          <command>lspp</command>
-          <inputfile>structure2.cfile</inputfile><dynaoptions/>
+          <command>/usr/local/bin/lsprepost48 c=LsPrepostOpt.inp -nographics</command>
+          <inputfile basefilename="LsPrepostOpt.inp">structure2.cfile</inputfile><dynaoptions/>
           <scheduling><resourceref resource="LSPREPOST" units="32"/>
             
           </scheduling><myvars><varref src="x_x1"/><varref src="x_y1"/><varref src="x_t"/><varref src="x_hmax"/></myvars><histories/><multihistories/><responses><response name="x_lsppout">response_FILE lsppout</response></responses><multiresponses/>
         </stage>
       <stage name="s_RUN_DYNA" type="dyna960">
           <guidata>
-            <position y="217.166667" x="613.166667"/>
+            <position y="282" x="795"/>
           </guidata><dependson stage="s_CREATE_FE"><filetransfer op="copy" srcfilename="lsppout" onerror="fail" dstfilename="lsppout"/></dependson>
           <command addinputarg="on">lsdyna</command>
           <inputfile>structure2_test.key</inputfile><dynaoptions/>
