@@ -43,7 +43,7 @@ fclose(fileID);
 %% Write output file
 if isfile(writefile)
     delete(writefile)
-    fprintf('file deleted\n');
+%     fprintf('file deleted\n');
 end
 
 edit(writefile);
@@ -52,6 +52,7 @@ edit(writefile);
 nodesz = [nodesz; zeros(mod(length(nodesz),8),1)];
 
 fid = fopen(writefile,'w');
+fprintf(fid,'*KEYWORD\n');
 fprintf(fid,'*SET_NODE_LIST\n');
 fprintf(fid,'$#     sid       da1       da2       da3       da4    solver\n');
 fprintf(fid,'         1       0.0       0.0       0.0       0.0MECH\n');
@@ -108,15 +109,3 @@ end
 fprintf(fid,'*END\n');
 
 fclose(fid);
-
-
-
-
-
-
-
-
-
-
-
-

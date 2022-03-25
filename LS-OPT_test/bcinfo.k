@@ -1,3 +1,4 @@
+*KEYWORD
 *SET_NODE_LIST
 $#     sid       da1       da2       da3       da4    solver
          1       0.0       0.0       0.0       0.0MECH
