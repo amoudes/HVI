@@ -266,3 +266,4 @@ genselect clear
 setnode none
 //
 output "lsppout" 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1.000000
+exit

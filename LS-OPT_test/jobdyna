@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#SBATCH -J lsdyna
+#SBATCH -o lsdyna.%j.out
+#SBATCH -N 1
+#SBATCH -n 16
+#SBATCH --ntasks-per-core=1
+
+export LSTC_LICENSE=network
+export LSTC_LICENSE_SERVER=129.241.89.45
+
+source /opt/intel/compilers_and_libraries/linux/bin/compilervars.sh intel64
+source /opt/intel/impi/2018.4.274/bin64/mpivars.sh intel64
+
+export I_MPI_ADJUST_BCAST=1
+export I_MPI_ADJUST_ALLREDUCE=5
+export I_MPI_PIN_CELL=core
+export I_MPI_PIN_PROCESSOR_EXCLUDE_LIST=48-95
+export I_MPI_FABRICS=shm:ofa
+export I_MPI_PRINT_VERSION=on
+export I_MPI_DEBUG=4
+export I_MPI_DEBUG_OUTPUT=jobstat
+
+echo $SLURM_NTASKS 
+echo $SLURM_NPROCS
+
+mpirun -prefork -np $SLURM_NTASKS /opt/lstc/mppdyna-eos-v2 i=structure2.cfile
