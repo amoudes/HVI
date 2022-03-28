@@ -233,4 +233,16 @@ $#    ipid     itype        nq     ipdes     isdes       rsf    outdes     ibond
 *INCLUDE
 $#                                                                      filename
 lsppout
+*INCLUDE
+$#                                                                      filename
+bcinfo.k
+*BOUNDARY_SPC_SET_ID
+$#      id                                                               heading
+         1Fix Z
+$#    nsid       cid      dofx      dofy      dofz     dofrx     dofry     dofrz
+         1         0         0         0         1         0         0         0
+$#      id                                                               heading
+         2Fix Y
+$#    nsid       cid      dofx      dofy      dofz     dofrx     dofry     dofrz
+         2         0         0         1         0         0         0         0
 *END

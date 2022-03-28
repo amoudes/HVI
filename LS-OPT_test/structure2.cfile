@@ -179,7 +179,7 @@ nlmesh2 clearsel
 genselect target edge
 genselect target segment
 genselect element add part 2/0 
-elgenerate solid solidfacedrag 1 9879 &hmax 1 0 0 0 0 0 4 
+elgenerate solid solidfacedrag 1 9879 &hmax 1 0 0 0 0 0 4
 genselect clear
 elgenerate accept
 //
@@ -207,7 +207,7 @@ delelement unrefn 0
 // CREATE BALL
 meshing cylindersolid create 4.780000 &hmax 100 1 -7.000000 0.000000,0.000000,0.000000,0.000000,1.000000,20,0.000000
 ac
-meshing cylindersolid accept 2 24826 22093 cylindersolid
+meshing cylindersolid accept 2 24826 22093 Ball
 ac
 home
 //
@@ -255,16 +255,29 @@ genselect node add region in 0.699752 0.330011 0.231390 0.399779
 setnode createset 2 1 0 0 0 0 
 genselect clear
 home
-// NODES SET FOR BALL
-setnode
-genselect target node
-genselect clear
-genselect clear
-genselect node add part 2/0 
-setnode createset 3 1 0 0 0 0 
-genselect clear
-setnode none
 //
-output "lsppout" 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1.000000
-save keyword "temp_model.key"
+//
+//
+// EDIT PART PARAMETERS
+KEYWORD INPUT 1
+*PART
+$#                                                                         title
+Target
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         1         1         2         2         0         0         0         0
+*END
+keyword updatekind
+PART_PART
+KEYWORD INPUT 2
+*PART
+$#                                                                         title
+Ball
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         2         2         1         2         0         0         0         0
+*END
+//
+//
+// SAVE OUTPUT
+$output "lsppout" 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1.000000
+save keyword "mesh.key"
 exit
