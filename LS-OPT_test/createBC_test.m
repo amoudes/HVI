@@ -7,38 +7,12 @@ ytop =  20; % upper bound geometry
 ybot = -20; % lower bound geometry
 
 TOL_g = 1e-4; % geometric tolerance
-%% read lsspout file
-fileID = fopen(readfile,'r');
+%%
+nodesz = 1:106;
+nodesy = 2:2:137;
 
-tline = fgetl(fileID);
-
-flag1 = 0;                                          % flag for node section
-nodesz = [];
-nodesy = [];
-while ischar(tline)
-    % start analyzing after NODE
-    if contains(tline,'NODE')
-        flag1 = 1;
-    end
-  
-    if flag1
-%         disp(tline)
-        data = str2num(tline);
-        
-        if ~isempty(data)
-            % store data for BC z
-            nodesz = [nodesz; data(1,1)];
-            
-            % store data for BC y
-            if data(1,3) > ytop-TOL_g || data(1,3) < ybot+TOL_g
-                nodesy = [nodesy; data(1,1)];
-            end
-        end
-    end
-    % Read next line
-    tline = fgetl(fileID);
-end
-fclose(fileID);
+nodesz = nodesz';
+nodesy = nodesy';
 
 %% Write output file
 if isfile(writefile)
@@ -81,7 +55,7 @@ for i = 1:length(nodesz)
 end
 
 % Write Y node list
-nodesy = [nodesy; zeros(8-mod(length(nodesy),8),1)];
+nodesy = [nodesy; zeros(mod(8-length(nodesy),8),1)];
 fprintf(fid,'*SET_NODE_LIST\n');
 fprintf(fid,'         2       0.0       0.0       0.0       0.0MECH\n');
 
