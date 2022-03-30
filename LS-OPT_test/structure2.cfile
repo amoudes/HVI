@@ -207,7 +207,7 @@ delelement unrefn 0
 // CREATE BALL
 meshing cylindersolid create 4.780000 &hmax 100 1 -7.000000 0.000000,0.000000,0.000000,0.000000,1.000000,20,0.000000
 ac
-meshing cylindersolid accept 2 24826 22093 Ball
+meshing cylindersolid accept 2 84826 92093 Ball
 ac
 home
 //
