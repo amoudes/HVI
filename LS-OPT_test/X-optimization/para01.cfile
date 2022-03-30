@@ -1,4 +1,4 @@
-parameter x1 1.05
-parameter y1 -0.8
+parameter x1 7.5
+parameter y1 0.0
 parameter t 0.5
 parameter hmax 0.25
