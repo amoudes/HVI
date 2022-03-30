@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE lsoptproject SYSTEM "http://www.lstc.com/dtd/lsopt/7_0_0">
+<lsoptproject version="7.0.0">
+  <head>
+    <title/>
+    <meta name="author" content=""/>
+    <meta name="save_date" content="2022-03-30 09:54:39"/>
+    <meta name="save_exe" content="lsoptui"/>
+    <meta name="save_version" content="7.0.0 revision 111699"/>
+    <meta name="save_os" content="rhel8"/>
+  <meta name="dpi" content="74"/></head><variables><variable name="x_hmax" type="constant" value="0.25"/><variable name="x_t" type="constant" value="0.5"/><variable name="x_x1" value="7.5" min="1.5" max="13.5"/><variable name="x_y1" value="0" min="-5" max="5"/></variables>
+  <samplings>
+    <sampling name="e_Sampling1"><design type="maximin_distance"><levels><level name="x_x1" numValues="2"/><level name="x_y1" numValues="2"/></levels></design><metamodel type="rbf"/><myvars><varref src="x_x1"/><varref src="x_y1"/><varref src="x_t"/><varref src="x_hmax"/></myvars>
+      <stages>
+        <stage name="s_CREATE_FE" type="prepro_lsprepost">
+          <guidata>
+            <position y="133" x="614"/>
+          </guidata>
+          <command displaygraphics="on">/usr/local/bin/lsprepost48 c=LsPrepostOpt.cfile -nographics</command>
+          <inputfile basefilename="LsPrepostOpt.cfile">structure2.cfile</inputfile><dynaoptions/>
+          <scheduling><resourceref resource="CPU" units="1"/>
+            
+          </scheduling><myvars><varref src="x_x1"/><varref src="x_y1"/><varref src="x_t"/><varref src="x_hmax"/></myvars><histories/><multihistories/><responses/><multiresponses/>
+        </stage>
+      <stage name="s_RUN_DYNA" type="dyna960">
+          <guidata>
+            <position y="290" x="615"/>
+          </guidata><dependson stage="s_CREATE_FE"><filetransfer op="copy" srcfilename="mesh.key" onerror="fail" dstfilename="mesh.key"/></dependson><fileops/>
+          <command addinputarg="on">${LSPROJHOME}/lsdyna</command>
+          <inputfile basefilename="DynaOpt.key">structure2_test.key</inputfile><dynaoptions/>
+          <scheduling proxy="none" queuer="slurm"><recover dynadb="d3plot"/><recover file="output"/><resourceref resource="CPU" units="4"/>
+            
+          </scheduling><myvars/><histories/><multihistories/><responses><response name="x_GLSTAT1">BinoutResponse -res_type GLStat -cmp internal_energy  -select TIME </response></responses><multiresponses/>
+        </stage></stages>
+    </sampling>
+  </samplings><objectives goal="maximize"><objective src="x_GLSTAT1"/></objectives><constraints/>
+  <resources><resource name="CPU" limit="48"/><resource name="LSO_EXTRACTOR" limit="40" global="true"/>
+    
+  </resources>
+  <task method="direct_opt"><optopts><seqopts/></optopts><optalg><gaopts generations="10" popsize="12"/><asaopts/><psoopts/><lfopopts/><paretoopts/></optalg><mcopts/></task>
+</lsoptproject>
