@@ -1,13 +1,19 @@
-$# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Mar-30-2022 (11:22:32)
-open command "C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\X-optimization\mesh.key"
-Message 1
-Message 0
-createrpoint 1 0.000000 -20.000000
+openc command "create_mesh.cfile" nodialog
+bgstyle fade
+openc
+parameter x1 7.5
+parameter y1 0.0
+parameter t 0.5
+parameter hmax 0.25
+Finished reading command file!
+cemptymodel
+genselect target edge
+genselect clear
+mesh2d createrpoint 1 0.000000 -20.000000
 mesh2d createrpoint 2 15.000000 -20.000000
 mesh2d createrpoint 3 15.000000 20.000000
 mesh2d createrpoint 4 0.000000 20.000000
-mesh2d createrpoint 5 &x1 &y1
+mesh2d createrpoint 5 7.5 0.0
 mesh2d acen
 mesh2d createline 6 1 2
 ac
@@ -29,19 +35,19 @@ undogeom enter
 genselect occobject add occobject  5e
 genselect occobject add occobject  8e
 genselect occobject add occobject  4e
-offsetgeom  planeedgewire &t tags 2 0 0 5e 8 4
+offsetgeom  planeedgewire 0.5 tags 2 0 0 5e 8 4
 genselect occobject add occobject  8e
 genselect occobject add occobject  7e
 genselect occobject add occobject  1e
-offsetgeom  planeedgewire &t tags 2 0 0 8e 7 1
+offsetgeom  planeedgewire 0.5 tags 2 0 0 8e 7 1
 genselect occobject add occobject  7e
 genselect occobject add occobject  6e
 genselect occobject add occobject  2e
-offsetgeom  planeedgewire &t tags 2 0 0 7e 6 2
+offsetgeom  planeedgewire 0.5 tags 2 0 0 7e 6 2
 genselect occobject add occobject  6e
 genselect occobject add occobject  5e
 genselect occobject add occobject  3e
-offsetgeom  planeedgewire &t tags 2 0 0 6e 5 3
+offsetgeom  planeedgewire 0.5 tags 2 0 0 6e 5 3
 genselect clear
 genselect target occobject
 occfilter clear
@@ -54,8 +60,11 @@ genselect target occobject
 occfilter add edge vertex RefAxis
 sketch setpln 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 1.00000000 1.00000000 0.00000000 0.00000000
 ac
+zoom 1.5
 sketch line
 change to sketch
+change to sketch
+Invalid command change!
 sketch point coord (15, 20)
 sketch point coord (0, 20)
 sketch point coord (0, -20)
@@ -70,8 +79,10 @@ occfilter clear
 occfilter add Edge Wire
 undogeom enter
 nlmesh2 switch 4 1 10.000000 
-nlmesh2 sizepara 0 &hmax
+nlmesh2 sizepara 0 0.25
 NLine mesh command failed.
+NLine mesh command failed.
+Invalid command nline!
 genselect clear
 nlmesh2 clearsel
 nlmesh2 clearsel
@@ -158,12 +169,14 @@ nlmesh2 seledge 2w 0 1
 nlmesh2 mesh 2 4 0
 nlmesh2 accept 2
 genselect clear
+genselect clear
 nlmesh2 clearsel
 nlmesh2 clearsel
 genselect target edge
 genselect target segment
 genselect element add part 2/0 
-elgenerate solid solidfacedrag 1 9879 &hmax 1 0 0 0 0 0 4
+elgenerate solid solidfacedrag 1 9879 0.25 1 0 0 0 0 0 4
+genselect clear
 genselect clear
 elgenerate accept
 genselect clear
@@ -176,15 +189,18 @@ genselect clear
 geomag delnoundo  1e 2 3 4 5 6 7 8 1w 2 3 4 6
 partdata readlist 2 
 clearid part
+Shell Part #2 
 clearid part
 Shell Part #2 
 partdata delete 2 
+delelement unrefn 1
 delelement unrefn 0
 delelement unrefn 1
 delelement unrefn 0
-meshing cylindersolid create 8 &hmax 100 1 -7.000000 0.000000,0.000000,0.000000,0.000000,1.000000,20,0.000000
+meshing cylindersolid create 4.780000 0.25 100 1 -7.000000 7.000000,0.000000,0.000000,0.000000,1.000000,20,0.000000
 ac
 meshing cylindersolid accept 2 84826 92093 Ball
+No duplicated nodes found!
 ac
 home
 genselect clear
@@ -204,6 +220,7 @@ genselect clear
 genselect target node
 genselect clear
 genselect clear
+pan 9.671716 13.112156;
 loadstate 1;
 loadquat 0.000000 0.000000 0.000000 1.000000;
 loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
@@ -212,6 +229,8 @@ loadpan 9.671716 13.112156;
 loadeyepos 0.000000 0.000000 0.000000;
 loadupvect 0.000000 1.000000 0.000000;
 genselect node add region in 0.632134 0.869324 0.138958 0.834994
+pan 7.800359 -2.444882;
+pan 7.078876 -17.911734;
 loadstate 1;
 loadquat 0.000000 0.000000 0.000000 1.000000;
 loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
@@ -229,3 +248,4 @@ KEYWORD INPUT 2
 $output "lsppout" 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1.000000
 save keyword "mesh.key"
 exit
+Save Config. parameters to file C:\Users\Kayleigh\AppData\Roaming\LSTC\LS-PrePost4.8\lsppconf

@@ -1,15 +1,31 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Mar-30-2022 (11:09:31)
-openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\X-optimization\structure.key"
-save keywordversion 2
-save keywordversion 12
+$# Created on Mar-30-2022 (11:27:47)
+open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\X-optimization\mesh.key"
 home
+genselect target node
+genselect clear
+meshing cylindersolid create 30.000000 50.000000 20 5 0.000000 0.000000,0.000000,1.000000,0.000000,0.000000,0,0.000000
+meshing cylindersolid modify 1 30.000000 50.000000 20 5 0.000000 0.000000,0.000000,0.000000,0.000000,1.000000
+meshing cylindersolid modify 1 4.780000 1.000000 20 5 -1.000000 0.000000,0.000000,0.000000,0.000000,1.000000
+meshing cylindersolid modify 1 4.780000 1.000000 20 5 -7.000000 0.000000,0.000000,0.000000,0.000000,1.000000
+meshing cylindersolid modify 1 4.780000 1.000000 20 5 -7.000000 1.000000,0.000000,0.000000,0.000000,1.000000
+meshing cylindersolid modify 1 4.780000 1.000000 20 5 -7.000000 7.000000,0.000000,0.000000,0.000000,1.000000
+meshing cylindershell reject
+meshing cylindersolid create 4.780000 1.000000 20 5 -7.000000 0.000000,0.000000,0.000000,0.000000,1.000000,0,0.000000
+meshing cylindersolid modify 1 4.780000 1.000000 20 5 -7.000000 5.000000,0.000000,0.000000,0.000000,1.000000
+meshing cylindersolid modify 1 4.780000 1.000000 20 5 -7.000000 10.000000,0.000000,0.000000,0.000000,1.000000
+meshing cylindershell reject
 measure select 1
-genselect target element
-measure type 11
-genselect target part
-genselect part add part 1/0 
+clearpick
+measure dist N2858/0 N5132/0 ;
+clearpick
+measure dist N439/0 N161/0 ;
 measure type 0
 measure select 0
 measure type 0
 measure type 0
+meshing cylindersolid create 4.780000 1.000000 20 5 -7.000000 10.000000,0.000000,0.000000,0.000000,1.000000,0,0.000000
+meshing cylindersolid modify 1 4.780000 1.000000 20 5 -7.000000 9.000000,0.000000,0.000000,0.000000,1.000000
+meshing cylindersolid modify 1 4.780000 1.000000 20 5 -7.000000 5.000000,0.000000,0.000000,0.000000,1.000000
+meshing cylindersolid modify 1 4.780000 1.000000 20 5 -7.000000 7.000000,0.000000,0.000000,0.000000,1.000000
+meshing cylindershell reject
