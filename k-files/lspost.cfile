@@ -1,16 +1,6 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Mar-28-2022 (11:05:17)
-open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\k-files\A2.k"
+$# Created on Mar-30-2022 (10:52:19)
+openc keyword "A2.k"
 Message 1
-save keywordversion 2
 save keywordversion 12
 Message 0
-measure select 1
-measure dist N120338/0 N120341/0 ;
-measure select 0
-measure type 0
-measure type 0
-open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\SPH_study\T4_SPH_2.k"
-Message 1
-Message 0
-selectentity None
