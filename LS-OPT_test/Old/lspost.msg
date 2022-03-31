@@ -1,99 +1,261 @@
-openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\structure2_test.key"
-save keywordversion 2
-save keywordversion 12
-Time to read keyword file = 0.250 seconds
-Time to process element data = 0.000 seconds
-Finished reading model
+openc command "create_mesh.cfile" nodialog
+bgstyle fade
+openc
+parameter radius 75.0
+parameter c_length 200.0
+parameter elerad 190
+parameter elelength 80
+Finished reading command file!
+cemptymodel
+genselect target edge
+genselect clear
+mesh2d createrpoint 1 0.000000 -20.000000
+mesh2d createrpoint 2 15.000000 -20.000000
+mesh2d createrpoint 3 15.000000 20.000000
+mesh2d createrpoint 4 0.000000 20.000000
+mesh2d createrpoint 5 &x1 &y1
+mesh2d acen
+mesh2d createline 6 1 2
+ac
+ac
+mesh2d createline 7 2 3
+mesh2d createline 8 3 4
+mesh2d createline 9 4 1
+mesh2d createline 10 5 4
+mesh2d createline 11 5 3
+mesh2d createline 12 5 2
+mesh2d createline 13 5 1
+mesh2d sbdown
 home
-zoomhere -0.011863 -0.002857 0.800000;
-zoomhere -0.011863 -0.004286 0.640000;
-zoomhere -0.011863 -0.007143 0.512000;
-zoomhere -0.011863 -0.012857 0.409600;
-zoomhere -0.011863 -0.020000 0.327680;
-zoomhere -0.008374 -0.065714 0.262144;
-zoomhere -0.008374 -0.065714 0.209715;
-zoomhere -0.009770 -0.065714 0.167772;
-zoomhere -0.011863 -0.065714 0.134218;
-zoomhere -0.013957 -0.065714 0.107374;
-zoomhere -0.015352 -0.064286 0.085899;
-zoomhere -0.019539 -0.060000 0.068719;
-zoomhere -0.035590 -0.024286 0.054975;
-zoomhere -0.043964 0.054286 0.068719;
-zoomhere -0.043964 0.054286 0.085899;
-zoomhere -0.043964 0.051429 0.107374;
-zoomhere -0.043964 0.050000 0.134217;
-zoomhere -0.043964 0.047143 0.167771;
-zoomhere -0.043964 0.045714 0.209714;
-zoomhere -0.043964 0.044286 0.262142;
-zoomhere -0.043964 0.042857 0.327678;
-zoomhere -0.043964 0.040000 0.409597;
-zoomhere -0.050244 0.054286 0.511996;
-zoomhere -0.050942 0.055714 0.639995;
-zoomhere -0.046057 0.057143 0.511996;
-zoomhere -0.046057 0.055714 0.409597;
-zoomhere -0.046057 0.052857 0.327678;
-zoomhere -0.045359 0.052857 0.262142;
-zoomhere -0.045359 0.052857 0.209714;
-zoomhere -0.044662 0.051429 0.167771;
-zoomhere -0.044662 0.051429 0.134217;
-zoomhere -0.043266 0.050000 0.107374;
-zoomhere -0.043266 0.050000 0.085899;
-zoomhere -0.043266 0.050000 0.068719;
-zoomhere -0.043266 0.050000 0.054975;
-zoomhere -0.043266 0.050000 0.043980;
-zoomhere -0.043266 0.050000 0.035184;
-zoomhere -0.066992 -0.115714 0.043980;
-zoomhere -0.066992 -0.115714 0.054975;
-zoomhere -0.066992 -0.115714 0.068719;
-zoomhere -0.066992 -0.115714 0.085899;
-zoomhere -0.066992 -0.115714 0.107374;
-zoomhere -0.066992 -0.117143 0.134217;
-zoomhere -0.066992 -0.117143 0.107374;
-zoomhere -0.069086 -0.124286 0.134217;
-zoomhere -0.069086 -0.124286 0.167771;
-zoomhere -0.069086 -0.125714 0.209714;
-zoomhere -0.069086 -0.125714 0.262142;
-zoomhere -0.089323 -0.124286 0.327678;
-zoomhere -0.089323 -0.124286 0.409597;
-zoomhere -0.089323 -0.124286 0.511996;
-zoomhere -0.089323 -0.124286 0.639995;
-zoomhere -0.088625 -0.127143 0.799994;
-zoomhere -0.088625 -0.127143 0.999992;
-zoomhere -0.089323 -0.128571 1.249990;
-pan 5.649330 -3.265559;
-zoomhere -0.059316 -0.087143 0.999992;
-pan 4.158175 -2.711701;
-zoomhere -0.069784 0.050000 0.799994;
-zoomhere -0.064899 0.042857 0.639995;
-zoomhere -0.064201 0.040000 0.511996;
-zoomhere -0.064201 0.038571 0.409597;
-zoomhere -0.063503 0.038571 0.327678;
-zoomhere -0.063503 0.038571 0.262142;
-zoomhere -0.063503 0.038571 0.209714;
-zoomhere -0.062107 0.037143 0.167771;
-zoomhere -0.062107 0.037143 0.134217;
-zoomhere -0.062107 0.037143 0.107374;
-zoomhere -0.062107 0.038571 0.085899;
-zoomhere -0.062107 0.041429 0.068719;
-zoomhere -0.063503 0.050000 0.054975;
-zoomhere -0.103280 0.132857 0.068719;
-zoomhere -0.120726 0.120000 0.085899;
-zoomhere -0.128402 0.112857 0.107374;
-zoomhere -0.131891 0.108571 0.134217;
-zoomhere -0.133985 0.107143 0.167771;
-zoomhere -0.134682 0.107143 0.209714;
-zoomhere -0.135380 0.107143 0.262142;
-zoomhere -0.145848 0.077143 0.327678;
-zoomhere -0.145848 0.077143 0.409597;
-zoomhere -0.145848 0.077143 0.511996;
-zoomhere -0.145848 0.075714 0.639995;
-zoomhere -0.146546 0.075714 0.799994;
-zoomhere -0.146546 0.074286 0.999992;
-zoomhere -0.146546 0.072857 1.249990;
-pan 7.367502 -2.793677;
-zoomhere -0.079553 0.067143 0.999992;
-zoomhere -0.133985 0.024286 1.249990;
-zoomhere -0.133985 0.008571 1.562487;
-zoomhere -0.129100 0.038571 1.249990;
-pan 8.031438 -1.213763;
+ac
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+genselect occobject add occobject  5e
+genselect occobject add occobject  8e
+genselect occobject add occobject  4e
+offsetgeom  planeedgewire &t tags 2 0 0 5e 8 4
+genselect occobject add occobject  8e
+genselect occobject add occobject  7e
+genselect occobject add occobject  1e
+offsetgeom  planeedgewire &t tags 2 0 0 8e 7 1
+genselect occobject add occobject  7e
+genselect occobject add occobject  6e
+genselect occobject add occobject  2e
+offsetgeom  planeedgewire &t tags 2 0 0 7e 6 2
+genselect occobject add occobject  6e
+genselect occobject add occobject  5e
+genselect occobject add occobject  3e
+offsetgeom  planeedgewire &t tags 2 0 0 6e 5 3
+genselect clear
+genselect target occobject
+occfilter clear
+occfilter add Edge Face Wire RefPlane
+undogeom enter
+sketch loadall
+genselect target occobject
+occfilter add edge vertex RefAxis
+genselect target occobject
+occfilter add edge vertex RefAxis
+sketch setpln 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 1.00000000 1.00000000 0.00000000 0.00000000
+ac
+zoom 1.5
+sketch line
+change to sketch
+change to sketch
+Invalid command change!
+sketch point coord (15, 20)
+sketch point coord (0, 20)
+sketch point coord (0, -20)
+sketch point coord (15, -20)
+sketch point coord (15, 20)
+sketch close
+genselect target occobject
+occfilter clear
+occfilter add Edge Face Wire RefPlane
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+nlmesh2 switch 4 1 10.000000 
+nlmesh2 sizepara 0 &hmax
+NLine mesh command failed.
+NLine mesh command failed.
+Invalid command nline!
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w
+nlmesh2 seledge 6w 0 1
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w 4
+nlmesh2 seledge 6w 0 1
+nlmesh2 seledge 4w 0 1
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w 4 3
+nlmesh2 seledge 6w 0 1
+nlmesh2 seledge 4w 0 1
+nlmesh2 seledge 3w 0 1
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w 4 3 1
+nlmesh2 seledge 6w 0 1
+nlmesh2 seledge 4w 0 1
+nlmesh2 seledge 3w 0 1
+nlmesh2 seledge 1w 0 1
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w 4 3 1 1
+nlmesh2 seledge 6w 0 1
+nlmesh2 seledge 4w 0 1
+nlmesh2 seledge 3w 0 1
+nlmesh2 seledge 1w 0 1
+nlmesh2 seledge 1w 0 1
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w 4 3 1 1 1
+nlmesh2 seledge 6w 0 1
+nlmesh2 seledge 4w 0 1
+nlmesh2 seledge 3w 0 1
+nlmesh2 seledge 1w 0 1
+nlmesh2 seledge 1w 0 1
+nlmesh2 seledge 1w 0 1
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w 4 3 1 1 1 1
+nlmesh2 seledge 6w 0 1
+nlmesh2 seledge 4w 0 1
+nlmesh2 seledge 3w 0 1
+nlmesh2 seledge 1w 0 1
+nlmesh2 seledge 1w 0 1
+nlmesh2 seledge 1w 0 1
+nlmesh2 seledge 1w 0 1
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w 4 3 1 1 1 1 2
+nlmesh2 seledge 6w 0 1
+nlmesh2 seledge 4w 0 1
+nlmesh2 seledge 3w 0 1
+nlmesh2 seledge 1w 0 1
+nlmesh2 seledge 2w 0 1
+nlmesh2 mesh 2 4 0
+NLine mesh command failed.
+nlmesh2 accept 2
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect target edge
+genselect target segment
+genselect element add part 2/0 
+Select part ID 2 not found!
+elgenerate solid solidfacedrag 1 9879 &hmax 1 0 0 0 0 0 4
+Select solid element first
+genselect clear
+elgenerate accept
+genselect clear
+genselect occobject add occobjectcheck  1e
+genselect clear
+genselect occobject add occobjectcheck  1e 2 3 4 5 6 7 8 1w 2 3 4 6
+genselect clear
+genselect occobject add occobjectcheck  1e  2  3  4  5  6  7  8  1w  2  3  4  6 
+genselect clear
+geomag delnoundo  1e 2 3 4 5 6 7 8 1w 2 3 4 6
+partdata readlist 2 
+clearid part
+clearid part
+Shell Part #2 
+partdata delete 2 
+delelement unrefn 0
+delelement unrefn 1
+delelement unrefn 0
+meshing cylindersolid create 4.780000 &hmax 100 1 -7.000000 0.000000,0.000000,0.000000,0.000000,1.000000,20,0.000000
+ac
+meshing cylindersolid accept 2 84826 92093 Ball
+3076 duplicated nodes found
+Element 84826 is deleted
+Element 84827 is deleted
+Element 84828 is deleted
+Element 84829 is deleted
+Element 84830 is deleted
+Element 84831 is deleted
+Element 84832 is deleted
+Element 84833 is deleted
+Element 84834 is deleted
+Total 3025 elements are deleted
+ac
+home
+genselect clear
+setnode
+genselect target node
+genselect clear
+genselect clear
+genselect node add part 2/0 
+genselect node add part 1/0 
+Select part ID 1 not found!
+setnode createset 1 1 0 0 0 0 
+genselect clear
+setnode none
+setnode
+genselect target node
+genselect clear
+genselect clear
+genselect target node
+genselect clear
+genselect clear
+pan 9.671716 13.112156;
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.512000;
+loadpan 9.671716 13.112156;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.632134 0.869324 0.138958 0.834994
+pan 7.800359 -2.444882;
+pan 7.078876 -17.911734;
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.512000;
+loadpan 7.078876 -17.911734;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.699752 0.330011 0.231390 0.399779
+setnode createset 2 1 0 0 0 0 
+genselect clear
+home
+KEYWORD INPUT 1
+keyword updatekind
+KEYWORD INPUT 2
+output "lsppout" 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1.000000
+save keyword "mesh.key"
+exit
 Save Config. parameters to file C:\Users\s148946\AppData\Roaming\LSTC\LS-PrePost4.8\lsppconf
