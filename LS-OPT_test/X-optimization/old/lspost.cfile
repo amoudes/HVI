@@ -1,6 +1,9 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Mar-31-2022 (13:51:08)
+$# Created on Mar-31-2022 (11:10:31)
 openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\X-optimization\structure.key"
 save keywordversion 2
 save keywordversion 12
-home
+displayentity Set Node off all
+displayentity Set Node on 1
+displayentity Set Node off all
+displayentity Set Node on 2

@@ -219,8 +219,8 @@ setnode
 genselect target node
 genselect clear
 genselect clear
-genselect node add part 1/0 
 genselect node add part 2/0 
+genselect node add part 1/0 
 setnode createset 1 1 0 0 0 0 
 genselect clear
 setnode none
@@ -278,6 +278,6 @@ $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
 //
 //
 // SAVE OUTPUT
-$output "lsppout" 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1.000000
-save keyword "mesh.key"
+output "lsppout" 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1.000000
+$save keyword "mesh.key"
 exit
