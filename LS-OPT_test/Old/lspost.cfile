@@ -1,6 +1,237 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Mar-30-2022 (09:47:55)
-openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\structure2_test.key"
-save keywordversion 2
-save keywordversion 12
+$# Created on Mar-31-2022 (09:45:44)
+bgstyle fade
+openc
+parameter radius 75.0
+parameter c_length 200.0
+parameter elerad 190
+parameter elelength 80
+cemptymodel
+genselect target edge
+genselect clear
+mesh2d createrpoint 1 0.000000 -20.000000
+mesh2d createrpoint 2 15.000000 -20.000000
+mesh2d createrpoint 3 15.000000 20.000000
+mesh2d createrpoint 4 0.000000 20.000000
+mesh2d createrpoint 5 &x1 &y1
+mesh2d acen
+mesh2d createline 6 1 2
+ac
+ac
+mesh2d createline 7 2 3
+mesh2d createline 8 3 4
+mesh2d createline 9 4 1
+mesh2d createline 10 5 4
+mesh2d createline 11 5 3
+mesh2d createline 12 5 2
+mesh2d createline 13 5 1
+mesh2d sbdown
 home
+ac
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+genselect occobject add occobject  5e
+genselect occobject add occobject  8e
+genselect occobject add occobject  4e
+offsetgeom  planeedgewire &t tags 2 0 0 5e 8 4
+genselect occobject add occobject  8e
+genselect occobject add occobject  7e
+genselect occobject add occobject  1e
+offsetgeom  planeedgewire &t tags 2 0 0 8e 7 1
+genselect occobject add occobject  7e
+genselect occobject add occobject  6e
+genselect occobject add occobject  2e
+offsetgeom  planeedgewire &t tags 2 0 0 7e 6 2
+genselect occobject add occobject  6e
+genselect occobject add occobject  5e
+genselect occobject add occobject  3e
+offsetgeom  planeedgewire &t tags 2 0 0 6e 5 3
+genselect clear
+genselect target occobject
+occfilter clear
+occfilter add Edge Face Wire RefPlane
+undogeom enter
+sketch loadall
+genselect target occobject
+occfilter add edge vertex RefAxis
+genselect target occobject
+occfilter add edge vertex RefAxis
+sketch setpln 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 1.00000000 1.00000000 0.00000000 0.00000000
+ac
+sketch line
+change to sketch
+sketch point coord (15, 20)
+sketch point coord (0, 20)
+sketch point coord (0, -20)
+sketch point coord (15, -20)
+sketch point coord (15, 20)
+sketch close
+genselect target occobject
+occfilter clear
+occfilter add Edge Face Wire RefPlane
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+nlmesh2 switch 4 1 10.000000 
+nlmesh2 sizepara 0 &hmax
+NLine mesh command failed.
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w
+nlmesh2 seledge 6w 0 1
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w 4
+nlmesh2 seledge 6w 0 1
+nlmesh2 seledge 4w 0 1
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w 4 3
+nlmesh2 seledge 6w 0 1
+nlmesh2 seledge 4w 0 1
+nlmesh2 seledge 3w 0 1
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w 4 3 1
+nlmesh2 seledge 6w 0 1
+nlmesh2 seledge 4w 0 1
+nlmesh2 seledge 3w 0 1
+nlmesh2 seledge 1w 0 1
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w 4 3 1 1
+nlmesh2 seledge 6w 0 1
+nlmesh2 seledge 4w 0 1
+nlmesh2 seledge 3w 0 1
+nlmesh2 seledge 1w 0 1
+nlmesh2 seledge 1w 0 1
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w 4 3 1 1 1
+nlmesh2 seledge 6w 0 1
+nlmesh2 seledge 4w 0 1
+nlmesh2 seledge 3w 0 1
+nlmesh2 seledge 1w 0 1
+nlmesh2 seledge 1w 0 1
+nlmesh2 seledge 1w 0 1
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w 4 3 1 1 1 1
+nlmesh2 seledge 6w 0 1
+nlmesh2 seledge 4w 0 1
+nlmesh2 seledge 3w 0 1
+nlmesh2 seledge 1w 0 1
+nlmesh2 seledge 1w 0 1
+nlmesh2 seledge 1w 0 1
+nlmesh2 seledge 1w 0 1
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  6w 4 3 1 1 1 1 2
+nlmesh2 seledge 6w 0 1
+nlmesh2 seledge 4w 0 1
+nlmesh2 seledge 3w 0 1
+nlmesh2 seledge 1w 0 1
+nlmesh2 seledge 2w 0 1
+nlmesh2 mesh 2 4 0
+nlmesh2 accept 2
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect target edge
+genselect target segment
+genselect element add part 2/0 
+elgenerate solid solidfacedrag 1 9879 &hmax 1 0 0 0 0 0 4
+genselect clear
+elgenerate accept
+genselect clear
+genselect occobject add occobjectcheck  1e
+genselect clear
+genselect occobject add occobjectcheck  1e 2 3 4 5 6 7 8 1w 2 3 4 6
+genselect clear
+genselect occobject add occobjectcheck  1e  2  3  4  5  6  7  8  1w  2  3  4  6 
+genselect clear
+geomag delnoundo  1e 2 3 4 5 6 7 8 1w 2 3 4 6
+partdata readlist 2 
+clearid part
+clearid part
+Shell Part #2 
+partdata delete 2 
+delelement unrefn 0
+delelement unrefn 1
+delelement unrefn 0
+meshing cylindersolid create 4.780000 &hmax 100 1 -7.000000 0.000000,0.000000,0.000000,0.000000,1.000000,20,0.000000
+ac
+meshing cylindersolid accept 2 84826 92093 Ball
+ac
+home
+genselect clear
+setnode
+genselect target node
+genselect clear
+genselect clear
+genselect node add part 2/0 
+genselect node add part 1/0 
+setnode createset 1 1 0 0 0 0 
+genselect clear
+setnode none
+setnode
+genselect target node
+genselect clear
+genselect clear
+genselect target node
+genselect clear
+genselect clear
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.512000;
+loadpan 9.671716 13.112156;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.632134 0.869324 0.138958 0.834994
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.512000;
+loadpan 7.078876 -17.911734;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.699752 0.330011 0.231390 0.399779
+setnode createset 2 1 0 0 0 0 
+genselect clear
+home
+KEYWORD INPUT 1
+keyword updatekind
+KEYWORD INPUT 2
+output "lsppout" 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1.000000
+save keyword "mesh.key"
+exit

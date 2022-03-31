@@ -264,7 +264,7 @@ KEYWORD INPUT 1
 $#                                                                         title
 Target
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-         1         1         2         1         0         0         0         0
+         1         1         2         2         0         0         0         0
 *END
 keyword updatekind
 PART_PART
