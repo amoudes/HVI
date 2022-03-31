@@ -1,0 +1,1431 @@
+16
+16
+Intel(R) MPI Library, Version 2018 Update 4  Build 20180823 (id: 18555)
+Copyright (C) 2003-2018 Intel Corporation.  All rights reserved.
+ License option : check network license only
+      Date: 03/30/2022      Time: 15:37:59  
+
+     ___________________________________________________
+     |                                                 |
+     |  Livermore Software Technology, LLC             |
+     |                                                 |
+     |  7374 Las Positas Road                          |
+     |  Livermore, CA 94551                            |
+     |  Tel: (925) 449-2500  Fax: (925) 449-2507       |
+     |  www.lstc.com                                   |
+     |_________________________________________________|
+     |                                                 |
+     |  LS-DYNA, A Program for Nonlinear Dynamic       |
+     |  Analysis of Structures in Three Dimensions     |
+     |  Version : mpp d R12.0.0   Date: 06/19/2020     |
+     |  Revision: 148931          Time: 17:26:40       |
+     |                                                 |
+     |  Features enabled in this version:              |
+     |    Distributed Memory Parallel                  |
+     |    CESE CHEMISTRY EM ICFD STOCHASTIC_PARTICLES  |
+     |    FFTW (multi-dimensional FFTW Library)        |
+     |    ANSYS License (ANSYS202)                     |
+     |    BigID  option                                |
+     |                                                 |
+     |  Licensed to: Norwegian University of Science an|
+     |  Issued by  : Pascale.SaneGuttin_02092022       |
+     |                                                 |
+     |  Platform   : Intel-MPI 2018 Xeon64             |
+     |  OS Level   : Linux CentOS 6.5 uom              |
+     |  Compiler   : Intel Fortran Compiler 16.0 AVX-2 |
+     |  Hostname   : compute-0-3                       |
+     |  Precision  : Double precision (I8R8)           |
+     |  SVN Version: 148978                            |
+     |                                                 |
+     |  Unauthorized use infringes LST copyrights      |
+     |_________________________________________________|
+
+
+ Input file: MJC.key                                                                         
+
+ The native file format       : 64-bit small endian
+ Memory size from default     :   100000000,            0
+ Memory size from default     :   100000000,    100000000
+
+ Memory for the head node
+ Memory installed (MB)        :       257787
+ Memory available (MB)        :       250052
+
+ on UNIX computers note the following change:
+
+ ctrl-c interrupts ls-dyna and prompts for a sense  switch.
+ type the desired sense switch: sw1., sw2., etc. to continue
+ the execution.  ls-dyna will respond as explained in the users manual
+
+    type                      response
+   -----   ------------------------------------------------------------
+   quit    ls-dyna terminates.
+   stop    ls-dyna terminates.
+   sw1.    a restart file is written and ls-dyna terminates.
+   sw2.    ls-dyna responds with time and cycle numbers.    
+   sw3.    a restart file is written and ls-dyna continues calculations.
+   sw4.    a plot state is written and ls-dyna continues calculations.
+   sw5.    ls-dyna enters interactive graphics phase.
+   swa.    ls-dyna flushes all output i/o buffers.
+   swb.    a dynain is written and ls-dyna continues calculations.
+   swc.    a restart and dynain are written and ls-dyna contiunues calculations.
+   swd.    a restart and dynain are written and ls-dyna terminates.
+   lpri    toggle implicit lin. alg. solver output on/off.
+   nlpr    toggle implicit nonlinear solver output on/off.
+   iter    toggle implicit output to d3iter database on/off.
+   prof    output timing data to prof.out and continue.
+   conv    force implicit nonlinear convergence for current time step.
+   ttrm    terminate implicit time step, reduce time step, retry time step.
+   rtrm    terminate implicit at end of current time step.
+
+
+ ********  notice  ********  notice  ********  notice  ********
+ *                                                            *
+ * This is the LS-DYNA Finite Element code.                   *
+ *                                                            *
+ * Neither LST nor the authors assume any responsibility for  *
+ * the validity, accuracy, or applicability of any results    *
+ * obtained from this system. Users must verify their own     *
+ * results.                                                   *
+ *                                                            *
+ * LST endeavors to make the LS-DYNA code as complete,        *
+ * accurate and easy to use as possible.                      *
+ * Suggestions and comments are welcomed.  Please report any  *
+ * errors encountered in either the documentation or results  *
+ * immediately to LST through your site focus.                *
+ *                                                            *
+ * Copyright (C) 1990-2020                                    *
+ * by Livermore Software Technology, LLC                      *
+ * All rights reserved                                        *
+ *                                                            *
+ ********  notice  ********  notice  ********  notice  ********
+
+ Beginning of keyword reader                                   03/30/22 15:37:59
+
+ Memory required to process keyword     :    1062755  
+ Additional dynamic memory required     :    2221506  
+
+
+ MPP execution with      16 procs
+
+ Initial reading of file                                       03/30/22 15:37:59
+
+ Performing Decomposition -- Phase 1                           03/30/22 15:37:59
+
+ Performing Recursive Coordinate Bisection (RCB)
+
+ Memory required for decomposition      :     155956  
+ Additional dynamic memory required     :    4188692  
+
+
+ Performing Decomposition -- Phase 2                           03/30/22 15:37:59
+ Performing Decomposition -- Phase 3                           03/30/22 15:37:59
+ 
+ *** Warning 40859 (SOL+859)
+     Cannot find elements of slave segment of interface 2
+ deleted segment ID          n1          n2          n3          n4
+       1 9475 9475 9475 9475
+       2 9476 9476 9476 9476
+       3 9477 9477 9477 9477
+       4 9478 9478 9478 9478
+       5 9479 9479 9479 9479
+       6 9480 9480 9480 9480
+       7 9481 9481 9481 9481
+       8 9482 9482 9482 9482
+       9 9483 9483 9483 9483
+       10 9484 9484 9484 9484
+      273 additional segments without elements written to messag & d3hsp file
+
+ input of data is completed
+ 
+ *** Warning 30364 (INI+364)
+     Contact ID 3 is an ERODING contact. A side effect of
+     ERODING contact is that a negative volume failure criterion
+     is automatically enabled for all solid parts.
+ 
+ *** Warning 30364 (INI+364)
+     Contact ID 2 is an ERODING contact. A side effect of
+     ERODING contact is that a negative volume failure criterion
+     is automatically enabled for all solid parts.
+
+ initial kinetic energy = 0.10867842E+07
+
+ The LS-DYNA time step size should not exceed     1.702E-08
+ to avoid contact instabilities.  If the step size is
+ bigger then scale the penalty of the offending surface.
+
+ The following binary output files are being created,
+ and contain data equivalent to the indicated ascii output files
+   binout0000: (on processor       0)
+    glstat                                  
+    matsum                                  
+    sleout                                  
+
+ Memory required to begin solution (memory=   1063K memory2=     48K)
+          Minimum     48K on processor    15
+          Maximum     48K on processor     3
+          Average     48K
+
+ Additional dynamically allocated memory
+          Minimum   4728K on processor    15
+          Maximum   5626K on processor     0
+          Average   4791K
+
+ Total allocated memory
+          Minimum   4775K on processor    15
+          Maximum   5673K on processor     0
+          Average   4839K
+
+ initialization completed
+ Initial penetration for SI          3   0.00000 (tol=   0.00053)
+       1 t 0.0000E+00 dt 1.27E-09 flush i/o buffers            03/30/22 15:38:00
+       1 t 0.0000E+00 dt 1.27E-09 write d3plot file            03/30/22 15:38:00
+ cpu time per zone cycle............        72 nanoseconds
+ average cpu time per zone cycle....       458 nanoseconds
+ average clock time per zone cycle..      1114 nanoseconds
+
+ estimated total cpu time          =        36 sec (       0 hrs  0 mins)
+ estimated cpu time to complete    =        36 sec (       0 hrs  0 mins)
+ estimated total clock time        =        87 sec (       0 hrs  1 mins)
+ estimated clock time to complete  =        87 sec (       0 hrs  1 mins)
+ termination time                  = 2.200E-05
+     node  number       5256 deleted at time 5.81175E-07
+     node  number       8332 deleted at time 5.81175E-07
+     node  number       5906 deleted at time 5.86947E-07
+     node  number       8982 deleted at time 5.86947E-07
+     919 t 7.4040E-07 dt 5.37E-10 write d3plot file            03/30/22 15:38:00
+     node  number       5247 deleted at time 8.91731E-07
+     node  number       8323 deleted at time 8.91731E-07
+     node  number        836 deleted at time 9.50172E-07
+     node  number       2497 deleted at time 9.50172E-07
+     node  number       5230 deleted at time 9.86603E-07
+     node  number       8306 deleted at time 9.86603E-07
+     node  number       5221 deleted at time 1.00840E-06
+     node  number       8297 deleted at time 1.00840E-06
+     node  number       5880 deleted at time 1.01264E-06
+     node  number       8956 deleted at time 1.01264E-06
+     node  number        935 deleted at time 1.01903E-06
+     node  number       2596 deleted at time 1.01903E-06
+     node  number        737 deleted at time 1.01962E-06
+     node  number       2398 deleted at time 1.01962E-06
+     node  number        835 deleted at time 1.03932E-06
+     node  number       2496 deleted at time 1.03932E-06
+     node  number        834 deleted at time 1.07240E-06
+     node  number       2495 deleted at time 1.07240E-06
+     node  number        628 deleted at time 1.07851E-06
+     node  number       2289 deleted at time 1.07851E-06
+     node  number        833 deleted at time 1.10323E-06
+     node  number       2494 deleted at time 1.10323E-06
+     node  number        934 deleted at time 1.11671E-06
+     node  number       2595 deleted at time 1.11671E-06
+     node  number        736 deleted at time 1.11717E-06
+     node  number       2397 deleted at time 1.11717E-06
+     node  number       5195 deleted at time 1.16615E-06
+     node  number       8271 deleted at time 1.16615E-06
+     node  number        933 deleted at time 1.17498E-06
+     node  number       2594 deleted at time 1.17498E-06
+     node  number        735 deleted at time 1.18337E-06
+     node  number       2396 deleted at time 1.18337E-06
+     node  number       1034 deleted at time 1.20862E-06
+     node  number       2695 deleted at time 1.20862E-06
+     node  number        627 deleted at time 1.23553E-06
+     node  number       2288 deleted at time 1.23553E-06
+     node  number       5854 deleted at time 1.23687E-06
+     node  number       8930 deleted at time 1.23687E-06
+     node  number        734 deleted at time 1.24362E-06
+     node  number       2395 deleted at time 1.24362E-06
+     node  number        932 deleted at time 1.25834E-06
+     node  number       2593 deleted at time 1.25834E-06
+     node  number       5169 deleted at time 1.25900E-06
+     node  number       8245 deleted at time 1.25900E-06
+     node  number       5204 deleted at time 1.26502E-06
+     node  number       8280 deleted at time 1.26502E-06
+     node  number        733 deleted at time 1.27588E-06
+     node  number       2394 deleted at time 1.27588E-06
+     node  number        629 deleted at time 1.28325E-06
+     node  number       2290 deleted at time 1.28325E-06
+     node  number        931 deleted at time 1.28581E-06
+     node  number       2592 deleted at time 1.28581E-06
+     node  number        930 deleted at time 1.34584E-06
+     node  number        732 deleted at time 1.34584E-06
+     node  number       2393 deleted at time 1.34584E-06
+     node  number       2591 deleted at time 1.34584E-06
+     node  number        829 deleted at time 1.35343E-06
+     node  number       2490 deleted at time 1.35343E-06
+     node  number        832 deleted at time 1.37855E-06
+     node  number       2493 deleted at time 1.37855E-06
+     node  number        830 deleted at time 1.38552E-06
+     node  number        831 deleted at time 1.38552E-06
+     node  number       2491 deleted at time 1.38552E-06
+     node  number       2492 deleted at time 1.38552E-06
+     node  number        731 deleted at time 1.39434E-06
+     node  number       2392 deleted at time 1.39434E-06
+     node  number       5895 deleted at time 1.42695E-06
+     node  number       5921 deleted at time 1.42695E-06
+     node  number       8971 deleted at time 1.42695E-06
+     node  number       8997 deleted at time 1.42695E-06
+     node  number       5245 deleted at time 1.47600E-06
+     node  number       5271 deleted at time 1.47600E-06
+     node  number       8321 deleted at time 1.47600E-06
+     node  number       8347 deleted at time 1.47600E-06
+     node  number       5179 deleted at time 1.47718E-06
+     node  number       8255 deleted at time 1.47718E-06
+     node  number       5219 deleted at time 1.48079E-06
+     node  number       8295 deleted at time 1.48079E-06
+    2321 t 1.4808E-06 dt 6.07E-10 write d3plot file            03/30/22 15:38:02
+     node  number       1035 deleted at time 1.50999E-06
+     node  number       2696 deleted at time 1.50999E-06
+     node  number       1033 deleted at time 1.54789E-06
+     node  number       2694 deleted at time 1.54789E-06
+     node  number       5869 deleted at time 1.55527E-06
+     node  number       8945 deleted at time 1.55527E-06
+     node  number       1032 deleted at time 1.56541E-06
+     node  number       2693 deleted at time 1.56541E-06
+     node  number       5143 deleted at time 1.56942E-06
+     node  number       8219 deleted at time 1.56942E-06
+     node  number       5829 deleted at time 1.58992E-06
+     node  number       8905 deleted at time 1.58992E-06
+     node  number       5868 deleted at time 1.59822E-06
+     node  number       8944 deleted at time 1.59822E-06
+     node  number       5192 deleted at time 1.59902E-06
+     node  number       8268 deleted at time 1.59902E-06
+     node  number       5193 deleted at time 1.61061E-06
+     node  number       8269 deleted at time 1.61061E-06
+     node  number        630 deleted at time 1.62801E-06
+     node  number       2291 deleted at time 1.62801E-06
+     node  number        928 deleted at time 1.65318E-06
+     node  number        929 deleted at time 1.65318E-06
+     node  number       2589 deleted at time 1.65318E-06
+     node  number       2590 deleted at time 1.65318E-06
+     node  number        729 deleted at time 1.66152E-06
+     node  number        730 deleted at time 1.66152E-06
+     node  number       2390 deleted at time 1.66152E-06
+     node  number       2391 deleted at time 1.66152E-06
+     node  number        828 deleted at time 1.67332E-06
+     node  number       2489 deleted at time 1.67332E-06
+     node  number        631 deleted at time 1.70581E-06
+     node  number        632 deleted at time 1.70581E-06
+     node  number       2292 deleted at time 1.70581E-06
+     node  number       2293 deleted at time 1.70581E-06
+     node  number        927 deleted at time 1.72314E-06
+     node  number       2588 deleted at time 1.72314E-06
+     node  number        727 deleted at time 1.72560E-06
+     node  number        728 deleted at time 1.72560E-06
+     node  number       2388 deleted at time 1.72560E-06
+     node  number       2389 deleted at time 1.72560E-06
+     node  number       5166 deleted at time 1.73134E-06
+     node  number        826 deleted at time 1.73134E-06
+     node  number       8242 deleted at time 1.73134E-06
+     node  number        827 deleted at time 1.73134E-06
+     node  number       2487 deleted at time 1.73134E-06
+     node  number       2488 deleted at time 1.73134E-06
+     node  number        633 deleted at time 1.73706E-06
+     node  number       2294 deleted at time 1.73706E-06
+     node  number        925 deleted at time 1.74013E-06
+     node  number        926 deleted at time 1.74013E-06
+     node  number       2586 deleted at time 1.74013E-06
+     node  number       2587 deleted at time 1.74013E-06
+     node  number       1036 deleted at time 1.79420E-06
+     node  number       1037 deleted at time 1.79420E-06
+     node  number       2697 deleted at time 1.79420E-06
+     node  number       2698 deleted at time 1.79420E-06
+     node  number       1031 deleted at time 1.79872E-06
+     node  number       2692 deleted at time 1.79872E-06
+     node  number       5140 deleted at time 1.81338E-06
+     node  number       5842 deleted at time 1.81338E-06
+     node  number       8216 deleted at time 1.81338E-06
+     node  number       8918 deleted at time 1.81338E-06
+     node  number       1040 deleted at time 1.82358E-06
+     node  number       2701 deleted at time 1.82358E-06
+     node  number       1038 deleted at time 1.83394E-06
+     node  number       1039 deleted at time 1.83394E-06
+     node  number       2699 deleted at time 1.83394E-06
+     node  number       2700 deleted at time 1.83394E-06
+     node  number        634 deleted at time 1.84997E-06
+     node  number       2295 deleted at time 1.84997E-06
+     node  number       1029 deleted at time 1.85453E-06
+     node  number       1030 deleted at time 1.85453E-06
+     node  number       2690 deleted at time 1.85453E-06
+     node  number       2691 deleted at time 1.85453E-06
+     node  number       4606 deleted at time 1.87418E-06
+     node  number       7682 deleted at time 1.87418E-06
+     node  number       3963 deleted at time 1.87493E-06
+     node  number       7039 deleted at time 1.87493E-06
+     node  number        625 deleted at time 1.89215E-06
+     node  number        626 deleted at time 1.89215E-06
+     node  number       2286 deleted at time 1.89215E-06
+     node  number       2287 deleted at time 1.89215E-06
+     node  number       5764 deleted at time 1.90554E-06
+     node  number       8840 deleted at time 1.90554E-06
+     node  number       5686 deleted at time 1.93272E-06
+     node  number       8762 deleted at time 1.93272E-06
+     node  number       5790 deleted at time 1.93479E-06
+     node  number       5816 deleted at time 1.93479E-06
+     node  number       8866 deleted at time 1.93479E-06
+     node  number       8892 deleted at time 1.93479E-06
+     node  number        623 deleted at time 1.93616E-06
+     node  number        624 deleted at time 1.93616E-06
+     node  number       2284 deleted at time 1.93616E-06
+     node  number       2285 deleted at time 1.93616E-06
+     node  number       5712 deleted at time 1.93754E-06
+     node  number       5738 deleted at time 1.93754E-06
+     node  number       8788 deleted at time 1.93754E-06
+     node  number       8814 deleted at time 1.93754E-06
+     node  number       5660 deleted at time 1.94715E-06
+     node  number       8736 deleted at time 1.94715E-06
+     node  number       5062 deleted at time 1.94783E-06
+     node  number       8138 deleted at time 1.94783E-06
+     node  number       4984 deleted at time 1.94851E-06
+     node  number       8060 deleted at time 1.94851E-06
+     node  number       5608 deleted at time 1.95603E-06
+     node  number       5634 deleted at time 1.95603E-06
+     node  number       8684 deleted at time 1.95603E-06
+     node  number       8710 deleted at time 1.95603E-06
+     node  number       4958 deleted at time 1.97030E-06
+     node  number       8034 deleted at time 1.97030E-06
+     node  number       5582 deleted at time 1.97233E-06
+     node  number       8658 deleted at time 1.97233E-06
+     node  number       5010 deleted at time 1.97774E-06
+     node  number       5036 deleted at time 1.97774E-06
+     node  number       8086 deleted at time 1.97774E-06
+     node  number       8112 deleted at time 1.97774E-06
+     node  number       4580 deleted at time 1.98044E-06
+     node  number       7656 deleted at time 1.98044E-06
+     node  number       3937 deleted at time 1.98583E-06
+     node  number       7013 deleted at time 1.98583E-06
+     node  number       5556 deleted at time 2.00792E-06
+     node  number       8632 deleted at time 2.00792E-06
+     node  number       4932 deleted at time 2.01125E-06
+     node  number       8008 deleted at time 2.01125E-06
+     node  number       3911 deleted at time 2.01760E-06
+     node  number       6987 deleted at time 2.01760E-06
+     node  number       4554 deleted at time 2.04289E-06
+     node  number       7630 deleted at time 2.04289E-06
+     node  number       5088 deleted at time 2.04639E-06
+     node  number       5114 deleted at time 2.04639E-06
+     node  number       8164 deleted at time 2.04639E-06
+     node  number       8190 deleted at time 2.04639E-06
+     node  number       5530 deleted at time 2.04779E-06
+     node  number       8606 deleted at time 2.04779E-06
+     node  number       5178 deleted at time 2.05058E-06
+     node  number       8254 deleted at time 2.05058E-06
+     node  number       4906 deleted at time 2.05540E-06
+     node  number       7982 deleted at time 2.05540E-06
+     node  number       5504 deleted at time 2.09078E-06
+     node  number       8580 deleted at time 2.09078E-06
+     node  number       3884 deleted at time 2.09652E-06
+     node  number       6960 deleted at time 2.09652E-06
+     node  number       4529 deleted at time 2.09992E-06
+     node  number       7605 deleted at time 2.09992E-06
+     node  number       3885 deleted at time 2.10500E-06
+     node  number       6961 deleted at time 2.10500E-06
+     node  number       4528 deleted at time 2.11092E-06
+     node  number       7604 deleted at time 2.11092E-06
+     node  number       4880 deleted at time 2.11177E-06
+     node  number       7956 deleted at time 2.11177E-06
+     node  number       3972 deleted at time 2.12359E-06
+     node  number       7048 deleted at time 2.12359E-06
+     node  number       3946 deleted at time 2.12943E-06
+     node  number       7022 deleted at time 2.12943E-06
+     node  number       4503 deleted at time 2.13893E-06
+     node  number       7579 deleted at time 2.13893E-06
+     node  number       5503 deleted at time 2.14051E-06
+     node  number       8579 deleted at time 2.14051E-06
+     node  number       4854 deleted at time 2.14130E-06
+     node  number       7930 deleted at time 2.14130E-06
+     node  number       4325 deleted at time 2.14524E-06
+     node  number       3672 deleted at time 2.14524E-06
+     node  number       4477 deleted at time 2.14524E-06
+     node  number       6748 deleted at time 2.14524E-06
+     node  number       7401 deleted at time 2.14524E-06
+     node  number       7553 deleted at time 2.14524E-06
+     node  number       4853 deleted at time 2.15232E-06
+     node  number       7929 deleted at time 2.15232E-06
+     node  number       3646 deleted at time 2.15311E-06
+     node  number       6722 deleted at time 2.15311E-06
+     node  number       3619 deleted at time 2.15389E-06
+     node  number       6695 deleted at time 2.15389E-06
+     node  number       3592 deleted at time 2.15625E-06
+     node  number       3699 deleted at time 2.15625E-06
+     node  number       6668 deleted at time 2.15625E-06
+     node  number       6775 deleted at time 2.15625E-06
+     node  number       4299 deleted at time 2.15782E-06
+     node  number       7375 deleted at time 2.15782E-06
+     node  number       4274 deleted at time 2.15860E-06
+     node  number       7350 deleted at time 2.15860E-06
+     node  number       3673 deleted at time 2.15939E-06
+     node  number       3752 deleted at time 2.15939E-06
+     node  number       6749 deleted at time 2.15939E-06
+     node  number       6828 deleted at time 2.15939E-06
+     node  number       3565 deleted at time 2.16017E-06
+     node  number       6641 deleted at time 2.16017E-06
+     node  number       3858 deleted at time 2.16095E-06
+     node  number       6934 deleted at time 2.16095E-06
+     node  number       3538 deleted at time 2.16331E-06
+     node  number       6614 deleted at time 2.16331E-06
+     node  number       3620 deleted at time 2.16487E-06
+     node  number       6696 deleted at time 2.16487E-06
+     node  number       3593 deleted at time 2.16566E-06
+     node  number       6669 deleted at time 2.16566E-06
+     node  number       4324 deleted at time 2.16722E-06
+     node  number       7400 deleted at time 2.16722E-06
+     node  number       4350 deleted at time 2.16800E-06
+     node  number       3753 deleted at time 2.16800E-06
+     node  number       7426 deleted at time 2.16800E-06
+     node  number       6829 deleted at time 2.16800E-06
+     node  number       3511 deleted at time 2.16879E-06
+     node  number       6587 deleted at time 2.16879E-06
+     node  number       4249 deleted at time 2.16957E-06
+     node  number       7325 deleted at time 2.16957E-06
+     node  number       3566 deleted at time 2.17113E-06
+     node  number       6642 deleted at time 2.17113E-06
+     node  number       5477 deleted at time 2.17279E-06
+     node  number       8553 deleted at time 2.17279E-06
+     node  number       4273 deleted at time 2.17363E-06
+     node  number       4827 deleted at time 2.17363E-06
+     node  number       7349 deleted at time 2.17363E-06
+     node  number       7903 deleted at time 2.17363E-06
+     node  number       4426 deleted at time 2.17529E-06
+     node  number       3831 deleted at time 2.17529E-06
+     node  number       4452 deleted at time 2.17529E-06
+     node  number       6907 deleted at time 2.17529E-06
+     node  number       7502 deleted at time 2.17529E-06
+     node  number       7528 deleted at time 2.17529E-06
+     node  number       3539 deleted at time 2.17611E-06
+     node  number       3700 deleted at time 2.17611E-06
+     node  number       3726 deleted at time 2.17611E-06
+     node  number       6615 deleted at time 2.17611E-06
+     node  number       6776 deleted at time 2.17611E-06
+     node  number       6802 deleted at time 2.17611E-06
+     node  number       3484 deleted at time 2.17694E-06
+     node  number       6560 deleted at time 2.17694E-06
+     node  number       4248 deleted at time 2.17777E-06
+     node  number       7324 deleted at time 2.17777E-06
+     node  number       3567 deleted at time 2.18275E-06
+     node  number       6643 deleted at time 2.18275E-06
+     node  number       3457 deleted at time 2.18358E-06
+     node  number       6533 deleted at time 2.18358E-06
+     node  number       4451 deleted at time 2.18440E-06
+     node  number       3512 deleted at time 2.18440E-06
+     node  number       7527 deleted at time 2.18440E-06
+     node  number       6588 deleted at time 2.18440E-06
+     node  number       4224 deleted at time 2.18854E-06
+     node  number       7300 deleted at time 2.18854E-06
+     node  number       3779 deleted at time 2.19103E-06
+     node  number       3805 deleted at time 2.19103E-06
+     node  number       6855 deleted at time 2.19103E-06
+     node  number       6881 deleted at time 2.19103E-06
+     node  number       4349 deleted at time 2.19268E-06
+     node  number       7425 deleted at time 2.19268E-06
+     node  number       4400 deleted at time 2.19351E-06
+     node  number       3485 deleted at time 2.19351E-06
+     node  number       7476 deleted at time 2.19351E-06
+     node  number       6561 deleted at time 2.19351E-06
+     node  number       4223 deleted at time 2.19433E-06
+     node  number       7299 deleted at time 2.19433E-06
+     node  number       3568 deleted at time 2.19599E-06
+     node  number       6644 deleted at time 2.19599E-06
+     node  number       4199 deleted at time 2.19681E-06
+     node  number       7275 deleted at time 2.19681E-06
+     node  number       3832 deleted at time 2.20011E-06
+     node  number       4149 deleted at time 2.20011E-06
+     node  number       6908 deleted at time 2.20011E-06
+     node  number       7225 deleted at time 2.20011E-06
+     node  number       5451 deleted at time 2.20093E-06
+     node  number       4174 deleted at time 2.20093E-06
+     node  number       4801 deleted at time 2.20093E-06
+     node  number       4222 deleted at time 2.20093E-06
+     node  number       8527 deleted at time 2.20093E-06
+     node  number       7877 deleted at time 2.20093E-06
+     node  number       7250 deleted at time 2.20093E-06
+     node  number       7298 deleted at time 2.20093E-06
+     node  number       3458 deleted at time 2.20258E-06
+     node  number       6534 deleted at time 2.20258E-06
+     node  number       4124 deleted at time 2.20336E-06
+     node  number       7200 deleted at time 2.20336E-06
+     node  number       3920 deleted at time 2.20569E-06
+     node  number       4198 deleted at time 2.20569E-06
+     node  number       7274 deleted at time 2.20569E-06
+     node  number       6996 deleted at time 2.20569E-06
+     node  number       4375 deleted at time 2.20646E-06
+     node  number       4401 deleted at time 2.20646E-06
+     node  number       7451 deleted at time 2.20646E-06
+     node  number       7477 deleted at time 2.20646E-06
+     node  number       4099 deleted at time 2.20724E-06
+     node  number       7175 deleted at time 2.20724E-06
+     node  number       3349 deleted at time 2.20956E-06
+     node  number       6425 deleted at time 2.20956E-06
+     node  number       4221 deleted at time 2.21034E-06
+     node  number       7297 deleted at time 2.21034E-06
+     node  number       4148 deleted at time 2.21266E-06
+     node  number       4173 deleted at time 2.21266E-06
+     node  number       7224 deleted at time 2.21266E-06
+     node  number       7249 deleted at time 2.21266E-06
+     node  number       4123 deleted at time 2.21499E-06
+     node  number       3542 deleted at time 2.21499E-06
+     node  number       6618 deleted at time 2.21499E-06
+     node  number       7199 deleted at time 2.21499E-06
+     node  number       4074 deleted at time 2.21885E-06
+     node  number       4098 deleted at time 2.21885E-06
+     node  number       7150 deleted at time 2.21885E-06
+     node  number       7174 deleted at time 2.21885E-06
+     node  number       3403 deleted at time 2.22040E-06
+     node  number       6479 deleted at time 2.22040E-06
+    3329 t 2.2219E-06 dt 7.72E-10 write d3plot file            03/30/22 15:38:04
+     node  number       4024 deleted at time 2.22349E-06
+     node  number       7100 deleted at time 2.22349E-06
+     node  number       4195 deleted at time 2.22966E-06
+     node  number       7271 deleted at time 2.22966E-06
+     node  number       4073 deleted at time 2.23043E-06
+     node  number       7149 deleted at time 2.23043E-06
+     node  number       4775 deleted at time 2.23274E-06
+     node  number       7851 deleted at time 2.23274E-06
+     node  number       4774 deleted at time 2.23274E-06
+     node  number       7850 deleted at time 2.23274E-06
+     node  number       3404 deleted at time 2.23659E-06
+     node  number       3430 deleted at time 2.23659E-06
+     node  number       6480 deleted at time 2.23659E-06
+     node  number       6506 deleted at time 2.23659E-06
+     node  number       3516 deleted at time 2.23821E-06
+     node  number       6592 deleted at time 2.23821E-06
+     node  number       4023 deleted at time 2.24630E-06
+     node  number       4049 deleted at time 2.24630E-06
+     node  number       7099 deleted at time 2.24630E-06
+     node  number       7125 deleted at time 2.24630E-06
+     node  number       3517 deleted at time 2.24792E-06
+     node  number       6593 deleted at time 2.24792E-06
+     node  number       3350 deleted at time 2.24953E-06
+     node  number       4169 deleted at time 2.24953E-06
+     node  number       3376 deleted at time 2.24953E-06
+     node  number       7245 deleted at time 2.24953E-06
+     node  number       6426 deleted at time 2.24953E-06
+     node  number       6452 deleted at time 2.24953E-06
+     node  number       5424 deleted at time 2.25115E-06
+     node  number       5425 deleted at time 2.25115E-06
+     node  number       8500 deleted at time 2.25115E-06
+     node  number       8501 deleted at time 2.25115E-06
+     node  number       3431 deleted at time 2.25517E-06
+     node  number       6507 deleted at time 2.25517E-06
+     node  number       4168 deleted at time 2.25678E-06
+     node  number       7244 deleted at time 2.25678E-06
+     node  number       4699 deleted at time 2.26160E-06
+     node  number       7775 deleted at time 2.26160E-06
+     node  number       4048 deleted at time 2.26240E-06
+     node  number       7124 deleted at time 2.26240E-06
+     node  number       4824 deleted at time 2.26401E-06
+     node  number       7900 deleted at time 2.26401E-06
+     node  number       5828 deleted at time 2.26561E-06
+     node  number       4748 deleted at time 2.26561E-06
+     node  number       4749 deleted at time 2.26561E-06
+     node  number       8904 deleted at time 2.26561E-06
+     node  number       7824 deleted at time 2.26561E-06
+     node  number       7825 deleted at time 2.26561E-06
+     node  number       3491 deleted at time 2.27040E-06
+     node  number       6567 deleted at time 2.27040E-06
+     node  number       3377 deleted at time 2.27439E-06
+     node  number       6453 deleted at time 2.27439E-06
+     node  number       4724 deleted at time 2.27598E-06
+     node  number       7800 deleted at time 2.27598E-06
+     node  number       3894 deleted at time 2.27676E-06
+     node  number       6970 deleted at time 2.27676E-06
+     node  number       4142 deleted at time 2.27755E-06
+     node  number       7218 deleted at time 2.27755E-06
+     node  number       3492 deleted at time 2.27911E-06
+     node  number       6568 deleted at time 2.27911E-06
+     node  number       4723 deleted at time 2.27989E-06
+     node  number       7799 deleted at time 2.27989E-06
+     node  number       5349 deleted at time 2.28374E-06
+     node  number       4141 deleted at time 2.28374E-06
+     node  number       8425 deleted at time 2.28374E-06
+     node  number       7217 deleted at time 2.28374E-06
+     node  number       3556 deleted at time 2.28903E-06
+     node  number       5398 deleted at time 2.28903E-06
+     node  number       5399 deleted at time 2.28903E-06
+     node  number       6632 deleted at time 2.28903E-06
+     node  number       8474 deleted at time 2.28903E-06
+     node  number       8475 deleted at time 2.28903E-06
+     node  number       3530 deleted at time 2.29349E-06
+     node  number       4874 deleted at time 2.29349E-06
+     node  number       6606 deleted at time 2.29349E-06
+     node  number       7950 deleted at time 2.29349E-06
+     node  number       5474 deleted at time 2.29423E-06
+     node  number       4799 deleted at time 2.29423E-06
+     node  number       7875 deleted at time 2.29423E-06
+     node  number       8550 deleted at time 2.29423E-06
+     node  number       4798 deleted at time 2.29644E-06
+     node  number       7874 deleted at time 2.29644E-06
+     node  number       3582 deleted at time 2.29791E-06
+     node  number       6658 deleted at time 2.29791E-06
+     node  number       3504 deleted at time 2.30453E-06
+     node  number       3466 deleted at time 2.30453E-06
+     node  number       6580 deleted at time 2.30453E-06
+     node  number       6542 deleted at time 2.30453E-06
+     node  number       4115 deleted at time 2.30527E-06
+     node  number       7191 deleted at time 2.30527E-06
+     node  number       3608 deleted at time 2.30750E-06
+     node  number       6684 deleted at time 2.30750E-06
+     node  number       4114 deleted at time 2.30898E-06
+     node  number       7190 deleted at time 2.30898E-06
+     node  number       3467 deleted at time 2.31057E-06
+     node  number       6543 deleted at time 2.31057E-06
+     node  number       5569 deleted at time 2.31214E-06
+     node  number       8645 deleted at time 2.31214E-06
+     node  number       3634 deleted at time 2.31608E-06
+     node  number       6710 deleted at time 2.31608E-06
+     node  number       3478 deleted at time 2.32157E-06
+     node  number       6554 deleted at time 2.32157E-06
+     node  number       5374 deleted at time 2.32235E-06
+     node  number       8450 deleted at time 2.32235E-06
+     node  number       5625 deleted at time 2.32391E-06
+     node  number       8701 deleted at time 2.32391E-06
+     node  number       4773 deleted at time 2.32469E-06
+     node  number       7849 deleted at time 2.32469E-06
+     node  number       4088 deleted at time 2.32625E-06
+     node  number       7164 deleted at time 2.32625E-06
+     node  number       4671 deleted at time 2.32703E-06
+     node  number       4697 deleted at time 2.32703E-06
+     node  number       4698 deleted at time 2.32703E-06
+     node  number       7747 deleted at time 2.32703E-06
+     node  number       7773 deleted at time 2.32703E-06
+     node  number       7774 deleted at time 2.32703E-06
+     node  number       4087 deleted at time 2.32859E-06
+     node  number       7163 deleted at time 2.32859E-06
+     node  number       3441 deleted at time 2.33015E-06
+     node  number       6517 deleted at time 2.33015E-06
+     node  number       3660 deleted at time 2.33093E-06
+     node  number       6736 deleted at time 2.33093E-06
+     node  number       3442 deleted at time 2.33170E-06
+     node  number       4848 deleted at time 2.33170E-06
+     node  number       4849 deleted at time 2.33170E-06
+     node  number       6518 deleted at time 2.33170E-06
+     node  number       7924 deleted at time 2.33170E-06
+     node  number       7925 deleted at time 2.33170E-06
+     node  number       3868 deleted at time 2.33629E-06
+     node  number       4899 deleted at time 2.33629E-06
+     node  number       7975 deleted at time 2.33629E-06
+     node  number       6944 deleted at time 2.33629E-06
+     node  number       5449 deleted at time 2.34079E-06
+     node  number       8525 deleted at time 2.34079E-06
+     node  number       3452 deleted at time 2.34453E-06
+     node  number       4060 deleted at time 2.34453E-06
+     node  number       4061 deleted at time 2.34453E-06
+     node  number       6528 deleted at time 2.34453E-06
+     node  number       7136 deleted at time 2.34453E-06
+     node  number       7137 deleted at time 2.34453E-06
+     node  number       3417 deleted at time 2.34677E-06
+     node  number       6493 deleted at time 2.34677E-06
+     node  number       3416 deleted at time 2.34827E-06
+     node  number       6492 deleted at time 2.34827E-06
+     node  number       5373 deleted at time 2.35523E-06
+     node  number       4924 deleted at time 2.35523E-06
+     node  number       8449 deleted at time 2.35523E-06
+     node  number       8000 deleted at time 2.35523E-06
+     node  number       5549 deleted at time 2.35602E-06
+     node  number       8625 deleted at time 2.35602E-06
+     node  number       3686 deleted at time 2.35761E-06
+     node  number       4673 deleted at time 2.35761E-06
+     node  number       7749 deleted at time 2.35761E-06
+     node  number       6762 deleted at time 2.35761E-06
+     node  number       4033 deleted at time 2.35920E-06
+     node  number       7109 deleted at time 2.35920E-06
+     node  number       4034 deleted at time 2.36000E-06
+     node  number       7110 deleted at time 2.36000E-06
+     node  number       4823 deleted at time 2.36079E-06
+     node  number       7899 deleted at time 2.36079E-06
+     node  number       3426 deleted at time 2.36238E-06
+     node  number       3392 deleted at time 2.36238E-06
+     node  number       6468 deleted at time 2.36238E-06
+     node  number       6502 deleted at time 2.36238E-06
+     node  number       5298 deleted at time 2.36556E-06
+     node  number       8374 deleted at time 2.36556E-06
+     node  number       3391 deleted at time 2.36715E-06
+     node  number       6467 deleted at time 2.36715E-06
+     node  number       3348 deleted at time 2.36874E-06
+     node  number       3973 deleted at time 2.36874E-06
+     node  number       6424 deleted at time 2.36874E-06
+     node  number       7049 deleted at time 2.36874E-06
+     node  number       3374 deleted at time 2.36953E-06
+     node  number       3400 deleted at time 2.36953E-06
+     node  number       6450 deleted at time 2.36953E-06
+     node  number       6476 deleted at time 2.36953E-06
+     node  number       5324 deleted at time 2.37112E-06
+     node  number       8400 deleted at time 2.37112E-06
+     node  number       4006 deleted at time 2.37192E-06
+     node  number       7082 deleted at time 2.37192E-06
+     node  number       4645 deleted at time 2.37350E-06
+     node  number       7721 deleted at time 2.37350E-06
+     node  number       4007 deleted at time 2.37509E-06
+     node  number       7083 deleted at time 2.37509E-06
+     node  number       3367 deleted at time 2.37748E-06
+     node  number       6443 deleted at time 2.37748E-06
+     node  number       4999 deleted at time 2.37907E-06
+     node  number       8075 deleted at time 2.37907E-06
+     node  number       3979 deleted at time 2.38145E-06
+     node  number       5662 deleted at time 2.38145E-06
+     node  number       8738 deleted at time 2.38145E-06
+     node  number       7055 deleted at time 2.38145E-06
+     node  number       4972 deleted at time 2.38294E-06
+     node  number       5570 deleted at time 2.38294E-06
+     node  number       8048 deleted at time 2.38294E-06
+     node  number       8646 deleted at time 2.38294E-06
+     node  number       3366 deleted at time 2.38444E-06
+     node  number       6442 deleted at time 2.38444E-06
+     node  number       3342 deleted at time 2.38668E-06
+     node  number       6418 deleted at time 2.38668E-06
+     node  number       3842 deleted at time 2.38742E-06
+     node  number       3980 deleted at time 2.38742E-06
+     node  number       7056 deleted at time 2.38742E-06
+     node  number       6918 deleted at time 2.38742E-06
+     node  number       3712 deleted at time 2.38893E-06
+     node  number       6788 deleted at time 2.38893E-06
+     node  number       4337 deleted at time 2.39350E-06
+     node  number       7413 deleted at time 2.39350E-06
+     solid element 283  failed at time  2.3943E-06
+     node  number       5926 deleted at time 2.39654E-06
+     node  number       3341 deleted at time 2.39654E-06
+     node  number       6417 deleted at time 2.39654E-06
+     node  number       9002 deleted at time 2.39654E-06
+     node  number       4025 deleted at time 2.40261E-06
+     node  number       7101 deleted at time 2.40261E-06
+     node  number       4778 deleted at time 2.40337E-06
+     node  number       7854 deleted at time 2.40337E-06
+     node  number       5346 deleted at time 2.40337E-06
+     node  number       8422 deleted at time 2.40337E-06
+     node  number       5377 deleted at time 2.40488E-06
+     node  number       8453 deleted at time 2.40488E-06
+     node  number       5351 deleted at time 2.40790E-06
+     node  number       5688 deleted at time 2.40790E-06
+     node  number       8764 deleted at time 2.40790E-06
+     node  number       8427 deleted at time 2.40790E-06
+     node  number       3738 deleted at time 2.41168E-06
+     node  number       6814 deleted at time 2.41168E-06
+     node  number       5543 deleted at time 2.41243E-06
+     node  number       8619 deleted at time 2.41243E-06
+     node  number       5927 deleted at time 2.41394E-06
+     node  number       9003 deleted at time 2.41394E-06
+     node  number       5376 deleted at time 2.41549E-06
+     node  number       8452 deleted at time 2.41549E-06
+     node  number       5320 deleted at time 2.41865E-06
+     node  number       8396 deleted at time 2.41865E-06
+     node  number       3816 deleted at time 2.42181E-06
+     node  number       4363 deleted at time 2.42181E-06
+     node  number       4804 deleted at time 2.42181E-06
+     node  number       6892 deleted at time 2.42181E-06
+     node  number       7880 deleted at time 2.42181E-06
+     node  number       7439 deleted at time 2.42181E-06
+     node  number       6053 deleted at time 2.42418E-06
+     node  number       9129 deleted at time 2.42418E-06
+     node  number       5574 deleted at time 2.42655E-06
+     node  number       8650 deleted at time 2.42655E-06
+     node  number       3764 deleted at time 2.42813E-06
+     node  number       5499 deleted at time 2.42813E-06
+     node  number       3790 deleted at time 2.42813E-06
+     node  number       8575 deleted at time 2.42813E-06
+     node  number       6840 deleted at time 2.42813E-06
+     node  number       6866 deleted at time 2.42813E-06
+     node  number       5348 deleted at time 2.42892E-06
+     node  number       5347 deleted at time 2.42892E-06
+     node  number       8424 deleted at time 2.42892E-06
+     node  number       8423 deleted at time 2.42892E-06
+     node  number       5523 deleted at time 2.43207E-06
+     node  number       5524 deleted at time 2.43207E-06
+     node  number       8599 deleted at time 2.43207E-06
+     node  number       8600 deleted at time 2.43207E-06
+     node  number       5423 deleted at time 2.43286E-06
+     node  number       8499 deleted at time 2.43286E-06
+     node  number       4946 deleted at time 2.43365E-06
+     node  number       4973 deleted at time 2.43365E-06
+     node  number       8022 deleted at time 2.43365E-06
+     node  number       8049 deleted at time 2.43365E-06
+     node  number       4873 deleted at time 2.43602E-06
+     node  number       7949 deleted at time 2.43602E-06
+     node  number       4830 deleted at time 2.43839E-06
+     node  number       7906 deleted at time 2.43839E-06
+     solid element 278  failed at time  2.4392E-06
+     node  number       5599 deleted at time 2.44667E-06
+     node  number       5323 deleted at time 2.44667E-06
+     node  number       8399 deleted at time 2.44667E-06
+     node  number       8675 deleted at time 2.44667E-06
+     solid element 273  failed at time  2.4474E-06
+     node  number       5294 deleted at time 2.44741E-06
+     node  number       8370 deleted at time 2.44741E-06
+     solid element 275  failed at time  2.4511E-06
+     node  number       4898 deleted at time 2.45185E-06
+     node  number       7974 deleted at time 2.45185E-06
+     node  number       4856 deleted at time 2.45333E-06
+     node  number       7932 deleted at time 2.45333E-06
+     node  number       5596 deleted at time 2.45628E-06
+     node  number       8672 deleted at time 2.45628E-06
+     node  number       5930 deleted at time 2.47174E-06
+     node  number       9006 deleted at time 2.47174E-06
+     node  number       5448 deleted at time 2.48093E-06
+     node  number       8524 deleted at time 2.48093E-06
+     node  number       5923 deleted at time 2.48171E-06
+     node  number       8999 deleted at time 2.48171E-06
+     node  number       4920 deleted at time 2.48404E-06
+     node  number       7996 deleted at time 2.48404E-06
+     solid element 268  failed at time  2.4848E-06
+     node  number       4919 deleted at time 2.48715E-06
+     node  number       7995 deleted at time 2.48715E-06
+     node  number       4703 deleted at time 2.49852E-06
+     node  number       7779 deleted at time 2.49852E-06
+     node  number       5931 deleted at time 2.50361E-06
+     node  number       9007 deleted at time 2.50361E-06
+     node  number       4923 deleted at time 2.50506E-06
+     node  number       7999 deleted at time 2.50506E-06
+     node  number       5498 deleted at time 2.51737E-06
+     node  number       8574 deleted at time 2.51737E-06
+     node  number       4892 deleted at time 2.51810E-06
+     node  number       7968 deleted at time 2.51810E-06
+     node  number       4650 deleted at time 2.51954E-06
+     node  number       4676 deleted at time 2.51954E-06
+     node  number       4677 deleted at time 2.51954E-06
+     node  number       7726 deleted at time 2.51954E-06
+     node  number       7752 deleted at time 2.51954E-06
+     node  number       7753 deleted at time 2.51954E-06
+     solid element 265  failed at time  2.5231E-06
+     node  number       5573 deleted at time 2.52602E-06
+     node  number       8649 deleted at time 2.52602E-06
+     solid element 263  failed at time  2.5275E-06
+     node  number       4893 deleted at time 2.52747E-06
+     node  number       7969 deleted at time 2.52747E-06
+     node  number       4644 deleted at time 2.53111E-06
+     node  number       5488 deleted at time 2.53111E-06
+     node  number       7720 deleted at time 2.53111E-06
+     node  number       8564 deleted at time 2.53111E-06
+     node  number       5548 deleted at time 2.53402E-06
+     node  number       8624 deleted at time 2.53402E-06
+     solid element 258  failed at time  2.5362E-06
+     node  number       5507 deleted at time 2.55360E-06
+     node  number       8583 deleted at time 2.55360E-06
+     node  number       5473 deleted at time 2.56070E-06
+     node  number       8549 deleted at time 2.56070E-06
+     node  number       4649 deleted at time 2.56423E-06
+     node  number       7725 deleted at time 2.56423E-06
+     node  number       5325 deleted at time 2.56918E-06
+     node  number       8401 deleted at time 2.56918E-06
+     node  number       4866 deleted at time 2.56990E-06
+     node  number       7942 deleted at time 2.56990E-06
+     node  number       4675 deleted at time 2.57783E-06
+     node  number       7751 deleted at time 2.57783E-06
+     node  number       5299 deleted at time 2.58502E-06
+     node  number       8375 deleted at time 2.58502E-06
+     solid element 255  failed at time  2.5865E-06
+     solid element 244  failed at time  2.5879E-06
+     solid element 245  failed at time  2.5886E-06
+     node  number       4701 deleted at time 2.58861E-06
+     node  number       7777 deleted at time 2.58861E-06
+     solid element 246  failed at time  2.5951E-06
+     node  number       5462 deleted at time 2.59579E-06
+     node  number       8538 deleted at time 2.59579E-06
+     node  number       4623 deleted at time 2.60009E-06
+     node  number       4624 deleted at time 2.60009E-06
+     node  number       7699 deleted at time 2.60009E-06
+     node  number       7700 deleted at time 2.60009E-06
+     node  number       5533 deleted at time 2.60664E-06
+     node  number       8609 deleted at time 2.60664E-06
+     node  number       6020 deleted at time 2.60872E-06
+     node  number       9096 deleted at time 2.60872E-06
+     node  number       5975 deleted at time 2.61426E-06
+     node  number       9051 deleted at time 2.61426E-06
+     node  number       4727 deleted at time 2.61978E-06
+     node  number       7803 deleted at time 2.61978E-06
+     node  number       5970 deleted at time 2.62734E-06
+     node  number       9046 deleted at time 2.62734E-06
+     node  number       4753 deleted at time 2.63486E-06
+     node  number       7829 deleted at time 2.63486E-06
+     node  number       5949 deleted at time 2.63964E-06
+     node  number       6394 deleted at time 2.63964E-06
+     node  number       6395 deleted at time 2.63964E-06
+     node  number       9025 deleted at time 2.63964E-06
+     node  number       9470 deleted at time 2.63964E-06
+     node  number       9471 deleted at time 2.63964E-06
+     solid element 248  failed at time  2.6430E-06
+     node  number       5978 deleted at time 2.65284E-06
+     node  number       9054 deleted at time 2.65284E-06
+     node  number       5489 deleted at time 2.65927E-06
+     node  number       8565 deleted at time 2.65927E-06
+     node  number       5969 deleted at time 2.66354E-06
+     node  number       5994 deleted at time 2.66354E-06
+     node  number       5995 deleted at time 2.66354E-06
+     node  number       9045 deleted at time 2.66354E-06
+     node  number       9070 deleted at time 2.66354E-06
+     node  number       9071 deleted at time 2.66354E-06
+     node  number       6235 deleted at time 2.68201E-06
+     node  number       9311 deleted at time 2.68201E-06
+     node  number       4838 deleted at time 2.68769E-06
+     node  number       4839 deleted at time 2.68769E-06
+     node  number       7914 deleted at time 2.68769E-06
+     node  number       7915 deleted at time 2.68769E-06
+     node  number       5951 deleted at time 2.70253E-06
+     node  number       9027 deleted at time 2.70253E-06
+     node  number       6005 deleted at time 2.70403E-06
+     node  number       9081 deleted at time 2.70403E-06
+     node  number       4812 deleted at time 2.73395E-06
+     node  number       7888 deleted at time 2.73395E-06
+     node  number       5950 deleted at time 2.73843E-06
+     node  number       9026 deleted at time 2.73843E-06
+     node  number       5101 deleted at time 2.73993E-06
+     node  number       8177 deleted at time 2.73993E-06
+     node  number       6369 deleted at time 2.75112E-06
+     node  number       9445 deleted at time 2.75112E-06
+     node  number       6032 deleted at time 2.76533E-06
+     node  number       9108 deleted at time 2.76533E-06
+     node  number       6261 deleted at time 2.76673E-06
+     node  number       9337 deleted at time 2.76673E-06
+     node  number       6019 deleted at time 2.77302E-06
+     node  number       9095 deleted at time 2.77302E-06
+     node  number       6344 deleted at time 2.77512E-06
+     node  number       6345 deleted at time 2.77512E-06
+     node  number       6370 deleted at time 2.77512E-06
+     node  number       9420 deleted at time 2.77512E-06
+     node  number       9421 deleted at time 2.77512E-06
+     node  number       9446 deleted at time 2.77512E-06
+     solid element 206  failed at time  2.7758E-06
+     solid element 205  failed at time  2.7779E-06
+     solid element 207  failed at time  2.7793E-06
+     solid element 204  failed at time  2.7897E-06
+     node  number       6045 deleted at time 2.79114E-06
+     node  number       9121 deleted at time 2.79114E-06
+     node  number       6319 deleted at time 2.79188E-06
+     node  number       9395 deleted at time 2.79188E-06
+     node  number       6031 deleted at time 2.80613E-06
+     node  number       9107 deleted at time 2.80613E-06
+     node  number       6044 deleted at time 2.80683E-06
+     node  number       6070 deleted at time 2.80683E-06
+     node  number       9120 deleted at time 2.80683E-06
+     node  number       9146 deleted at time 2.80683E-06
+     node  number       6382 deleted at time 2.82371E-06
+     node  number       9458 deleted at time 2.82371E-06
+     node  number       5977 deleted at time 2.82815E-06
+     node  number       6059 deleted at time 2.82815E-06
+     node  number       9053 deleted at time 2.82815E-06
+     node  number       9135 deleted at time 2.82815E-06
+     node  number       6004 deleted at time 2.83996E-06
+     node  number       9080 deleted at time 2.83996E-06
+     node  number       6058 deleted at time 2.84688E-06
+     node  number       9134 deleted at time 2.84688E-06
+     node  number       6381 deleted at time 2.85706E-06
+     node  number       6096 deleted at time 2.85706E-06
+     node  number       9172 deleted at time 2.85706E-06
+     node  number       9457 deleted at time 2.85706E-06
+     node  number       6095 deleted at time 2.86884E-06
+     node  number       9171 deleted at time 2.86884E-06
+     node  number       6121 deleted at time 2.87607E-06
+     node  number       9197 deleted at time 2.87607E-06
+     node  number       6086 deleted at time 2.88714E-06
+     node  number       9162 deleted at time 2.88714E-06
+     node  number       6085 deleted at time 2.89129E-06
+     node  number       9161 deleted at time 2.89129E-06
+     node  number       5117 deleted at time 2.91615E-06
+     node  number       8193 deleted at time 2.91615E-06
+     node  number       6320 deleted at time 2.93219E-06
+     node  number       9396 deleted at time 2.93219E-06
+     node  number       6112 deleted at time 2.93304E-06
+     node  number       9188 deleted at time 2.93304E-06
+     node  number       6113 deleted at time 2.94152E-06
+     node  number       9189 deleted at time 2.94152E-06
+     node  number       6354 deleted at time 2.94321E-06
+     node  number       6355 deleted at time 2.94321E-06
+     node  number       9430 deleted at time 2.94321E-06
+     node  number       9431 deleted at time 2.94321E-06
+     node  number       6294 deleted at time 2.96168E-06
+     node  number       6295 deleted at time 2.96168E-06
+     node  number       9370 deleted at time 2.96168E-06
+     node  number       9371 deleted at time 2.96168E-06
+    4330 t 2.9625E-06 dt 7.91E-10 write d3plot file            03/30/22 15:38:08
+     node  number       6269 deleted at time 2.96484E-06
+     node  number       9345 deleted at time 2.96484E-06
+     node  number       6120 deleted at time 2.96879E-06
+     node  number       6146 deleted at time 2.96879E-06
+     node  number       9196 deleted at time 2.96879E-06
+     node  number       9222 deleted at time 2.96879E-06
+     node  number       6139 deleted at time 2.97352E-06
+     node  number       9215 deleted at time 2.97352E-06
+     node  number       6140 deleted at time 2.98727E-06
+     node  number       9216 deleted at time 2.98727E-06
+     node  number       6328 deleted at time 2.98898E-06
+     node  number       9404 deleted at time 2.98898E-06
+     node  number       6145 deleted at time 2.99324E-06
+     node  number       9221 deleted at time 2.99324E-06
+     solid element 155  failed at time  2.9966E-06
+     solid element 156  failed at time  2.9975E-06
+     node  number       6327 deleted at time 2.99920E-06
+     node  number       9403 deleted at time 2.99920E-06
+     node  number       6166 deleted at time 3.01023E-06
+     node  number       9242 deleted at time 3.01023E-06
+     node  number       6167 deleted at time 3.02368E-06
+     node  number       9243 deleted at time 3.02368E-06
+     node  number       6193 deleted at time 3.03960E-06
+     node  number       9269 deleted at time 3.03960E-06
+     node  number       6194 deleted at time 3.05008E-06
+     node  number       9270 deleted at time 3.05008E-06
+     node  number       6300 deleted at time 3.05096E-06
+     node  number       6301 deleted at time 3.05096E-06
+     node  number       9376 deleted at time 3.05096E-06
+     node  number       9377 deleted at time 3.05096E-06
+     node  number       6221 deleted at time 3.06366E-06
+     node  number       9297 deleted at time 3.06366E-06
+     node  number       6220 deleted at time 3.07947E-06
+     node  number       9296 deleted at time 3.07947E-06
+     node  number       6171 deleted at time 3.08279E-06
+     node  number       9247 deleted at time 3.08279E-06
+     node  number       6247 deleted at time 3.09366E-06
+     node  number       6170 deleted at time 3.09366E-06
+     node  number       6195 deleted at time 3.09366E-06
+     node  number       6273 deleted at time 3.09366E-06
+     node  number       6196 deleted at time 3.09366E-06
+     node  number       9246 deleted at time 3.09366E-06
+     node  number       9323 deleted at time 3.09366E-06
+     node  number       9271 deleted at time 3.09366E-06
+     node  number       9349 deleted at time 3.09366E-06
+     node  number       9272 deleted at time 3.09366E-06
+     node  number       6274 deleted at time 3.09453E-06
+     node  number       6218 deleted at time 3.09453E-06
+     node  number       6219 deleted at time 3.09453E-06
+     node  number       9350 deleted at time 3.09453E-06
+     node  number       9294 deleted at time 3.09453E-06
+     node  number       9295 deleted at time 3.09453E-06
+     node  number       6244 deleted at time 3.10154E-06
+     node  number       6270 deleted at time 3.10154E-06
+     node  number       9320 deleted at time 3.10154E-06
+     node  number       9346 deleted at time 3.10154E-06
+     node  number       6246 deleted at time 3.12540E-06
+     node  number       9322 deleted at time 3.12540E-06
+     node  number       5127 deleted at time 3.47056E-06
+     node  number       5153 deleted at time 3.47056E-06
+     node  number       8203 deleted at time 3.47056E-06
+     node  number       8229 deleted at time 3.47056E-06
+    5000 t 3.5057E-06 dt 7.90E-10 flush i/o buffers            03/30/22 15:38:09
+     node  number       5039 deleted at time 3.68583E-06
+     node  number       8115 deleted at time 3.68583E-06
+    5248 t 3.7026E-06 dt 7.64E-10 write d3plot file            03/30/22 15:38:09
+     node  number       5803 deleted at time 4.08064E-06
+     node  number       8879 deleted at time 4.08064E-06
+     node  number       5065 deleted at time 4.11402E-06
+     node  number       5091 deleted at time 4.11402E-06
+     node  number       8141 deleted at time 4.11402E-06
+     node  number       8167 deleted at time 4.11402E-06
+     node  number       1342 deleted at time 4.34486E-06
+     node  number       3003 deleted at time 4.34486E-06
+    6203 t 4.4439E-06 dt 7.96E-10 write d3plot file            03/30/22 15:38:10
+     node  number       5013 deleted at time 4.67697E-06
+     node  number       8089 deleted at time 4.67697E-06
+     solid element 238  failed at time  4.7028E-06
+     node  number       5025 deleted at time 4.74475E-06
+     node  number       8101 deleted at time 4.74475E-06
+     node  number       4779 deleted at time 4.74688E-06
+     node  number       7855 deleted at time 4.74688E-06
+     solid element 269  failed at time  4.8369E-06
+      node  number 295 deleted at time  4.8404E-06
+      node  number 1956 deleted at time  4.8404E-06
+     solid element 259  failed at time  4.8404E-06
+     solid element 277  failed at time  4.8557E-06
+     node  number        316 deleted at time 4.85568E-06
+     node  number       1977 deleted at time 4.85568E-06
+      node  number 306 deleted at time  4.8585E-06
+      node  number 1967 deleted at time  4.8585E-06
+     solid element 279  failed at time  4.8585E-06
+     node  number        317 deleted at time 4.89242E-06
+     node  number       1978 deleted at time 4.89242E-06
+     solid element 280  failed at time  4.9090E-06
+     node  number       1350 deleted at time 4.94538E-06
+     node  number       3011 deleted at time 4.94538E-06
+     solid element 257  failed at time  4.9763E-06
+      node  number 281 deleted at time  5.0061E-06
+      node  number 1942 deleted at time  5.0061E-06
+     solid element 256  failed at time  5.0061E-06
+     solid element 276  failed at time  5.0068E-06
+     node  number        314 deleted at time 5.00676E-06
+     node  number        315 deleted at time 5.00676E-06
+     node  number       1975 deleted at time 5.00676E-06
+     node  number       1976 deleted at time 5.00676E-06
+     node  number       1348 deleted at time 5.09354E-06
+     node  number       1349 deleted at time 5.09354E-06
+     node  number       3009 deleted at time 5.09354E-06
+     node  number       3010 deleted at time 5.09354E-06
+     node  number       1340 deleted at time 5.10022E-06
+     node  number       1341 deleted at time 5.10022E-06
+     node  number       1351 deleted at time 5.10022E-06
+     node  number       3001 deleted at time 5.10022E-06
+     node  number       3002 deleted at time 5.10022E-06
+     node  number       3012 deleted at time 5.10022E-06
+    7236 t 5.1842E-06 dt 7.00E-10 write d3plot file            03/30/22 15:38:11
+     solid element 228  failed at time  5.1891E-06
+      node  number 292 deleted at time  5.2337E-06
+      node  number 303 deleted at time  5.2337E-06
+      node  number 1953 deleted at time  5.2337E-06
+      node  number 1964 deleted at time  5.2337E-06
+     solid element 266  failed at time  5.2337E-06
+      node  number 293 deleted at time  5.2448E-06
+      node  number 294 deleted at time  5.2448E-06
+      node  number 305 deleted at time  5.2448E-06
+      node  number 304 deleted at time  5.2448E-06
+      node  number 1954 deleted at time  5.2448E-06
+      node  number 1955 deleted at time  5.2448E-06
+      node  number 1966 deleted at time  5.2448E-06
+      node  number 1965 deleted at time  5.2448E-06
+     solid element 267  failed at time  5.2448E-06
+     node  number       5751 deleted at time 5.27361E-06
+     node  number       5777 deleted at time 5.27361E-06
+     node  number       8827 deleted at time 5.27361E-06
+     node  number       8853 deleted at time 5.27361E-06
+     node  number       5000 deleted at time 5.28830E-06
+     node  number       8076 deleted at time 5.28830E-06
+     solid element 235  failed at time  5.3049E-06
+     node  number       4949 deleted at time 5.30785E-06
+     node  number       4974 deleted at time 5.30785E-06
+     node  number       4975 deleted at time 5.30785E-06
+     node  number       8025 deleted at time 5.30785E-06
+     node  number       8050 deleted at time 5.30785E-06
+     node  number       8051 deleted at time 5.30785E-06
+      node  number 283 deleted at time  5.3391E-06
+      node  number 282 deleted at time  5.3391E-06
+      node  number 1944 deleted at time  5.3391E-06
+      node  number 1943 deleted at time  5.3391E-06
+     solid element 247  failed at time  5.3391E-06
+      node  number 269 deleted at time  5.3617E-06
+      node  number 1930 deleted at time  5.3617E-06
+     solid element 234  failed at time  5.3617E-06
+     solid element 229  failed at time  5.4322E-06
+     solid element 227  failed at time  5.4376E-06
+     node  number       4987 deleted at time 5.46638E-06
+     node  number       8063 deleted at time 5.46638E-06
+      node  number 261 deleted at time  5.5378E-06
+      node  number 272 deleted at time  5.5378E-06
+      node  number 1922 deleted at time  5.5378E-06
+      node  number 1933 deleted at time  5.5378E-06
+     solid element 237  failed at time  5.5378E-06
+     solid element 218  failed at time  5.5475E-06
+     solid element 208  failed at time  5.6502E-06
+     solid element 198  failed at time  5.7669E-06
+     solid element 188  failed at time  5.7727E-06
+     solid element 178  failed at time  5.7795E-06
+      node  number 271 deleted at time  5.8476E-06
+      node  number 270 deleted at time  5.8476E-06
+      node  number 1932 deleted at time  5.8476E-06
+      node  number 1931 deleted at time  5.8476E-06
+     solid element 236  failed at time  5.8476E-06
+     solid element 168  failed at time  5.8735E-06
+     solid element 282  failed at time  5.9099E-06
+     node  number        322 deleted at time 5.90988E-06
+     node  number       1983 deleted at time 5.90988E-06
+    8001 t 5.9245E-06 dt 9.71E-10 write d3plot file            03/30/22 15:38:12
+     solid element 224  failed at time  5.9361E-06
+     solid element 281  failed at time  5.9557E-06
+     node  number        320 deleted at time 5.95571E-06
+     node  number        321 deleted at time 5.95571E-06
+     node  number       1981 deleted at time 5.95571E-06
+     node  number       1982 deleted at time 5.95571E-06
+     node  number       5726 deleted at time 5.97887E-06
+     node  number       8802 deleted at time 5.97887E-06
+     solid element 214  failed at time  5.9932E-06
+      node  number 236 deleted at time  6.0004E-06
+      node  number 1897 deleted at time  6.0004E-06
+     solid element 215  failed at time  6.0004E-06
+      node  number 247 deleted at time  6.0651E-06
+      node  number 258 deleted at time  6.0651E-06
+      node  number 1908 deleted at time  6.0651E-06
+      node  number 1919 deleted at time  6.0651E-06
+     solid element 225  failed at time  6.0651E-06
+     node  number       5622 deleted at time 6.17833E-06
+     node  number       8698 deleted at time 6.17833E-06
+     node  number       5050 deleted at time 6.25267E-06
+     node  number       8126 deleted at time 6.25267E-06
+     node  number       5051 deleted at time 6.28561E-06
+     node  number       8127 deleted at time 6.28561E-06
+     node  number        323 deleted at time 6.33923E-06
+     node  number       1984 deleted at time 6.33923E-06
+     node  number       5700 deleted at time 6.38047E-06
+     node  number       5701 deleted at time 6.38047E-06
+     node  number       8776 deleted at time 6.38047E-06
+     node  number       8777 deleted at time 6.38047E-06
+    8750 t 6.6652E-06 dt 1.03E-09 write d3plot file            03/30/22 15:38:13
+     node  number       5650 deleted at time 6.79032E-06
+     node  number       8726 deleted at time 6.79032E-06
+     node  number       5649 deleted at time 6.80982E-06
+     node  number       5675 deleted at time 6.80982E-06
+     node  number       8725 deleted at time 6.80982E-06
+     node  number       8751 deleted at time 6.80982E-06
+     solid element 260  failed at time  6.8324E-06
+     node  number       1345 deleted at time 6.84113E-06
+     node  number       3006 deleted at time 6.84113E-06
+      node  number 286 deleted at time  6.8518E-06
+      node  number 1947 deleted at time  6.8518E-06
+     solid element 250  failed at time  6.8518E-06
+     node  number       5076 deleted at time 6.88757E-06
+     node  number       5102 deleted at time 6.88757E-06
+     node  number       8152 deleted at time 6.88757E-06
+     node  number       8178 deleted at time 6.88757E-06
+     node  number       5752 deleted at time 7.08868E-06
+     node  number       8828 deleted at time 7.08868E-06
+     node  number       5624 deleted at time 7.13848E-06
+     node  number       5623 deleted at time 7.13848E-06
+     node  number       8700 deleted at time 7.13848E-06
+     node  number       8699 deleted at time 7.13848E-06
+      node  number 262 deleted at time  7.1808E-06
+      node  number 1923 deleted at time  7.1808E-06
+     solid element 239  failed at time  7.1808E-06
+     solid element 274  failed at time  7.4048E-06
+     node  number        312 deleted at time 7.40476E-06
+     node  number        313 deleted at time 7.40476E-06
+     node  number       1973 deleted at time 7.40476E-06
+     node  number       1974 deleted at time 7.40476E-06
+    9499 t 7.4057E-06 dt 9.82E-10 write d3plot file            03/30/22 15:38:14
+     solid element 253  failed at time  7.4787E-06
+      node  number 273 deleted at time  7.4943E-06
+      node  number 285 deleted at time  7.4943E-06
+      node  number 284 deleted at time  7.4943E-06
+      node  number 1934 deleted at time  7.4943E-06
+      node  number 1946 deleted at time  7.4943E-06
+      node  number 1945 deleted at time  7.4943E-06
+     solid element 249  failed at time  7.4943E-06
+   10000 t 7.8947E-06 dt 9.83E-10 flush i/o buffers            03/30/22 15:38:14
+     node  number       1343 deleted at time 8.03180E-06
+     node  number       1344 deleted at time 8.03180E-06
+     node  number       3004 deleted at time 8.03180E-06
+     node  number       3005 deleted at time 8.03180E-06
+   10262 t 8.1469E-06 dt 9.45E-10 write d3plot file            03/30/22 15:38:15
+     node  number        318 deleted at time 8.21991E-06
+     node  number        319 deleted at time 8.21991E-06
+     node  number       1979 deleted at time 8.21991E-06
+     node  number       1980 deleted at time 8.21991E-06
+      node  number 311 deleted at time  8.6583E-06
+      node  number 1972 deleted at time  8.6583E-06
+     solid element 272  failed at time  8.6583E-06
+     solid element 261  failed at time  8.6734E-06
+   11024 t 8.8871E-06 dt 1.01E-09 write d3plot file            03/30/22 15:38:15
+     solid element 169  failed at time  9.4953E-06
+     node  number       4730 deleted at time 9.59214E-06
+     node  number       7806 deleted at time 9.59214E-06
+   11760 t 9.6285E-06 dt 1.01E-09 write d3plot file            03/30/22 15:38:16
+      node  number 300 deleted at time  9.6893E-06
+      node  number 1961 deleted at time  9.6893E-06
+     solid element 262  failed at time  9.6893E-06
+   12487 t 1.0369E-05 dt 1.01E-09 write d3plot file            03/30/22 15:38:17
+      node  number 251 deleted at time  1.0445E-05
+      node  number 1912 deleted at time  1.0445E-05
+     solid element 219  failed at time  1.0445E-05
+   13224 t 1.1109E-05 dt 1.03E-09 write d3plot file            03/30/22 15:38:17
+   13963 t 1.1850E-05 dt 9.84E-10 write d3plot file            03/30/22 15:38:18
+   14702 t 1.2591E-05 dt 1.05E-09 write d3plot file            03/30/22 15:38:19
+   15000 t 1.2890E-05 dt 1.02E-09 flush i/o buffers            03/30/22 15:38:19
+   15440 t 1.3331E-05 dt 1.02E-09 write d3plot file            03/30/22 15:38:20
+   16175 t 1.4072E-05 dt 9.85E-10 write d3plot file            03/30/22 15:38:20
+   16909 t 1.4812E-05 dt 1.02E-09 write d3plot file            03/30/22 15:38:21
+   17650 t 1.5553E-05 dt 9.87E-10 write d3plot file            03/30/22 15:38:22
+     solid element 170  failed at time  1.5705E-05
+   18387 t 1.6294E-05 dt 1.02E-09 write d3plot file            03/30/22 15:38:22
+   19118 t 1.7035E-05 dt 1.05E-09 write d3plot file            03/30/22 15:38:23
+   19851 t 1.7776E-05 dt 9.84E-10 write d3plot file            03/30/22 15:38:23
+   20000 t 1.7923E-05 dt 9.86E-10 flush i/o buffers            03/30/22 15:38:23
+   20584 t 1.8516E-05 dt 9.85E-10 write d3plot file            03/30/22 15:38:24
+   21325 t 1.9257E-05 dt 1.05E-09 write d3plot file            03/30/22 15:38:24
+   22060 t 1.9998E-05 dt 9.87E-10 write d3plot file            03/30/22 15:38:25
+   22792 t 2.0738E-05 dt 9.85E-10 write d3plot file            03/30/22 15:38:25
+   23524 t 2.1479E-05 dt 1.02E-09 write d3plot file            03/30/22 15:38:26
+ 
+ *** termination time reached ***
+   24045 t 2.2000E-05 dt 1.05E-09 write d3dump01 file          03/30/22 15:38:30
+   24045 t 2.2000E-05 dt 1.05E-09 flush i/o buffers            03/30/22 15:38:30
+   24045 t 2.2000E-05 dt 1.05E-09 write d3plot file            03/30/22 15:38:30
+
+ N o r m a l    t e r m i n a t i o n                          03/30/22 15:38:30
+
+ Memory required to complete solution (memory=   1063K memory2=     48K)
+          Minimum     48K on processor    15
+          Maximum     48K on processor     3
+          Average     48K
+
+ Additional dynamically allocated memory
+          Minimum   4749K on processor     4
+          Maximum   5647K on processor     0
+          Average   4812K
+
+ Total allocated memory
+          Minimum   4797K on processor     4
+          Maximum   5695K on processor     0
+          Average   4859K
+
+ T i m i n g   i n f o r m a t i o n
+                        CPU(seconds)   %CPU  Clock(seconds) %Clock
+  ----------------------------------------------------------------
+  Keyword Processing ... 1.0871E-01    0.39     1.1166E-01    0.36
+    KW Reading ......... 1.5669E-03    0.01     1.8491E-03    0.01
+    KW Writing ......... 9.5201E-04    0.00     1.0337E-03    0.00
+  MPP Decomposition .... 2.4723E-01    0.90     3.0793E-01    0.99
+    Init Proc .......... 1.7734E-01    0.64     1.8283E-01    0.59
+    Decomposition ...... 1.3511E-02    0.05     1.4048E-02    0.05
+    Translation ........ 5.6346E-02    0.20     1.1102E-01    0.36
+  Initialization ....... 8.0745E-02    0.29     1.1216E-01    0.36
+    Init Proc Phase 1 .. 3.4544E-02    0.13     5.3662E-02    0.17
+    Init Proc Phase 2 .. 5.5456E-03    0.02     7.9677E-03    0.03
+  Init solver .......... 1.7939E-03    0.01     1.8046E-03    0.01
+  Element processing ... 2.1840E+00    7.92     2.2054E+00    7.11
+    Solids ............. 2.0029E+00    7.26     2.0216E+00    6.51
+    E Other ............ 1.8329E-02    0.07     1.8431E-02    0.06
+  Binary databases ..... 1.4719E-01    0.53     1.5093E-01    0.49
+  ASCII database ....... 4.6121E-01    1.67     5.7245E-01    1.84
+  Contact algorithm .... 1.0336E+01   37.49     1.0404E+01   33.52
+    Interf. ID         3 7.6078E+00   27.59     7.6547E+00   24.66
+    Interf. ID         2 2.2894E+00    8.30     2.3047E+00    7.43
+  Rigid Bodies ......... 3.0436E-02    0.11     3.0559E-02    0.10
+  DEM .................. 5.1380E+00   18.64     5.1714E+00   16.66
+    DEM self contact ... 5.1158E+00   18.55     5.1492E+00   16.59
+  Time step size ....... 3.9267E+00   14.24     3.9519E+00   12.73
+  Group force file ..... 9.4925E-03    0.03     1.0224E-02    0.03
+  Others ............... 4.4411E-01    1.61     5.5468E-01    1.79
+    Force Sharing ...... 3.4109E-01    1.24     3.4262E-01    1.10
+  Misc. 1 .............. 1.0046E+00    3.64     1.0447E+00    3.37
+    Scale Masses ....... 6.7346E-03    0.02     6.8113E-03    0.02
+    Force Constraints .. 7.4219E-03    0.03     7.4444E-03    0.02
+    Force to Accel ..... 7.7369E-02    0.28     7.7447E-02    0.25
+    Constraint Sharing . 8.0810E-03    0.03     8.1801E-03    0.03
+    Update RB nodes .... 9.1493E-03    0.03     9.2664E-03    0.03
+  Misc. 2 .............. 1.2010E-01    0.44     1.2022E-01    0.39
+  Misc. 3 .............. 3.2506E+00   11.79     6.2053E+00   19.99
+  Misc. 4 .............. 8.0985E-02    0.29     8.2302E-02    0.27
+    Timestep Init ...... 2.7793E-02    0.10     2.7508E-02    0.09
+    Apply Loads ........ 3.5893E-02    0.13     3.6541E-02    0.12
+  ----------------------------------------------------------------
+  T o t a l s            2.7571E+01  100.00     3.1037E+01  100.00
+
+ Problem time       =    2.2000E-05
+ Problem cycle      =     24045
+ Total CPU time     =        28 seconds (   0 hours  0 minutes 28 seconds)
+ CPU time per zone cycle  =        250.466 nanoseconds
+ Clock time per zone cycle=        280.392 nanoseconds
+
+ Parallel execution with     16 MPP proc
+ NLQ used/max                64/    64
+
+  C P U   T i m i n g   i n f o r m a t i o n
+
+  Processor   Hostname                              CPU/Avg_CPU  CPU(seconds)
+  ---------------------------------------------------------------------------
+  #       0   compute-0-3                               0.91046   2.5160E+01
+  #       1   compute-0-3                               1.02698   2.8380E+01
+  #       2   compute-0-3                               0.99550   2.7510E+01
+  #       3   compute-0-3                               0.99478   2.7490E+01
+  #       4   compute-0-3                               0.99333   2.7450E+01
+  #       5   compute-0-3                               1.00057   2.7650E+01
+  #       6   compute-0-3                               1.01395   2.8020E+01
+  #       7   compute-0-3                               1.01866   2.8150E+01
+  #       8   compute-0-3                               1.04833   2.8970E+01
+  #       9   compute-0-3                               0.99876   2.7600E+01
+  #      10   compute-0-3                               0.99152   2.7400E+01
+  #      11   compute-0-3                               0.99550   2.7510E+01
+  #      12   compute-0-3                               0.99369   2.7460E+01
+  #      13   compute-0-3                               1.00599   2.7800E+01
+  #      14   compute-0-3                               1.00961   2.7900E+01
+  #      15   compute-0-3                               1.00237   2.7700E+01
+  ---------------------------------------------------------------------------
+  T o t a l s                                                     4.4215E+02
+
+
+ Start time   03/30/2022 15:37:59  
+ End time     03/30/2022 15:38:30  
+ Elapsed time      31 seconds for   24045 cycles using    16 MPP procs
+             (      0 hour   0 minute  31 seconds)
+
+ N o r m a l    t e r m i n a t i o n                          03/30/22 15:38:30
