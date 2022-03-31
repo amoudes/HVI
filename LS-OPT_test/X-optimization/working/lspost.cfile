@@ -1,3 +1,15 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Mar-31-2022 (13:35:31)
-openc d3plot "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\X-optimization\results\lsppout"
+$# Created on Mar-31-2022 (15:03:39)
+openc d3plot "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\X-optimization\working\d3plot"
+ac
+home
+anim forward
+anim stop; state 2;
+gtime 2
+state -1;
+state -1;
+state -1;
+state +1;
+anim forward
+anim stop; state 10;
+gtime 2
