@@ -1,0 +1,7 @@
+open d3plot d3plot
+//measure select 1
+//measure type 14
+measure history angvel rv all
+xyplot 1 savefile xypair LsoptHistory 1
+deletewin 1
+quit

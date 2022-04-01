@@ -1,5 +1,6 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Mar-31-2022 (10:51:41)
+$# Created on Mar-31-2022 (16:39:13)
 openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\X-optimization_3D\structure.key"
 save keywordversion 2
 save keywordversion 12
+home

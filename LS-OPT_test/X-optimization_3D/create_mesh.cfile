@@ -179,7 +179,7 @@ nlmesh2 clearsel
 genselect target edge
 genselect target segment
 genselect element add part 2/0 
-elgenerate solid solidfacedrag 1 2107 20 80 0 0 0 0 0 4
+elgenerate solid solidfacedrag 1 2107 40 160 0 0 0 0 0 4
 genselect clear
 elgenerate accept
 //
@@ -205,7 +205,7 @@ delelement unrefn 0
 //
 //
 // CREATE BALL
-meshing spheresolid create -7 0 10 4.78 25 0 0 0 0 1 0
+meshing spheresolid create -7 0 20 4.78 25 0 0 0 0 1 0
 ac
 meshing spheresolid accept 2 555259 614271 spheresolid
 ac
