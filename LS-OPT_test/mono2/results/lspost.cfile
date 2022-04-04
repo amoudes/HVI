@@ -1,109 +1,33 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Mar-31-2022 (17:05:36)
-open d3plot "C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\mono2\results\d3plot"
+$# Created on Apr-4-2022 (09:24:49)
+openc d3plot "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\mono2\results\d3plot"
 ac
-anim forward
 home
-anim backward
-front
-home
-anim forward
-open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\mono2\MJC.key"
-save keywordversion 2
-save keywordversion 12
-Message 0
-home
-anim forward
+state -1;
+state -1;
+state -1;
+state -1;
+state +1;
+state +1;
+state +1;
+state +1;
+ac
+state -1;
+ac
+state -1;
+state +1;
 state +1;
 anim forward
+anim stop; state 21;
+state +1;
+state 31;
+gtime 3
 gtime 1
-selectentity None
-open d3plot "F:\3dmonothick\d3plot"
-ac
-anim forward
-home
-anim backward
-anim forward
-home
-anim backward
-anim forward
-home
-anim backward
-anim forward
 measure select 1
 measure type 14
-measure history angvel xv all
-measure history angvel xv all
-anim backward
-measure history angvel rv all
-measure history angvel rv all
-measure axes set 1
-measure history angvel xv all
-findhist None 1
 measure history angvel rv all
 findhist None 1
+measure type 0
 measure select 0
 measure type 0
 measure type 0
-open d3plot "E:\Topology_optimization\X-optimization_3D_baseline_wide\d3plot"
-ac
-anim forward
-animatemode 0
-home
-anim stop; state 12;
-home
-state 1;
-anim forward
-anim stop; state 1;
-animatemode 1
-anim forward
--M 20
--M 1
-+M 1
--M 10
-+M 10
-+M 20
-anim backward
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-anim forward
-measure select 1
-measure history angvel rv all
-findhist None 1
-measure select 0
-measure type 0
-measure type 0
-open d3plot "F:\3dmonothick\d3plot"
-ac
