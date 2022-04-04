@@ -1,53 +1,22 @@
-openc keyword "2platestructure.key"
+openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\mono2\2platestructure.key"
 save keywordversion 2
 save keywordversion 12
-Time to read keyword file = 0.094 seconds
+Time to read keyword file = 0.250 seconds
 Time to process element data = 0.031 seconds
 Finished reading model
-front
 home
-Save Config. parameters to file C:\Users\Kayleigh\AppData\Roaming\LSTC\LS-PrePost4.8\lsppconf
-4 0.512000;
-zoomhere 0.263423 -0.005574 0.409600;
-zoomhere 0.263423 -0.005574 0.327680;
-zoomhere 0.263423 -0.005574 0.262144;
-zoomhere 0.263423 -0.005574 0.209715;
-zoomhere 0.258389 -0.013378 0.167772;
-zoomhere 0.257271 -0.016722 0.134218;
-zoomhere 0.256711 -0.017837 0.107374;
-zoomhere 0.256152 -0.018952 0.085899;
-zoomhere 0.256152 -0.021182 0.068719;
-zoomhere 0.253915 -0.031215 0.054975;
-zoomhere 0.161074 -0.057971 0.043980;
-zoomhere 0.160515 -0.059086 0.035184;
-zoomhere 0.159955 -0.061315 0.028147;
-zoomhere 0.159396 -0.062430 0.022518;
-zoomhere 0.159396 -0.063545 0.018014;
-zoomhere 0.159396 -0.063545 0.014411;
-zoomhere 0.157718 -0.070234 0.011529;
-zoomhere 0.109620 -0.104794 0.014411;
-zoomhere 0.109060 -0.107023 0.018014;
-zoomhere 0.108501 -0.109253 0.022518;
-zoomhere 0.108501 -0.109253 0.028147;
-zoomhere 0.135347 -0.128205 0.035184;
-zoomhere 0.135906 -0.129320 0.043980;
-zoomhere 0.136465 -0.133779 0.054975;
-zoomhere 0.137025 -0.134894 0.068719;
-zoomhere 0.137025 -0.134894 0.085899;
-zoomhere 0.154362 -0.143813 0.107374;
-zoomhere 0.156040 -0.148272 0.134217;
-zoomhere 0.157159 -0.151616 0.167771;
-zoomhere 0.157159 -0.152731 0.209714;
-zoomhere 0.157159 -0.152731 0.262142;
-zoomhere 0.157159 -0.153846 0.327678;
-zoomhere 0.161074 -0.150502 0.409597;
-zoomhere 0.161074 -0.150502 0.511996;
-zoomhere 0.161074 -0.150502 0.639995;
-zoomhere 0.161074 -0.149387 0.799994;
-zoomhere 0.168904 -0.137124 0.999992;
-zoomhere 0.168904 -0.137124 1.249990;
-zoomhere 0.168904 -0.137124 1.562487;
-zoomhere 0.168904 -0.137124 1.953109;
-zoomhere 0.168904 -0.137124 2.441386;
-pan 12.854082 12.242105;
-Save Config. parameters to file C:\Users\Kayleigh\AppData\Roaming\LSTC\LS-PrePost4.8\lsppconf
+zoomhere -0.237603 -0.008571 0.800000;
+zoomhere -0.238981 -0.008571 0.640000;
+zoomhere -0.238981 -0.008571 0.512000;
+zoomhere -0.238981 -0.008571 0.409600;
+zoomhere -0.238981 -0.008571 0.327680;
+zoomhere -0.238981 -0.008571 0.262144;
+zoomhere -0.238981 -0.008571 0.209715;
+zoomhere -0.237603 0.004286 0.167772;
+zoomhere -0.237603 0.004286 0.134218;
+zoomhere -0.237603 0.004286 0.107374;
+zoomhere -0.238292 -0.004286 0.085899;
+zoomhere -0.238292 -0.007143 0.068719;
+zoomhere -0.238292 -0.007143 0.085899;
+zoomhere -0.238292 -0.007143 0.107374;
+Save Config. parameters to file C:\Users\s148946\AppData\Roaming\LSTC\LS-PrePost4.8\lsppconf

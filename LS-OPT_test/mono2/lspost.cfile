@@ -1,7 +1,6 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Apr-4-2022 (13:00:39)
-openc keyword "2platestructure.key"
+$# Created on Apr-4-2022 (13:35:40)
+openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\mono2\2platestructure.key"
 save keywordversion 2
 save keywordversion 12
-front
 home
