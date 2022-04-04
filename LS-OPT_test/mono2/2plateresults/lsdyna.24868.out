@@ -1,0 +1,599 @@
+16
+16
+Intel(R) MPI Library, Version 2018 Update 4  Build 20180823 (id: 18555)
+Copyright (C) 2003-2018 Intel Corporation.  All rights reserved.
+ License option : check network license only
+      Date: 04/04/2022      Time: 10:05:05  
+
+     ___________________________________________________
+     |                                                 |
+     |  Livermore Software Technology, LLC             |
+     |                                                 |
+     |  7374 Las Positas Road                          |
+     |  Livermore, CA 94551                            |
+     |  Tel: (925) 449-2500  Fax: (925) 449-2507       |
+     |  www.lstc.com                                   |
+     |_________________________________________________|
+     |                                                 |
+     |  LS-DYNA, A Program for Nonlinear Dynamic       |
+     |  Analysis of Structures in Three Dimensions     |
+     |  Version : mpp d R12.0.0   Date: 06/19/2020     |
+     |  Revision: 148931          Time: 17:26:40       |
+     |                                                 |
+     |  Features enabled in this version:              |
+     |    Distributed Memory Parallel                  |
+     |    CESE CHEMISTRY EM ICFD STOCHASTIC_PARTICLES  |
+     |    FFTW (multi-dimensional FFTW Library)        |
+     |    ANSYS License (ANSYS202)                     |
+     |    BigID  option                                |
+     |                                                 |
+     |  Licensed to: Norwegian University of Science an|
+     |  Issued by  : Pascale.SaneGuttin_02092022       |
+     |                                                 |
+     |  Platform   : Intel-MPI 2018 Xeon64             |
+     |  OS Level   : Linux CentOS 6.5 uom              |
+     |  Compiler   : Intel Fortran Compiler 16.0 AVX-2 |
+     |  Hostname   : compute-0-2                       |
+     |  Precision  : Double precision (I8R8)           |
+     |  SVN Version: 148978                            |
+     |                                                 |
+     |  Unauthorized use infringes LST copyrights      |
+     |_________________________________________________|
+
+
+ Input file: MJC.k                                                                           
+
+ The native file format       : 64-bit small endian
+ Memory size from default     :   100000000,            0
+ Memory size from default     :   100000000,    100000000
+
+ Memory for the head node
+ Memory installed (MB)        :       257787
+ Memory available (MB)        :       238371
+
+ on UNIX computers note the following change:
+
+ ctrl-c interrupts ls-dyna and prompts for a sense  switch.
+ type the desired sense switch: sw1., sw2., etc. to continue
+ the execution.  ls-dyna will respond as explained in the users manual
+
+    type                      response
+   -----   ------------------------------------------------------------
+   quit    ls-dyna terminates.
+   stop    ls-dyna terminates.
+   sw1.    a restart file is written and ls-dyna terminates.
+   sw2.    ls-dyna responds with time and cycle numbers.    
+   sw3.    a restart file is written and ls-dyna continues calculations.
+   sw4.    a plot state is written and ls-dyna continues calculations.
+   sw5.    ls-dyna enters interactive graphics phase.
+   swa.    ls-dyna flushes all output i/o buffers.
+   swb.    a dynain is written and ls-dyna continues calculations.
+   swc.    a restart and dynain are written and ls-dyna contiunues calculations.
+   swd.    a restart and dynain are written and ls-dyna terminates.
+   lpri    toggle implicit lin. alg. solver output on/off.
+   nlpr    toggle implicit nonlinear solver output on/off.
+   iter    toggle implicit output to d3iter database on/off.
+   prof    output timing data to prof.out and continue.
+   conv    force implicit nonlinear convergence for current time step.
+   ttrm    terminate implicit time step, reduce time step, retry time step.
+   rtrm    terminate implicit at end of current time step.
+
+
+ ********  notice  ********  notice  ********  notice  ********
+ *                                                            *
+ * This is the LS-DYNA Finite Element code.                   *
+ *                                                            *
+ * Neither LST nor the authors assume any responsibility for  *
+ * the validity, accuracy, or applicability of any results    *
+ * obtained from this system. Users must verify their own     *
+ * results.                                                   *
+ *                                                            *
+ * LST endeavors to make the LS-DYNA code as complete,        *
+ * accurate and easy to use as possible.                      *
+ * Suggestions and comments are welcomed.  Please report any  *
+ * errors encountered in either the documentation or results  *
+ * immediately to LST through your site focus.                *
+ *                                                            *
+ * Copyright (C) 1990-2020                                    *
+ * by Livermore Software Technology, LLC                      *
+ * All rights reserved                                        *
+ *                                                            *
+ ********  notice  ********  notice  ********  notice  ********
+
+ Beginning of keyword reader                                   04/04/22 10:05:05
+
+ Memory required to process keyword     :     828526  
+ Additional dynamic memory required     :    2194626  
+
+
+ MPP execution with      16 procs
+
+ Initial reading of file                                       04/04/22 10:05:05
+
+ Performing Decomposition -- Phase 1                           04/04/22 10:05:05
+
+ Performing Recursive Coordinate Bisection (RCB)
+
+ Memory required for decomposition      :     113573  
+ Additional dynamic memory required     :    3187211  
+
+
+ Performing Decomposition -- Phase 2                           04/04/22 10:05:05
+ Performing Decomposition -- Phase 3                           04/04/22 10:05:06
+ 
+ *** Warning 40859 (SOL+859)
+     Cannot find elements of slave segment of interface 2
+ deleted segment ID          n1          n2          n3          n4
+       1 16057 16057 16057 16057
+       2 16058 16058 16058 16058
+       3 16059 16059 16059 16059
+       4 16060 16060 16060 16060
+       5 16061 16061 16061 16061
+       6 16062 16062 16062 16062
+       7 16065 16065 16065 16065
+       8 16066 16066 16066 16066
+       9 16067 16067 16067 16067
+       10 16068 16068 16068 16068
+      134 additional segments without elements written to messag & d3hsp file
+
+ input of data is completed
+ 
+ *** Warning 30364 (INI+364)
+     Contact ID 3 is an ERODING contact. A side effect of
+     ERODING contact is that a negative volume failure criterion
+     is automatically enabled for all solid parts.
+ 
+ *** Warning 30364 (INI+364)
+     Contact ID 2 is an ERODING contact. A side effect of
+     ERODING contact is that a negative volume failure criterion
+     is automatically enabled for all solid parts.
+
+ initial kinetic energy = 0.18821737E+06
+ 
+ *** Warning 30131 (INI+131)
+     total number of massless nodes = 6152
+
+ The LS-DYNA time step size should not exceed     3.007E-08
+ to avoid contact instabilities.  If the step size is
+ bigger then scale the penalty of the offending surface.
+
+ The following binary output files are being created,
+ and contain data equivalent to the indicated ascii output files
+   binout0000: (on processor       0)
+    glstat                                  
+    matsum                                  
+    sleout                                  
+
+ Memory required to begin solution (memory=    829K memory2=     32K)
+          Minimum     30K on processor    15
+          Maximum     32K on processor     5
+          Average     31K
+
+ Additional dynamically allocated memory
+          Minimum   3471K on processor    15
+          Maximum   3756K on processor     0
+          Average   3498K
+
+ Total allocated memory
+          Minimum   3501K on processor    15
+          Maximum   3786K on processor     0
+          Average   3528K
+
+ initialization completed
+ Initial penetration for SI          3   0.00000 (tol=   0.00068)
+       1 t 0.0000E+00 dt 3.01E-09 flush i/o buffers            04/04/22 10:05:06
+       1 t 0.0000E+00 dt 3.01E-09 write d3plot file            04/04/22 10:05:06
+ cpu time per zone cycle............       330 nanoseconds
+ average cpu time per zone cycle....      1394 nanoseconds
+ average clock time per zone cycle..      4322 nanoseconds
+
+ estimated total cpu time          =        23 sec (       0 hrs  0 mins)
+ estimated cpu time to complete    =        23 sec (       0 hrs  0 mins)
+ estimated total clock time        =        73 sec (       0 hrs  1 mins)
+ estimated clock time to complete  =        72 sec (       0 hrs  1 mins)
+ termination time                  = 2.200E-05
+     node  number      13303 deleted at time 5.31953E-07
+     node  number      14032 deleted at time 5.31953E-07
+     node  number      13304 deleted at time 5.91831E-07
+     node  number      14033 deleted at time 5.91831E-07
+     node  number      13305 deleted at time 6.54451E-07
+     node  number      14034 deleted at time 6.54451E-07
+     node  number      13296 deleted at time 6.81954E-07
+     node  number      14025 deleted at time 6.81954E-07
+     307 t 7.3921E-07 dt 1.55E-09 write d3plot file            04/04/22 10:05:06
+     node  number      13297 deleted at time 7.40759E-07
+     node  number      14026 deleted at time 7.40759E-07
+     node  number      13298 deleted at time 8.27082E-07
+     node  number      14027 deleted at time 8.27082E-07
+     node  number      13308 deleted at time 8.86167E-07
+     node  number      14037 deleted at time 8.86167E-07
+     node  number      13299 deleted at time 9.08026E-07
+     node  number      14028 deleted at time 9.08026E-07
+     node  number      13272 deleted at time 9.24915E-07
+     node  number      14001 deleted at time 9.24915E-07
+     node  number      13344 deleted at time 9.26671E-07
+     node  number      14073 deleted at time 9.26671E-07
+     node  number      13317 deleted at time 9.30164E-07
+     node  number      14046 deleted at time 9.30164E-07
+     node  number      13326 deleted at time 9.48086E-07
+     node  number      13335 deleted at time 9.48086E-07
+     node  number      14055 deleted at time 9.48086E-07
+     node  number      14064 deleted at time 9.48086E-07
+     node  number      13281 deleted at time 9.53608E-07
+     node  number      13290 deleted at time 9.53608E-07
+     node  number      14010 deleted at time 9.53608E-07
+     node  number      14019 deleted at time 9.53608E-07
+     node  number      13263 deleted at time 9.62964E-07
+     node  number      13992 deleted at time 9.62964E-07
+     node  number      13353 deleted at time 9.83602E-07
+     node  number      14082 deleted at time 9.83602E-07
+     node  number      13362 deleted at time 1.03186E-06
+     node  number      13371 deleted at time 1.03186E-06
+     node  number      14091 deleted at time 1.03186E-06
+     node  number      14100 deleted at time 1.03186E-06
+     node  number      13236 deleted at time 1.03979E-06
+     node  number      13965 deleted at time 1.03979E-06
+     node  number      13355 deleted at time 1.04179E-06
+     node  number      14084 deleted at time 1.04179E-06
+     node  number      13380 deleted at time 1.04383E-06
+     node  number      14109 deleted at time 1.04383E-06
+     node  number      13328 deleted at time 1.04583E-06
+     node  number      13337 deleted at time 1.04583E-06
+     node  number      13346 deleted at time 1.04583E-06
+     node  number      14057 deleted at time 1.04583E-06
+     node  number      14066 deleted at time 1.04583E-06
+     node  number      14075 deleted at time 1.04583E-06
+     node  number      13265 deleted at time 1.04779E-06
+     node  number      13245 deleted at time 1.04779E-06
+     node  number      13254 deleted at time 1.04779E-06
+     node  number      13364 deleted at time 1.04779E-06
+     node  number      13974 deleted at time 1.04779E-06
+     node  number      13994 deleted at time 1.04779E-06
+     node  number      13983 deleted at time 1.04779E-06
+     node  number      14093 deleted at time 1.04779E-06
+     node  number      13256 deleted at time 1.05559E-06
+     node  number      13373 deleted at time 1.05559E-06
+     node  number      13985 deleted at time 1.05559E-06
+     node  number      14102 deleted at time 1.05559E-06
+     node  number      13247 deleted at time 1.06699E-06
+     node  number      13976 deleted at time 1.06699E-06
+     node  number      13274 deleted at time 1.07086E-06
+     node  number      13283 deleted at time 1.07086E-06
+     node  number      13292 deleted at time 1.07086E-06
+     node  number      14003 deleted at time 1.07086E-06
+     node  number      14012 deleted at time 1.07086E-06
+     node  number      14021 deleted at time 1.07086E-06
+     node  number      13238 deleted at time 1.07304E-06
+     node  number      13967 deleted at time 1.07304E-06
+     node  number      12769 deleted at time 1.08846E-06
+     node  number      13301 deleted at time 1.08846E-06
+     node  number      14030 deleted at time 1.08846E-06
+     node  number      12938 deleted at time 1.08846E-06
+     node  number      13310 deleted at time 1.09069E-06
+     node  number      13319 deleted at time 1.09069E-06
+     node  number      13382 deleted at time 1.09069E-06
+     node  number      14039 deleted at time 1.09069E-06
+     node  number      14048 deleted at time 1.09069E-06
+     node  number      14111 deleted at time 1.09069E-06
+     node  number      13227 deleted at time 1.11924E-06
+     node  number      13956 deleted at time 1.11924E-06
+     node  number      13389 deleted at time 1.13008E-06
+     node  number      14118 deleted at time 1.13008E-06
+     node  number      13391 deleted at time 1.14612E-06
+     node  number      14120 deleted at time 1.14612E-06
+     node  number      13229 deleted at time 1.15490E-06
+     node  number      13958 deleted at time 1.15490E-06
+     node  number      13218 deleted at time 1.16480E-06
+     node  number      13947 deleted at time 1.16480E-06
+     node  number      13220 deleted at time 1.17460E-06
+     node  number      13398 deleted at time 1.17460E-06
+     node  number      14127 deleted at time 1.17460E-06
+     node  number      13949 deleted at time 1.17460E-06
+     node  number      13405 deleted at time 1.21123E-06
+     node  number      14134 deleted at time 1.21123E-06
+     node  number      13209 deleted at time 1.25029E-06
+     node  number      13938 deleted at time 1.25029E-06
+     node  number      13425 deleted at time 1.27049E-06
+     node  number      14154 deleted at time 1.27049E-06
+     node  number      13406 deleted at time 1.28144E-06
+     node  number      13407 deleted at time 1.28144E-06
+     node  number      14135 deleted at time 1.28144E-06
+     node  number      13416 deleted at time 1.28144E-06
+     node  number      14136 deleted at time 1.28144E-06
+     node  number      14145 deleted at time 1.28144E-06
+     node  number      13434 deleted at time 1.30883E-06
+     node  number      14163 deleted at time 1.30883E-06
+     node  number      13191 deleted at time 1.32520E-06
+     node  number      13200 deleted at time 1.32520E-06
+     node  number      13920 deleted at time 1.32520E-06
+     node  number      13929 deleted at time 1.32520E-06
+     node  number      12685 deleted at time 1.33912E-06
+     node  number      12854 deleted at time 1.33912E-06
+     node  number      13443 deleted at time 1.35164E-06
+     node  number      14172 deleted at time 1.35164E-06
+     node  number      13182 deleted at time 1.35549E-06
+     node  number      13911 deleted at time 1.35549E-06
+     solid element 6263  failed at time  1.3592E-06
+     node  number      13173 deleted at time 1.35917E-06
+     node  number      13902 deleted at time 1.35917E-06
+     solid element 6262  failed at time  1.3780E-06
+     node  number      13172 deleted at time 1.37796E-06
+     node  number      13901 deleted at time 1.37796E-06
+     solid element 6255  failed at time  1.3830E-06
+     node  number      13164 deleted at time 1.38302E-06
+     node  number      13893 deleted at time 1.38302E-06
+     solid element 6261  failed at time  1.3899E-06
+     node  number      13171 deleted at time 1.38988E-06
+     node  number      13900 deleted at time 1.38988E-06
+     node  number      12657 deleted at time 1.39692E-06
+     node  number      12826 deleted at time 1.39692E-06
+      node  number 13163 deleted at time  1.3988E-06
+      node  number 13892 deleted at time  1.3988E-06
+     solid element 6254  failed at time  1.3988E-06
+     node  number      12678 deleted at time 1.40426E-06
+     node  number      12847 deleted at time 1.40426E-06
+     node  number      13452 deleted at time 1.41157E-06
+     node  number      14181 deleted at time 1.41157E-06
+     node  number      13404 deleted at time 1.41892E-06
+     node  number      14133 deleted at time 1.41892E-06
+     node  number      12730 deleted at time 1.43619E-06
+     node  number      12899 deleted at time 1.43619E-06
+     node  number      12664 deleted at time 1.44004E-06
+     node  number      12671 deleted at time 1.44004E-06
+     node  number      12833 deleted at time 1.44004E-06
+     node  number      12840 deleted at time 1.44004E-06
+     solid element 6247  failed at time  1.4458E-06
+     node  number      13155 deleted at time 1.44581E-06
+     node  number      13884 deleted at time 1.44581E-06
+      node  number 13162 deleted at time  1.4535E-06
+      node  number 13891 deleted at time  1.4535E-06
+     solid element 6253  failed at time  1.4535E-06
+     node  number      12723 deleted at time 1.45349E-06
+     node  number      12892 deleted at time 1.45349E-06
+      node  number 13154 deleted at time  1.4554E-06
+      node  number 13883 deleted at time  1.4554E-06
+     solid element 6246  failed at time  1.4554E-06
+     701 t 1.4803E-06 dt 1.85E-09 write d3plot file            04/04/22 10:05:07
+     node  number      12650 deleted at time 1.49303E-06
+     node  number      12651 deleted at time 1.49303E-06
+     node  number      12709 deleted at time 1.49303E-06
+     node  number      12716 deleted at time 1.49303E-06
+     node  number      12819 deleted at time 1.49303E-06
+     node  number      12820 deleted at time 1.49303E-06
+     node  number      12878 deleted at time 1.49303E-06
+     node  number      12885 deleted at time 1.49303E-06
+     node  number      12731 deleted at time 1.51057E-06
+     node  number      12773 deleted at time 1.51057E-06
+     node  number      12900 deleted at time 1.51057E-06
+     node  number      12942 deleted at time 1.51057E-06
+     node  number      13400 deleted at time 1.51228E-06
+     node  number      14129 deleted at time 1.51228E-06
+     node  number      13461 deleted at time 1.51399E-06
+     node  number      14190 deleted at time 1.51399E-06
+     solid element 6238  failed at time  1.5610E-06
+     node  number      13409 deleted at time 1.58708E-06
+     node  number      13418 deleted at time 1.58708E-06
+     node  number      14138 deleted at time 1.58708E-06
+     node  number      14147 deleted at time 1.58708E-06
+     node  number      13202 deleted at time 1.60826E-06
+     node  number      13211 deleted at time 1.60826E-06
+     node  number      13931 deleted at time 1.60826E-06
+     node  number      13940 deleted at time 1.60826E-06
+     node  number      12762 deleted at time 1.62865E-06
+     node  number      12931 deleted at time 1.62865E-06
+     node  number      13193 deleted at time 1.66048E-06
+     node  number      13922 deleted at time 1.66048E-06
+     node  number      12741 deleted at time 1.72794E-06
+     node  number      12910 deleted at time 1.72794E-06
+     node  number      13427 deleted at time 1.73142E-06
+     node  number      14156 deleted at time 1.73142E-06
+     node  number      13436 deleted at time 1.75413E-06
+     node  number      13445 deleted at time 1.75413E-06
+     node  number      14165 deleted at time 1.75413E-06
+     node  number      14174 deleted at time 1.75413E-06
+     node  number      12733 deleted at time 1.76459E-06
+     node  number      12902 deleted at time 1.76459E-06
+     solid element 6230  failed at time  1.7728E-06
+     node  number      13166 deleted at time 1.81427E-06
+     node  number      13895 deleted at time 1.81427E-06
+     node  number      13175 deleted at time 1.81616E-06
+     node  number      13184 deleted at time 1.81616E-06
+     node  number      13904 deleted at time 1.81616E-06
+     node  number      13913 deleted at time 1.81616E-06
+     node  number      13157 deleted at time 1.84011E-06
+     node  number      13886 deleted at time 1.84011E-06
+     node  number      13454 deleted at time 1.93203E-06
+     node  number      14183 deleted at time 1.93203E-06
+     solid element 6229  failed at time  2.0611E-06
+     node  number      12748 deleted at time 2.06112E-06
+     node  number      12755 deleted at time 2.06112E-06
+     node  number      12917 deleted at time 2.06112E-06
+     node  number      12924 deleted at time 2.06112E-06
+     solid element 6252  failed at time  2.1657E-06
+    1110 t 2.2203E-06 dt 2.31E-09 write d3plot file            04/04/22 10:05:07
+     node  number      13148 deleted at time 2.47482E-06
+     node  number      13877 deleted at time 2.47482E-06
+     solid element 6221  failed at time  2.4846E-06
+     node  number      13463 deleted at time 2.55702E-06
+     node  number      13472 deleted at time 2.55702E-06
+     node  number      14192 deleted at time 2.55702E-06
+     node  number      14201 deleted at time 2.55702E-06
+     node  number      13470 deleted at time 2.67272E-06
+     node  number      13479 deleted at time 2.67272E-06
+     node  number      14199 deleted at time 2.67272E-06
+     node  number      14208 deleted at time 2.67272E-06
+     solid element 6220  failed at time  2.8170E-06
+    1424 t 2.9605E-06 dt 2.44E-09 write d3plot file            04/04/22 10:05:08
+     node  number      13139 deleted at time 2.98492E-06
+     node  number      13868 deleted at time 2.98492E-06
+      node  number 13135 deleted at time  3.0516E-06
+      node  number 13864 deleted at time  3.0516E-06
+     solid element 6237  failed at time  3.0516E-06
+     node  number      13481 deleted at time 3.19778E-06
+     node  number      14210 deleted at time 3.19778E-06
+      node  number 13145 deleted at time  3.3257E-06
+      node  number 13874 deleted at time  3.3257E-06
+     solid element 6239  failed at time  3.3257E-06
+     node  number      13146 deleted at time 3.32567E-06
+     node  number      13875 deleted at time 3.32567E-06
+     solid element 6251  failed at time  3.4235E-06
+     node  number      13413 deleted at time 3.43811E-06
+     node  number      14142 deleted at time 3.43811E-06
+    1738 t 3.7021E-06 dt 2.43E-09 write d3plot file            04/04/22 10:05:08
+    2052 t 4.4424E-06 dt 2.29E-09 write d3plot file            04/04/22 10:05:08
+    2365 t 5.1826E-06 dt 2.29E-09 write d3plot file            04/04/22 10:05:08
+     solid element 6219  failed at time  5.1895E-06
+    2679 t 5.9245E-06 dt 2.43E-09 write d3plot file            04/04/22 10:05:09
+    2993 t 6.6655E-06 dt 2.29E-09 write d3plot file            04/04/22 10:05:09
+    3306 t 7.4060E-06 dt 2.29E-09 write d3plot file            04/04/22 10:05:10
+    3620 t 8.1471E-06 dt 2.43E-09 write d3plot file            04/04/22 10:05:10
+    3933 t 8.8859E-06 dt 2.43E-09 write d3plot file            04/04/22 10:05:11
+    4247 t 9.6282E-06 dt 2.43E-09 write d3plot file            04/04/22 10:05:11
+    4561 t 1.0368E-05 dt 2.43E-09 write d3plot file            04/04/22 10:05:11
+    4876 t 1.1109E-05 dt 2.43E-09 write d3plot file            04/04/22 10:05:11
+    5000 t 1.1402E-05 dt 2.29E-09 flush i/o buffers            04/04/22 10:05:12
+    5190 t 1.1849E-05 dt 2.43E-09 write d3plot file            04/04/22 10:05:12
+    5505 t 1.2591E-05 dt 2.43E-09 write d3plot file            04/04/22 10:05:12
+    5820 t 1.3331E-05 dt 2.28E-09 write d3plot file            04/04/22 10:05:12
+    6135 t 1.4071E-05 dt 2.28E-09 write d3plot file            04/04/22 10:05:12
+    6450 t 1.4811E-05 dt 2.28E-09 write d3plot file            04/04/22 10:05:13
+    6766 t 1.5554E-05 dt 2.28E-09 write d3plot file            04/04/22 10:05:13
+    7081 t 1.6293E-05 dt 2.28E-09 write d3plot file            04/04/22 10:05:13
+    7397 t 1.7035E-05 dt 2.28E-09 write d3plot file            04/04/22 10:05:14
+    7713 t 1.7776E-05 dt 2.28E-09 write d3plot file            04/04/22 10:05:14
+    8029 t 1.8516E-05 dt 2.28E-09 write d3plot file            04/04/22 10:05:14
+    8345 t 1.9257E-05 dt 2.27E-09 write d3plot file            04/04/22 10:05:14
+    8662 t 1.9998E-05 dt 2.27E-09 write d3plot file            04/04/22 10:05:15
+     node  number       1400 deleted at time 2.03264E-05
+     node  number       3061 deleted at time 2.03264E-05
+     node  number       1389 deleted at time 2.03505E-05
+     node  number       3050 deleted at time 2.03505E-05
+     node  number       1411 deleted at time 2.04259E-05
+     node  number       3072 deleted at time 2.04259E-05
+    8978 t 2.0738E-05 dt 2.27E-09 write d3plot file            04/04/22 10:05:15
+     node  number        982 deleted at time 2.08713E-05
+     node  number       2643 deleted at time 2.08713E-05
+     node  number       1459 deleted at time 2.13294E-05
+     node  number       3120 deleted at time 2.13294E-05
+     node  number        200 deleted at time 2.13294E-05
+     node  number       1861 deleted at time 2.13294E-05
+     node  number       1367 deleted at time 2.13553E-05
+     node  number       1378 deleted at time 2.13553E-05
+     node  number       3028 deleted at time 2.13553E-05
+     node  number       3039 deleted at time 2.13553E-05
+     node  number        211 deleted at time 2.13604E-05
+     node  number       1872 deleted at time 2.13604E-05
+     node  number        189 deleted at time 2.14113E-05
+     node  number       1850 deleted at time 2.14113E-05
+    9272 t 2.1477E-05 dt 3.01E-09 write d3plot file            04/04/22 10:05:15
+     node  number        178 deleted at time 2.16215E-05
+     node  number       1839 deleted at time 2.16215E-05
+     node  number        167 deleted at time 2.17189E-05
+     node  number       1828 deleted at time 2.17189E-05
+     node  number        222 deleted at time 2.19423E-05
+     node  number       1883 deleted at time 2.19423E-05
+ 
+ *** termination time reached ***
+    9448 t 2.2001E-05 dt 2.94E-09 write d3dump01 file          04/04/22 10:05:18
+    9448 t 2.2001E-05 dt 2.94E-09 flush i/o buffers            04/04/22 10:05:18
+    9448 t 2.2001E-05 dt 2.94E-09 write d3plot file            04/04/22 10:05:18
+
+ N o r m a l    t e r m i n a t i o n                          04/04/22 10:05:18
+
+ Memory required to complete solution (memory=    829K memory2=     32K)
+          Minimum     30K on processor    15
+          Maximum     32K on processor     5
+          Average     31K
+
+ Additional dynamically allocated memory
+          Minimum   3481K on processor     3
+          Maximum   3761K on processor     0
+          Average   3510K
+
+ Total allocated memory
+          Minimum   3511K on processor     3
+          Maximum   3791K on processor     0
+          Average   3540K
+
+ T i m i n g   i n f o r m a t i o n
+                        CPU(seconds)   %CPU  Clock(seconds) %Clock
+  ----------------------------------------------------------------
+  Keyword Processing ... 1.9241E-01    1.75     2.0507E-01    1.52
+    KW Reading ......... 1.5421E-03    0.01     3.7196E-03    0.03
+    KW Writing ......... 6.4693E-04    0.01     2.5713E-03    0.02
+  MPP Decomposition .... 4.0568E-01    3.69     4.7525E-01    3.52
+    Init Proc .......... 3.4885E-01    3.17     3.6862E-01    2.73
+    Decomposition ...... 1.4412E-02    0.13     1.8230E-02    0.14
+    Translation ........ 4.2380E-02    0.38     8.8362E-02    0.65
+  Initialization ....... 1.1411E-01    1.04     3.0160E-01    2.23
+    Init Proc Phase 1 .. 2.8863E-02    0.26     5.2712E-02    0.39
+    Init Proc Phase 2 .. 1.4108E-02    0.13     3.8795E-02    0.29
+  Init solver .......... 2.8707E-03    0.03     5.5002E-03    0.04
+  Element processing ... 1.0669E+00    9.69     1.0974E+00    8.13
+    Solids ............. 9.8757E-01    8.97     1.0083E+00    7.47
+    E Other ............ 7.4895E-03    0.07     7.5096E-03    0.06
+  Binary databases ..... 1.1788E-01    1.07     1.2662E-01    0.94
+  ASCII database ....... 4.7530E-01    4.32     6.0757E-01    4.50
+  Contact algorithm .... 2.4775E+00   22.51     2.5005E+00   18.53
+    Interf. ID         3 1.2909E+00   11.73     1.3038E+00    9.66
+    Interf. ID         2 9.6562E-01    8.77     9.7247E-01    7.21
+  Rigid Bodies ......... 1.2912E-02    0.12     1.4982E-02    0.11
+  DEM .................. 1.1232E+00   10.20     1.1304E+00    8.38
+    DEM self contact ... 1.1153E+00   10.13     1.1225E+00    8.32
+  Time step size ....... 1.3924E+00   12.65     1.4019E+00   10.39
+  Group force file ..... 3.9768E-03    0.04     4.3226E-03    0.03
+  Others ............... 1.5206E-01    1.38     1.5309E-01    1.13
+    Force Sharing ...... 1.1814E-01    1.07     1.1855E-01    0.88
+  Misc. 1 .............. 3.4595E-01    3.14     3.6252E-01    2.69
+    Scale Masses ....... 2.6683E-03    0.02     2.7020E-03    0.02
+    Force Constraints .. 3.2546E-03    0.03     3.2464E-03    0.02
+    Force to Accel ..... 3.0086E-02    0.27     3.0087E-02    0.22
+    Constraint Sharing . 3.3703E-03    0.03     3.3900E-03    0.03
+    Update RB nodes .... 3.8802E-03    0.04     4.3949E-03    0.03
+  Misc. 2 .............. 5.4472E-02    0.49     5.7389E-02    0.43
+  Misc. 3 .............. 3.0365E+00   27.58     5.0120E+00   37.13
+  Misc. 4 .............. 3.4509E-02    0.31     4.0671E-02    0.30
+    Timestep Init ...... 1.1417E-02    0.10     1.3042E-02    0.10
+    Apply Loads ........ 1.6104E-02    0.15     1.9892E-02    0.15
+  ----------------------------------------------------------------
+  T o t a l s            1.1009E+01  100.00     1.3497E+01  100.00
+
+ Problem time       =    2.2001E-05
+ Problem cycle      =      9448
+ Total CPU time     =        11 seconds (   0 hours  0 minutes 11 seconds)
+ CPU time per zone cycle  =        495.423 nanoseconds
+ Clock time per zone cycle=        577.110 nanoseconds
+
+ Parallel execution with     16 MPP proc
+ NLQ used/max                64/    64
+
+  C P U   T i m i n g   i n f o r m a t i o n
+
+  Processor   Hostname                              CPU/Avg_CPU  CPU(seconds)
+  ---------------------------------------------------------------------------
+  #       0   compute-0-2                               0.73671   8.1600E+00
+  #       1   compute-0-2                               1.01569   1.1250E+01
+  #       2   compute-0-2                               1.01930   1.1290E+01
+  #       3   compute-0-2                               1.01930   1.1290E+01
+  #       4   compute-0-2                               1.01930   1.1290E+01
+  #       5   compute-0-2                               1.01659   1.1260E+01
+  #       6   compute-0-2                               1.01749   1.1270E+01
+  #       7   compute-0-2                               1.01840   1.1280E+01
+  #       8   compute-0-2                               1.02110   1.1310E+01
+  #       9   compute-0-2                               1.01478   1.1240E+01
+  #      10   compute-0-2                               1.01840   1.1280E+01
+  #      11   compute-0-2                               1.01749   1.1270E+01
+  #      12   compute-0-2                               1.01659   1.1260E+01
+  #      13   compute-0-2                               1.01659   1.1260E+01
+  #      14   compute-0-2                               1.01569   1.1250E+01
+  #      15   compute-0-2                               1.01659   1.1260E+01
+  ---------------------------------------------------------------------------
+  T o t a l s                                                     1.7722E+02
+
+
+ Start time   04/04/2022 10:05:05  
+ End time     04/04/2022 10:05:18  
+ Elapsed time      13 seconds for    9448 cycles using    16 MPP procs
+             (      0 hour   0 minute  13 seconds)
+
+ N o r m a l    t e r m i n a t i o n                          04/04/22 10:05:18

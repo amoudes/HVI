@@ -1,0 +1,3 @@
+parameter densitycylinder 36
+parameter front_side_back_plate 55
+parameter back_side_back_plate 58.3

@@ -1,0 +1,107 @@
+\\ DOUBLE PLATE COMMAND FILE
+
+bgstyle fade
+openc command "para03.cfile"
+cemptymodel
+genselect target edge
+genselect clear
+
+\\ THE BALL
+meshing cylindersolid create 2.000000 0.250000 &densitycylinder 1 0.000000 0.000000,0.000000,0.000000,0.000000,1.000000,0,0.000000
+ac
+meshing cylindersolid accept 1 1 1 ball
+No duplicated nodes found!
+ac
+
+
+\\ THE FRONT PLATE
+genselect target node
+genselect clear
+meshing boxsolid create 3.000000 -10.000000 0.000000 5.000000 10.000000 0.250000 8 80 1 0.000000
+ac
+meshing boxsolid accept 2 370 777 front plate
+genselect clear
+ac
+
+
+\\ THE BACK PLATE
+genselect target node
+genselect clear
+meshing boxsolid create &front_side_back_plate -20.000000 0.000000 &back_side_back_plate 20.000000 0.250000 13 160 1 0.000000
+ac
+meshing boxsolid accept 3 1010 2235 BACK plate
+genselect clear
+ac
+
+
+// EDIT PART PARAMETERS
+KEYWORD INPUT 1
+*PART
+$#                                                                         title
+Ball
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         1         2         1         2         0         0         0         0
+*END
+keyword updatekind
+PART_PART
+KEYWORD INPUT 2
+*PART
+$#                                                                         title
+front Target
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         2         1         2         1         0         0         0         0
+*END
+KEYWORD INPUT 3
+*PART
+$#                                                                         title
+back Target
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         3         1         2         1         0         0         0         0
+*END
+
+
+
+// CREATE NODE SETS FOR BOUNDARY CONDITIONS
+// FIX Z
+entlistset operationtype 5 2
+spcdata operationtype 2
+genselect target node
+genselect clear
+genselect node add part 1/0 
+genselect node add part 2/0 
+genselect node add part 3/0 
+spcdata createnodeset 1 1 NODESET(SPC) 1
+genselect clear
+spcdata create set 1 0 0 0 1 0 0 0
+
+\\ FIX Y
+entlistset operationtype 5 2
+spcdata operationtype 2
+genselect target node
+genselect clear
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.382090;
+loadpan -21.499031 0.061762;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.475392 0.117057 0.383669 0.093645
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.382090;
+loadpan -21.499031 0.061762;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.473154 0.884058 0.416667 0.905240
+spcdata createnodeset 2 1 NODESET(SPC) 2
+genselect clear
+spcdata create set 2 0 0 1 0 0 0 0
+
+//
+
+//
+// SAVE OUTPUT
+save keyword "2platemesh.key"
+exit
