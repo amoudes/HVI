@@ -1,0 +1,19 @@
+// 2 PLATE COMMAND FILE
+// TARGET PLATE = SOLID
+// WITNESS PLATE (SHIELD) = STRUCTURE
+//
+//
+//
+\\ THE FRONT PLATE
+genselect target node
+genselect clear
+meshing boxsolid create 0.000000 -10.000000 0.000000 2.000000 10.000000 2.500000 8 80 1 0.000000
+ac
+meshing boxsolid accept 1 1256 1645 boxsolid
+genselect clear
+ac
+// BALL
+meshing cylindersolid create 2.500000 1.000000 50 5 -3.000000 0.000000,0.000000,0.000000,0.000000,1.000000,0,0.000000
+ac
+meshing cylindersolid accept 3 1 1 ball
+ac
