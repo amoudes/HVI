@@ -1,18 +1,21 @@
-openc command "create_mesh.cfile" nodialog
-\\ THE FRONT PLATE
-Invalid command \\!
-genselect target node
-genselect clear
-meshing boxsolid create 0.000000 -10.000000 0.000000 2.000000 10.000000 2.500000 8 80 1 0.000000
-ac
-meshing boxsolid accept 1 1256 1645 boxsolid
-genselect clear
-genselect clear
-ac
-meshing cylindersolid create 2.500000 1.000000 50 5 -3.000000 0.000000,0.000000,0.000000,0.000000,1.000000,0,0.000000
-ac
-meshing cylindersolid accept 3 1 1 ball
-No duplicated nodes found!
-ac
-Finished reading command file!
+openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key"
+save keywordversion 2
+save keywordversion 12
+Time to read keyword file = 0.234 seconds
+Time to process element data = 0.047 seconds
+Finished reading model
+home
+zoomhere 0.197488 -0.007143 0.800000;
+zoomhere 0.207257 -0.005714 0.640000;
+zoomhere 0.214934 -0.005714 0.512000;
+zoomhere 0.216329 -0.005714 0.409600;
+zoomhere 0.217725 -0.007143 0.327680;
+zoomhere 0.218423 -0.007143 0.262144;
+zoomhere 0.237264 -0.001429 0.209715;
+zoomhere 0.237264 -0.001429 0.167772;
+zoomhere 0.236567 -0.001429 0.134218;
+zoomhere 0.235869 -0.001429 0.107374;
+zoomhere 0.235869 -0.001429 0.134217;
+zoomhere 0.235869 -0.001429 0.107374;
+zoomhere 0.235869 0.000000 0.085899;
 Save Config. parameters to file C:\Users\s148946\AppData\Roaming\LSTC\LS-PrePost4.8\lsppconf
