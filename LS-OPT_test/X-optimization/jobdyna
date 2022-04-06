@@ -24,4 +24,4 @@ export I_MPI_DEBUG_OUTPUT=jobstat
 echo $SLURM_NTASKS 
 echo $SLURM_NPROCS
 
-mpirun -prefork -np $SLURM_NTASKS /opt/lstc/mppdyna-eos-v2 i=structure.key
+mpirun -prefork -np $SLURM_NTASKS /opt/lstc/mppdyna-eos i=structure.key

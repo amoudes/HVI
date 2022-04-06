@@ -1,8 +1,0 @@
-open d3plot d3plot
-//measure select 1
-//measure type 14
-ac
-gtime 1
-xyplot 1 savefile xypair LsoptHistory 1
-deletewin 1
-quit
