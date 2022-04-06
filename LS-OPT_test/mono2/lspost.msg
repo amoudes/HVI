@@ -1,22 +1,96 @@
-openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\mono2\2platestructure.key"
-save keywordversion 2
-save keywordversion 12
-Time to read keyword file = 0.250 seconds
-Time to process element data = 0.031 seconds
-Finished reading model
-home
-zoomhere -0.237603 -0.008571 0.800000;
-zoomhere -0.238981 -0.008571 0.640000;
-zoomhere -0.238981 -0.008571 0.512000;
-zoomhere -0.238981 -0.008571 0.409600;
-zoomhere -0.238981 -0.008571 0.327680;
-zoomhere -0.238981 -0.008571 0.262144;
-zoomhere -0.238981 -0.008571 0.209715;
-zoomhere -0.237603 0.004286 0.167772;
-zoomhere -0.237603 0.004286 0.134218;
-zoomhere -0.237603 0.004286 0.107374;
-zoomhere -0.238292 -0.004286 0.085899;
-zoomhere -0.238292 -0.007143 0.068719;
-zoomhere -0.238292 -0.007143 0.085899;
-zoomhere -0.238292 -0.007143 0.107374;
-Save Config. parameters to file C:\Users\s148946\AppData\Roaming\LSTC\LS-PrePost4.8\lsppconf
+openc command "2PLATE2D.cfile" nodialog
+\\ DOUBLE PLATE COMMAND FILE
+Invalid command \\!
+bgstyle fade
+openc
+parameter densitycylinder 50
+parameter front_side_back_plate 75
+parameter back_side_back_plate 78.3
+parameter vel 5000000
+Finished reading command file!
+cemptymodel
+genselect target edge
+genselect clear
+\\ THE BALL
+Invalid command \\!
+meshing cylindersolid create 2.000000 0.250000 50 1 0.000000 0.000000,0.000000,0.000000,0.000000,1.000000,0,0.000000
+ac
+meshing cylindersolid accept 1 1 1 ball
+No duplicated nodes found!
+No duplicated nodes found!
+Invalid command no!
+ac
+\\ THE FRONT PLATE
+Invalid command \\!
+genselect target node
+genselect clear
+meshing boxsolid create 3.000000 -10.000000 0.000000 5.000000 10.000000 0.250000 8 80 1 0.000000
+ac
+meshing boxsolid accept 2 370 777 front plate
+genselect clear
+genselect clear
+ac
+\\ THE BACK PLATE
+Invalid command \\!
+genselect target node
+genselect clear
+meshing boxsolid create 75 -20.000000 0.000000 78.3 20.000000 0.250000 13 160 1 0.000000
+ac
+meshing boxsolid accept 3 1010 2235 BACK plate
+genselect clear
+genselect clear
+ac
+KEYWORD INPUT 1
+keyword updatekind
+KEYWORD INPUT 2
+KEYWORD INPUT 3
+entlistset operationtype 5 2
+spcdata operationtype 2
+genselect target node
+genselect clear
+genselect node add part 1/0 
+genselect node add part 2/0 
+genselect node add part 3/0 
+spcdata createnodeset 1 1 NODESET(SPC) 1
+genselect clear
+spcdata create set 1 0 0 0 1 0 0 0
+genselect clear
+\\ FIX Y
+Invalid command \\!
+entlistset operationtype 5 2
+spcdata operationtype 2
+genselect target node
+genselect clear
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.382090;
+loadpan -21.499031 0.061762;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.65392 0.117057 0.383669 0.093645
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.382090;
+loadpan -21.499031 0.061762;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.63154 0.884058 0.416667 0.905240
+spcdata createnodeset 2 1 NODESET(SPC) 2
+genselect clear
+spcdata create set 2 0 0 1 0 0 0 0
+genselect clear
+iniveldata operationtype 1
+iniveldata operationtype 2
+genselect target node
+genselect clear
+genselect target node
+genselect clear
+genselect node add part 1/0 
+iniveldata create 5000000 0 0 0 0 0 0 1
+genselect clear
+genselect clear
+save keyword "2platemesh.key"
+exit
+Save Config. parameters to file C:\Users\Kayleigh\AppData\Roaming\LSTC\LS-PrePost4.8\lsppconf
