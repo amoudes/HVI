@@ -86,7 +86,7 @@ loadzoom 0.382090;
 loadpan -21.499031 0.061762;
 loadeyepos 0.000000 0.000000 0.000000;
 loadupvect 0.000000 1.000000 0.000000;
-genselect node add region in 0.475392 0.117057 0.383669 0.093645
+genselect node add region in 0.65392 0.117057 0.383669 0.093645
 loadstate 1;
 loadquat 0.000000 0.000000 0.000000 1.000000;
 loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
@@ -94,12 +94,19 @@ loadzoom 0.382090;
 loadpan -21.499031 0.061762;
 loadeyepos 0.000000 0.000000 0.000000;
 loadupvect 0.000000 1.000000 0.000000;
-genselect node add region in 0.473154 0.884058 0.416667 0.905240
+genselect node add region in 0.63154 0.884058 0.416667 0.905240
 spcdata createnodeset 2 1 NODESET(SPC) 2
 genselect clear
 spcdata create set 2 0 0 1 0 0 0 0
 
-//
+// INPUT VELOCITY
+iniveldata operationtype 1
+iniveldata operationtype 2
+genselect target node
+genselect clear
+genselect node add part 1/0 
+iniveldata create &vel 0 0 0 0 0 0 1
+genselect clear
 
 //
 // SAVE OUTPUT

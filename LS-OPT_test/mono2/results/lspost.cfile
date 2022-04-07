@@ -1,42 +1,5 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Apr-4-2022 (15:24:19)
-openc d3plot "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\mono2\results\d3plot"
+$# Created on Apr-5-2022 (12:49:47)
+open d3plot "C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\mono2\results\d3plot"
 ac
 home
-measure select 1
-measure type 14
-measure axes set 1
-measure history angvel xv
-measure history angvel xv
-measure history angvel xv
-measure angvel part H2/0 ;
-measure angvel part H1/0 ;
-measure history angvel xv
-findhist None 1
-findhist None 1
-clearpick
-partdata readlist 2 
-clearid part
-measure history angvel xv
-findhist None 2
-findhist None 2
-clearpick
-anim forward
-anim stop; state 23;
-state 31;
-state 1;
-measure select 0
-measure type 0
-measure type 0
-measure select 1
-measure history angvel rv
-partdata readlist 1 
-clearid part
-measure history angvel rv
-findhist None 1
-anim start;
-anim stop; state 15;
-state 31;
-measure select 0
-measure type 0
-measure type 0

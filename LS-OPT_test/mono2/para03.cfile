@@ -1,6 +1,7 @@
 parameter densitycylinder 50
-parameter front_side_back_plate 55
-parameter back_side_back_plate 58.3
+parameter front_side_back_plate 75
+parameter back_side_back_plate 78.3
+parameter vel 5000000
 // default
 // parameter densitycylinder 36
 // parameter front_side_back_plate 55
