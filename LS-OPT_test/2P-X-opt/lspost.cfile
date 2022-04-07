@@ -1,13 +1,46 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Apr-5-2022 (16:10:43)
-openc d3plot "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\old\d3plot"
+$# Created on Apr-7-2022 (16:31:48)
+openc d3plot "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\d3plot"
 ac
 home
 anim forward
-anim stop; state 3;
+state +1;
+anim forward
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
 state -1;
 state -1;
-state -1;
 state +1;
 state +1;
 state +1;
@@ -40,4 +73,3 @@ state +1;
 state +1;
 state +1;
 state +1;
-state -1;

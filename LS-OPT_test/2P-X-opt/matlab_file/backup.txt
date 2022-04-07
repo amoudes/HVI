@@ -1,0 +1,58 @@
+clc; close all; clear all;
+%%
+% fid = fopen('mesh.txt','w');
+% fclose(fid);
+
+%%
+Lx  = 1; % Horizontal length of one strut
+Ly  = 1;
+ny  = 3; % Number of vertical repeating cells
+%%
+%      1 2  3  4  5 
+Cds = [0 0  Lx Lx 0.5*Lx   
+       0 Ly Ly 0  0.5*Ly];
+
+Lines = [1 2 3 4 1
+         5 5 5 5 2];
+     
+nCds   = length(Cds);
+nLines = length(Lines);
+%%
+for n = 1:ny-1
+    cd = [0               Lx              0.5*Lx
+          (Cds(2,2)+n*Ly) (Cds(2,3)+n*Ly) (Cds(2,5)+n*Ly)];
+    
+    nCds = nCds + 3;
+    Cds = [Cds cd];
+    
+    if n == 1  
+        line = [2 6 7 3 2
+                8 8 8 8 6];
+    else
+        line = [nCds-5 nCds-2 nCds-1 nCds-4 nCds-5
+                nCds   nCds   nCds   nCds   nCds-2];
+    end
+    Lines  = [Lines line];
+    nLines = nLines + 5; 
+end
+     
+%%
+
+     
+%% Plot shape
+figure(10);
+for i = 1:length(Lines)
+    node1 = Lines(1,i);
+    node2 = Lines(2,i);
+    
+    cd1 = Cds(:,node1);
+    cd2 = Cds(:,node2);
+    
+    x = [cd1(1) cd2(1)];
+    y = [cd1(2) cd2(2)];
+    
+    plot(x,y,'k.-'); 
+    hold on; axis equal;
+end
+%%
+
