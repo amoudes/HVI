@@ -1,0 +1,40 @@
+% Triangles number nodes
+pTri = [1 4
+        2 5
+        7 8];
+
+for n = 1:ny-1
+   if n == 1
+       ptri = [ 2 11
+                9  4
+               12 13];
+   else
+       ptri = [nCds-9 nCds-2
+               nCds-4 nCds-7
+               nCds-1 nCds];
+   end
+   pTri = [pTri ptri];       
+end
+
+TriCds = [Cds(:,pTri(1,1)) Cds(:,pTri(2,1)) Cds(:,pTri(3,1))];
+offst = getOffset(TriCds,t);
+
+%% Square number nodes
+pSq = [6 7 3 8]';
+
+for n = 1:ny-1
+    if n == 1
+        psq = [ 7  3  8
+                2 12  2
+               12 10 13
+                3 13  4];
+    else
+        psq = [nCds-6 nCds-8 nCds-5
+               nCds-9 nCds-1 nCds-8
+               nCds-1 nCds-3 nCds
+               nCds-8 nCds   nCds-7];
+    end
+    pSq = [pSq psq];    
+end
+SqCds = [Cds(:,pSq(1,1)) Cds(:,pSq(2,1)) Cds(:,pSq(3,1)),Cds(:,pSq(4,1))];
+offst = getOffset(SqCds,t);

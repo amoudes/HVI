@@ -1,0 +1,297 @@
+$# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
+$# Created on Apr-6-2022 (15:51:11)
+bgstyle fade
+openc
+parameter x3 113.3300
+parameter y3 -6.6650
+parameter x7 106.6650
+parameter y7 -13.3300
+parameter x8 119.9950
+parameter y8 -13.3300
+parameter x10 113.3300
+parameter y10 6.6650
+parameter x12 106.6650
+parameter y12 0.0000
+parameter x13 119.9950
+parameter y13 0.0000
+parameter x17 106.6650
+parameter y17 13.3300
+parameter x18 119.9950
+parameter y18 13.3300
+cemptymodel
+genselect target edge
+genselect clear
+mesh2d createrpoint 1 100.00 -20.00 
+mesh2d createrpoint 2 100.00 -6.67 
+mesh2d createrpoint 3 113.3300 -6.6650 
+mesh2d createrpoint 4 126.66 -6.67 
+mesh2d createrpoint 5 126.66 -20.00 
+mesh2d createrpoint 6 113.33 -20.00 
+mesh2d createrpoint 7 106.6650 -13.3300 
+mesh2d createrpoint 8 119.9950 -13.3300 
+mesh2d createrpoint 9 100.00 6.66 
+mesh2d createrpoint 10 113.3300 6.6650 
+mesh2d createrpoint 11 126.66 6.66 
+mesh2d createrpoint 12 106.6650 0.0000 
+mesh2d createrpoint 13 119.9950 0.0000 
+mesh2d createrpoint 14 100.00 20.00 
+mesh2d createrpoint 15 113.33 20.00 
+mesh2d createrpoint 16 126.66 20.00 
+mesh2d createrpoint 17 106.6650 13.3300 
+mesh2d createrpoint 18 119.9950 13.3300 
+mesh2d acen
+mesh2d createline 19 1 7
+ac
+mesh2d createline 20 2 7
+mesh2d createline 21 3 7
+mesh2d createline 22 6 7
+mesh2d createline 23 6 8
+mesh2d createline 24 3 8
+mesh2d createline 25 4 8
+mesh2d createline 26 5 8
+mesh2d createline 27 1 2
+mesh2d createline 28 4 5
+mesh2d createline 29 2 12
+mesh2d createline 30 9 12
+mesh2d createline 31 10 12
+mesh2d createline 32 3 12
+mesh2d createline 33 3 13
+mesh2d createline 34 10 13
+mesh2d createline 35 11 13
+mesh2d createline 36 4 13
+mesh2d createline 37 9 2
+mesh2d createline 38 11 4
+mesh2d createline 39 9 17
+mesh2d createline 40 14 17
+mesh2d createline 41 15 17
+mesh2d createline 42 10 17
+mesh2d createline 43 10 18
+mesh2d createline 44 15 18
+mesh2d createline 45 16 18
+mesh2d createline 46 11 18
+mesh2d createline 47 9 14
+mesh2d createline 48 16 11
+mesh2d sbdown
+home
+ac
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+genselect occobject add occobject  2e
+genselect occobject add occobject  1e
+genselect occobject add occobject  9e
+offsetgeom  planeedgewire 0.333 invert tags 2 0 0 2e 1 9
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+genselect occobject add occobject  8e
+genselect occobject add occobject  7e
+genselect occobject add occobject  10e
+offsetgeom  planeedgewire 0.333 invert tags 2 0 0 8e 7 10
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+genselect occobject add occobject  12e
+genselect occobject add occobject  11e
+genselect occobject add occobject  19e
+offsetgeom  planeedgewire 0.333 invert tags 2 0 0 12e 11 19
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+genselect occobject add occobject  18e
+genselect occobject add occobject  17e
+genselect occobject add occobject  20e
+offsetgeom  planeedgewire 0.333 invert tags 2 0 0 18e 17 20
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+genselect occobject add occobject  22e
+genselect occobject add occobject  21e
+genselect occobject add occobject  29e
+offsetgeom  planeedgewire 0.333 invert tags 2 0 0 22e 21 29
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+genselect occobject add occobject  28e
+genselect occobject add occobject  27e
+genselect occobject add occobject  30e
+offsetgeom  planeedgewire 0.333 invert tags 2 0 0 28e 27 30
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+genselect occobject add occobject  4e
+genselect occobject add occobject  3e
+genselect occobject add occobject  6e
+genselect occobject add occobject  5e
+offsetgeom  planeedgewire 0.333 invert tags 2 0 0 4e 3 6 5
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+genselect occobject add occobject  3e
+genselect occobject add occobject  14e
+genselect occobject add occobject  11e
+genselect occobject add occobject  2e
+offsetgeom  planeedgewire 0.333 invert tags 2 0 0 3e 14 11 2
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+genselect occobject add occobject  7e
+genselect occobject add occobject  18e
+genselect occobject add occobject  15e
+genselect occobject add occobject  6e
+offsetgeom  planeedgewire 0.333 invert tags 2 0 0 7e 18 15 6
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+genselect occobject add occobject  14e
+genselect occobject add occobject  13e
+genselect occobject add occobject  16e
+genselect occobject add occobject  15e
+offsetgeom  planeedgewire 0.333 invert tags 2 0 0 14e 13 16 15
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+genselect occobject add occobject  13e
+genselect occobject add occobject  24e
+genselect occobject add occobject  21e
+genselect occobject add occobject  12e
+offsetgeom  planeedgewire 0.333 invert tags 2 0 0 13e 24 21 12
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+genselect occobject add occobject  17e
+genselect occobject add occobject  28e
+genselect occobject add occobject  25e
+genselect occobject add occobject  16e
+offsetgeom  planeedgewire 0.333 invert tags 2 0 0 17e 28 25 16
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+genselect occobject add occobject  24e
+genselect occobject add occobject  23e
+genselect occobject add occobject  26e
+genselect occobject add occobject  25e
+offsetgeom  planeedgewire 0.333 invert tags 2 0 0 24e 23 26 25
+genselect clear
+genselect clear
+geomag del 1e 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 //
+genselect target occobject
+occfilter clear
+occfilter add Edge Face Wire RefPlane
+undogeom enter
+sketch loadall
+genselect target occobject
+occfilter add edge vertex RefAxis
+genselect target occobject
+occfilter add edge vertex RefAxis
+sketch setpln 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 1.00000000 1.00000000 0.00000000 0.00000000
+ac
+sketch line
+change to sketch
+sketch point coord (99.8334, -19.9950)
+sketch point coord (99.8334, 19.9950)
+sketch point coord (106.6650, 13.3300)
+sketch point coord (113.3300, 19.9950)
+sketch point coord (119.9950, 13.3300)
+sketch point coord (126.8266, 19.9950)
+sketch point coord (126.8266, -19.9950)
+sketch point coord (119.9950, -13.3300)
+sketch point coord (113.3300, -19.9950)
+sketch point coord (106.6650, -13.3300)
+sketch point coord (99.8334, -19.9950)
+sketch close
+genselect target occobject
+occfilter clear
+occfilter add Edge Face Wire RefPlane
+ac
+genselect target occobject
+occfilter clear
+occfilter add Edge Wire
+undogeom enter
+nlmesh2 switch 4 1 0.1250
+nlmesh2 sizepara 0 0.12500
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  15w
+nlmesh2 seledge 15w 0 1
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect occobject add occobjectcheck  1w 2 3 4 5 6 7 8 9 10 11 12 13 15
+nlmesh2 seledge 1w 0 1
+nlmesh2 seledge 2w 0 1
+nlmesh2 seledge 3w 0 1
+nlmesh2 seledge 4w 0 1
+nlmesh2 seledge 5w 0 1
+nlmesh2 seledge 6w 0 1
+nlmesh2 seledge 7w 0 1
+nlmesh2 seledge 8w 0 1
+nlmesh2 seledge 9w 0 1
+nlmesh2 seledge 10w 0 1
+nlmesh2 seledge 11w 0 1
+nlmesh2 seledge 12w 0 1
+nlmesh2 seledge 13w 0 1
+nlmesh2 seledge 15w 0 1
+nlmesh2 mesh 1 4 0
+nlmesh2 accept 1
+genselect clear
+genselect clear
+nlmesh2 clearsel
+nlmesh2 clearsel
+genselect target edge
+genselect target segment
+genselect element add part 1/0
+elgenerate solid solidfacedrag 2 30000 0.1250 1 0 0 0 0 0 4
+genselect clear
+genselect clear
+elgenerate accept
+partdata delete 1
+delelement unrefn 1
+delelement unrefn 0
+geomag delnoundo 1w 2 3 4 5 6 7 8 9 10 11 12 13 15
+KEYWORD INPUT 1
+renumber clean
+renumber offset 0
+renumber setkind NODE 299999
+renumber setrange 1 10000 10000
+renumber renumkind 170
+renumber keyword
+renum occupant models
+renumber clean
+renumber offset 0
+renumber setkind SOLID_ELEM 299999
+renumber setrange 30000 30000 40000
+renumber renumkind 133
+renumber keyword
+renum occupant models
+setnode
+genselect target node
+genselect clear
+genselect clear
+genselect node add part 2/0 
+setnode createset 4 1 0 0 0 0 "Fix Z Wall"
+genselect clear
+setnode none
+genselect target node
+genselect clear
+genselect clear
+Coincident nodes found. Select node ID
+genselect node add box in 100.00010 -19.99490 -0.00010 99.99990 -19.99510 0.12510
+genselect node add box in 100.00010 19.99510 -0.00010 99.99990 19.99490 0.12510
+setnode createset 5 1 0 0 0 0 "Fix XY Wall" 
+genselect clear
+save keyword "mesh_wall.key"
