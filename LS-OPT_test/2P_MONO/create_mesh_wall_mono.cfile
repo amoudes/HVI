@@ -1,0 +1,74 @@
+bgstyle fade
+openc command "para01.cfile"
+cemptymodel
+
+//create mono target
+genselect target node
+genselect clear
+meshing boxsolid create 102.000000 -20.000000 0.000000 105.300003 20.000000 0.250000 13 160 1 0.000000
+ac
+meshing boxsolid accept 2 11000 16000 monobackplate
+genselect clear
+ac
+
+
+//
+skip
+// RENUMBER ENTIRE PART
+renumber clean
+renumber offset 0
+renumber setkind NODE 9999
+renumber setrange 1 5608 5608
+renumber renumkind 170
+renumber keyword
+renum occupant models
+renumber clean
+renumber offset 0
+renumber setkind SOLID_ELEM 9999
+renumber setrange 9879 11977 2099
+renumber renumkind 133
+renumber keyword
+renum occupant models
+
+//
+//
+//
+// CREATE NODE SETS FOR BOUNDARY CONDITIONS
+// FIX Z
+setnode
+genselect target node
+genselect clear
+genselect clear
+genselect node add part 2/0 
+setnode createset 4 1 0 0 0 0 "Fix Z Wall"
+genselect clear
+setnode none
+endskip
+
+
+
+entlistset operationtype 5 2
+spcdata operationtype 2
+genselect target node
+genselect clear
+genselect node add part 2/0 
+spcdata createnodeset 5 1 NODESET(SPC) 5
+genselect clear
+spcdata create set 5 0 0 0 1 0 0 0
+
+
+// EDIT PART PARAMETERS
+KEYWORD INPUT 1
+*PART
+$#                                                                         title
+mono wall
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         2         1         2         2         0         0         0         0
+*END
+
+
+
+//
+// SAVE OUTPUT
+$output "lsppout" 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1.000000
+save keyword "mesh_wall_mono.key"

@@ -1,0 +1,129 @@
+// 2 PLATE COMMAND FILE
+// TARGET PLATE = SOLID
+// WITNESS PLATE (SHIELD) = STRUCTURE
+//
+//
+//
+skip
+// BALL
+genselect target node
+genselect clear
+meshing spheresolid create -7 0 0 2.5 15 1 0 0 0 1 0
+ac
+meshing spheresolid accept 3 1 7000 ball
+ac
+//
+// THE FRONT PLATE
+meshing boxsolid create -2.000000 -10.000000 0.000000 0.000000 10.000000 20 8 80 80 0.000000
+ac
+meshing boxsolid accept 1 50000 57000 boxsolid
+ac
+//
+//create mono target
+meshing boxsolid create 102.000000 -40.000000 0.000000 109.700003 40.000000 80 13 160 160 0.000000
+ac
+meshing boxsolid accept 2 70000 80000 monobackplate
+ac
+endskip
+
+//new geom
+genselect target node
+genselect clear
+meshing spheresolid create -7 0 0 2.5 15 1 0 0 0 1 0
+ac
+meshing spheresolid accept 3 1 1 ball
+No duplicated nodes found!
+ac
+genselect target node
+genselect clear
+meshing boxsolid create 0.000000 -10.000000 -10.000000 2.000000 10.000000 10.000000 8 80 80 0.000000
+ac
+meshing boxsolid accept 2 23626 24377 frontplate
+genselect clear
+ac
+meshing boxsolid create 102.000000 -40.000000 -40.000000 109.7 40.000000 40.000000 13 160 160 0.000000
+ac
+meshing boxsolid accept 1 74826 83426 backplate
+genselect clear
+ac
+
+
+//
+// NODE SETS
+//
+//
+skip
+// FIX Z SET
+genselect target part
+setnode
+genselect target node
+genselect clear
+genselect clear
+genselect target node
+genselect clear
+genselect clear
+genselect whole
+setnode createset 1 1 0 0 0 0 "Fix Z Target + Ball" 
+genselect clear
+// TARGET TOP
+setnode
+genselect target node
+genselect clear
+genselect clear
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.900000;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.612003 0.987143 0.505932 1.007143
+setnode createset 2 1 0 0 0 0 "Target Top" 
+genselect clear
+// TARGET BOTTOM
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.900000;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.608514 0.012857 0.491277 -0.010000
+setnode createset 3 1 0 0 0 0 "Target Bottom" 
+genselect clear
+endskip
+
+
+
+
+
+
+
+//
+//
+// EDIT PART PARAMETERS
+KEYWORD INPUT 1
+*PART
+$#                                                                         title
+Target plate
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         1         1         2         2         0         0         0         0
+*END
+keyword updatekind
+PART_PART
+KEYWORD INPUT 2
+*PART
+$#                                                                         title
+Ball
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         3         2         1         2         0         0         0         0
+*END
+keyword updatekind
+// EDIT PART PARAMETERS
+KEYWORD INPUT 3
+*PART
+$#                                                                         title
+mono wall
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         2         1         2         2         0         0         0         0
+*END
+//
+save keyword "mesh_ball_target.key"
