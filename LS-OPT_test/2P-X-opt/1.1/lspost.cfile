@@ -1,0 +1,73 @@
+$# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
+$# Created on Apr-8-2022 (14:19:13)
+openc d3plot "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\1.1\d3plot"
+ac
+home
+state -1;
+anim forward
+state +1;
+animatemode 0
+anim forward
+anim speed 24
+anim stop; state 22;
+shrink
+mesh
+clearpick
+shrink
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state -1;
+front
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+home
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;

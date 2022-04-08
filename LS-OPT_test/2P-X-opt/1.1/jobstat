@@ -1,0 +1,9 @@
+[3] MPID_nem_ofacm_init(): Init
+[1] MPI startup(): shm and ofa data transfer modes
+
+[0] MPI startup(): shm and ofa data transfer modes
+[0] MPI startup(): Rank    Pid      Node name    Pin cpu
+[0] MPI startup(): 0       129731   compute-0-0  41
+[0] MPI startup(): 1       129732   compute-0-0  17
+[0] MPI startup(): 2       129733   compute-0-0  22
+[0] MPI startup(): 3       129730   compute-0-0  40

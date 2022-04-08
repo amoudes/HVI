@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<lsopt_run_db xmlns='www.crashoptimization.com' lsopt_version='7.0'>
+<dir_data this_solver='0' directory='RUN_DYNA/4.6'/>
+<solvers>
+ <solver name='RUN_DYNA' baseFileName='DynaOpt.key' type='3'>
+  <inputfiles>
+   <inputfile name='structure.key' type='3' is_root='1' noccur_native='0' noccur_lsopt='0' utility='1' must_copy='1' must_transfer='0'>   </inputfile>
+   <inputfile name='mesh_ball_target.key' type='3' is_root='0' noccur_native='0' noccur_lsopt='0' utility='1' must_copy='1' must_transfer='1'>   </inputfile>
+   <inputfile name='mesh_wall.key' type='3' is_root='0' noccur_native='0' noccur_lsopt='0' utility='1' must_copy='1' must_transfer='1'>   </inputfile>
+   <inputfile name='lsopt_run_db.lsox' type='0' is_root='0' noccur_native='0' noccur_lsopt='0' utility='3' must_copy='0' must_transfer='0'>   </inputfile>
+   <inputfile name='get_AvgDisp.cfile' type='3' is_root='0' noccur_native='0' noccur_lsopt='0' utility='4' must_copy='1' must_transfer='1'>   </inputfile>
+  </inputfiles>
+  <outputfile name='(null)'/>
+  <databaserecover>
+   <remotefile name='d3plot*' type='1' must_transfer='1' must_delete='0'>   </remotefile>
+   <remotefile name='output' type='6' must_transfer='1' must_delete='0'>   </remotefile>
+  </databaserecover>
+  <lso_StageParentList>
+    <lso_StageParent name='CREATE_FE'>    </lso_StageParent>
+  </lso_StageParentList>
+ </solver>
+<job_submission>
+ <number_of_processors> 0 </number_of_processors>
+ <queuer_id> 7 </queuer_id>
+ <group_id> -1 </group_id>
+ <dyna_options>
+  <check_output_requests> 1 </check_output_requests>
+  <compress_d3plot> 0 </compress_d3plot>
+ </dyna_options>
+</job_submission>
+</solvers>
+<variables>
+ <variable name='x10'> 1.2132370303549700e+02 </variable>
+ <variable name='x12'> 1.1399949485945314e+02 </variable>
+ <variable name='x13'> 1.1754871058823812e+02 </variable>
+ <variable name='x17'> 1.0325705359388294e+02 </variable>
+ <variable name='x18'> 1.1895392196601107e+02 </variable>
+ <variable name='x3'> 1.0960872988802394e+02 </variable>
+ <variable name='x7'> 1.0210379251420675e+02 </variable>
+ <variable name='x8'> 1.2853603034303760e+02 </variable>
+ <variable name='y10'> -1.3348881135709906e+01 </variable>
+ <variable name='y12'> -9.1533899156299690e+00 </variable>
+ <variable name='y13'> -2.0622953717187123e+01 </variable>
+ <variable name='y3'> -2.8441595680390506e+01 </variable>
+ <variable name='y7'> -3.5228299058799841e+01 </variable>
+ <variable name='y8'> -3.5739665176099322e+01 </variable>
+ <variable name='y11'> -1.3181313114249496e+01 </variable>
+ <variable name='y2'> -1.6582874703439476e+01 </variable>
+ <variable name='y4'> -1.6783209124295347e+01 </variable>
+ <variable name='y9'> -1.3467336097474398e+01 </variable>
+ <variable name='x6'> 1.0951933941062244e+02 </variable>
+</variables>
+<dependents>
+ <dependent  name='x14' command='x9' type='0'> </dependent>
+ <dependent  name='x15' command='x10' type='0'> </dependent>
+ <dependent  name='x16' command='x11' type='0'> </dependent>
+ <dependent  name='x19' command='x2' type='0'> </dependent>
+ <dependent  name='x20' command='x3' type='0'> </dependent>
+ <dependent  name='x21' command='x4' type='0'> </dependent>
+ <dependent  name='x22' command='x12' type='0'> </dependent>
+ <dependent  name='x23' command='x13' type='0'> </dependent>
+ <dependent  name='x27' command='x7' type='0'> </dependent>
+ <dependent  name='x28' command='x8' type='0'> </dependent>
+ <dependent  name='y14' command='-y9' type='0'> </dependent>
+ <dependent  name='y15' command='-y10' type='0'> </dependent>
+ <dependent  name='y16' command='-y11' type='0'> </dependent>
+ <dependent  name='y19' command='-y2' type='0'> </dependent>
+ <dependent  name='y20' command='-y3' type='0'> </dependent>
+ <dependent  name='y21' command='-y4' type='0'> </dependent>
+ <dependent  name='y22' command='-y12' type='0'> </dependent>
+ <dependent  name='y23' command='-y13' type='0'> </dependent>
+ <dependent  name='y27' command='-y7' type='0'> </dependent>
+ <dependent  name='y28' command='-y8' type='0'> </dependent>
+ <dependent  name='x24' command='x1' type='0'> </dependent>
+ <dependent  name='x25' command='x6' type='0'> </dependent>
+ <dependent  name='x26' command='x5' type='0'> </dependent>
+ <dependent  name='y24' command='-y1' type='0'> </dependent>
+ <dependent  name='y25' command='-y6' type='0'> </dependent>
+ <dependent  name='y26' command='-y5' type='0'> </dependent>
+</dependents>
+<constants>
+ <constant name='y17' value='0.0000000000000000e+00' >
+ </constant>
+ <constant name='y18' value='0.0000000000000000e+00' >
+ </constant>
+ <constant name='x11' value='1.3050000000000000e+02' >
+ </constant>
+ <constant name='x2' value='1.0050000000000000e+02' >
+ </constant>
+ <constant name='x4' value='1.3050000000000000e+02' >
+ </constant>
+ <constant name='x9' value='1.0050000000000000e+02' >
+ </constant>
+ <constant name='x1' value='1.0050000000000000e+02' >
+ </constant>
+ <constant name='x5' value='1.3050000000000000e+02' >
+ </constant>
+ <constant name='y1' value='-3.7500000000000000e+01' >
+ </constant>
+ <constant name='y5' value='-3.7500000000000000e+01' >
+ </constant>
+ <constant name='y6' value='-3.7500000000000000e+01' >
+ </constant>
+</constants>
+<responses  local_num_variables='19' num_solvers='1' >
+ <response name='AvgDisp' command='Final ("TimeAvgDisp(t)")' interface='703' isGlobal='0' global_id='0' SolverPtr='0' factor='1.0000000000000000e+00' shift='0.0000000000000000e+00' formula_file='(null)' rootMultiHist='-1' >
+  <active_solvers>
+    <active_solver solver='0' active='1'>  </active_solver>
+  </active_solvers>
+ </response>
+</responses>
+<matrices  >
+</matrices>
+<nometaresponses  >
+</nometaresponses>
+<histories>
+  <history global_id='0' name='TimeAvgDisp' Xtitle='' Ytitle='TimeAvgDisp' command='lsprepost48 c=get_AvgDisp.cfile -nographics' filename='' interface='700' initLower='0' initUpper='0' valLower='0.0000000000000000e+00' valUpper='0.0000000000000000e+00' isGlobal='0' SolverPtr='0' xComponent='(null)' yComponent='(null)' pointId='(null)'  >
+    <define_curve fileName='(null)' lcid='(null)'>
+    </define_curve>
+  </history>
+</histories>
+<composites  >
+</composites>
+<multihistories>
+</multihistories>
+<multiresponses>
+</multiresponses>
+</lsopt_run_db>

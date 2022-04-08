@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lsch_JobInfo>
+  <timeStamp>Fri Apr  8 12:08:22 2022</timeStamp>
+  <runDirectory>RUN_DYNA/4.6</runDirectory>
+  <SolverType>DYNA960</SolverType>
+  <solverName>dyna960</solverName>
+  <execType>exec_LSOPT</execType>
+  <SolverCommand>${LSPROJHOME}/lsdyna  i=DynaOpt.key </SolverCommand>
+  <RestartCommand>${LSPROJHOME}/lsdyna  r=runrsf2 o=d3hsp2</RestartCommand>
+  <Queue>queue_SLURM</Queue>
+  <QueuerTimeoutMinutes>720</QueuerTimeoutMinutes>
+  <SSHConfig/>
+  <SSHCleanMode>ssh_clean_DEFAULT</SSHCleanMode>
+  <Proxy>proxy_NIL</Proxy>
+  <ExtractorPrefix>extractor</ExtractorPrefix>
+  <retry_number>9</retry_number>
+  <retry_timeout>60</retry_timeout>
+  <EnvVarList/>
+  <resource>
+    <lsch_ResourceRefList>
+      <ResourceRef>
+        <lsch_ResourceRef>
+          <refResourceName>CPU</refResourceName>
+          <numUsedPerJob>4</numUsedPerJob>
+        </lsch_ResourceRef>
+      </ResourceRef>
+    </lsch_ResourceRefList>
+  </resource>
+  <termCrit>
+    <lsch_TermCritList>
+      <crits/>
+    </lsch_TermCritList>
+  </termCrit>
+  <fileOp>
+    <lsch_FileOpList>
+      <FileOpList>
+        <lsch_FileOp>
+          <fileOperation>operation_COPY</fileOperation>
+          <sourceFile>${LSPROJHOME}/CREATE_FE/4.6/mesh_wall.key</sourceFile>
+          <destFile>${LSPROJHOME}/RUN_DYNA/4.6/mesh_wall.key</destFile>
+          <file_Sequence>sequence_BEFORE</file_Sequence>
+          <errorAction>erroraction_ERROR</errorAction>
+        </lsch_FileOp>
+        <lsch_FileOp>
+          <fileOperation>operation_COPY</fileOperation>
+          <sourceFile>${LSPROJHOME}/CREATE_FE/4.6/JobResults.CREATE_FE.lsda</sourceFile>
+          <destFile>${LSPROJHOME}/RUN_DYNA/4.6/JobResults.CREATE_FE.lsda</destFile>
+          <file_Sequence>sequence_BEFORE</file_Sequence>
+          <errorAction>erroraction_WARNING</errorAction>
+        </lsch_FileOp>
+      </FileOpList>
+    </lsch_FileOpList>
+  </fileOp>
+  <parentList>
+    <entry>CREATE_FE/4.6</entry>
+  </parentList>
+  <CheckOutputFileComplete>0</CheckOutputFileComplete>
+  <RecoverFile>
+    <entry>d3plot*</entry>
+    <entry>output</entry>
+  </RecoverFile>
+  <SendFile>
+    <entry>DynaOpt.key</entry>
+    <entry>mesh_ball_target.key</entry>
+    <entry>mesh_wall.key</entry>
+    <entry>get_AvgDisp.cfile</entry>
+  </SendFile>
+</lsch_JobInfo>

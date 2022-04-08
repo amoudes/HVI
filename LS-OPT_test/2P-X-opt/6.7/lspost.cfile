@@ -1,0 +1,57 @@
+$# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
+$# Created on Apr-8-2022 (13:09:11)
+openc d3plot "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\6.7\d3plot"
+ac
+home
+mesh
+mesh
+state -1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+anim forward
+wire
+wire
+shad
+mesh
+state +1;
+mesh
+state -1;
+state +1;
+measure select 1
+genselect target element
+measure type 11
+genselect target part
+genselect part add part 2/0 
+measure select 0
+measure type 0
+measure type 0

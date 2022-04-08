@@ -1,0 +1,171 @@
+Performing 1 file operation(s) before job
+[1] COPY (STATUS=0,ONERR=WARN,IGN=NO)
+             SRC=/home/andrieso/Simulations/LS-OPT/X-opt-2P/CREATE_FE/4.6/JobResults.CREATE_FE.lsda
+             DST=/home/andrieso/Simulations/LS-OPT/X-opt-2P/RUN_DYNA/4.6/JobResults.CREATE_FE.lsda
+[STDOUT] 
+[STDOUT] Fri Apr  8 12:18:28 2022 : STARTING EXTRACTION ...
+[STDOUT] 
+[STDOUT] 
+[STDOUT] Extractor command:
+[STDOUT] /opt/lstc/LSOPT_EXE/extractor nojob 
+[STDOUT] 
+[STDOUT] 
+[STDOUT] The solver output log follows after the following line:
+[STDOUT] 
+[STDOUT] ===========================================================
+[STDOUT] 
+[STDOUT] 
+[STDOUT] Opened Extraction database: "/home/andrieso/Simulations/LS-OPT/X-opt-2P/RUN_DYNA/4.6/lsopt_run_db.lsox"
+[STDOUT] 
+[STDOUT] Job home directory: "/home/andrieso/Simulations/LS-OPT/X-opt-2P/RUN_DYNA/4.6"
+[STDOUT] 
+[STDOUT] Job run directory:  "/home/andrieso/Simulations/LS-OPT/X-opt-2P/RUN_DYNA/4.6"
+[STDOUT] 
+[STDOUT] 
+[STDOUT] ===========================================================
+[STDOUT] Extractor pre-processor.
+[STDOUT] ===========================================================
+[STDOUT] 
+[STDOUT] 
+[STDOUT] Fri Apr  8 12:18:28 2022 : Reading /home/andrieso/Simulations/LS-OPT/X-opt-2P/RUN_DYNA/4.6/JobResults.CREATE_FE.lsda ...
+[STDOUT] 
+[STDOUT] Fri Apr  8 12:18:28 2022 : Reading /home/andrieso/Simulations/LS-OPT/X-opt-2P/RUN_DYNA/4.6/JobResults.CREATE_FE.lsda completed.
+[STDOUT] 
+[STDOUT] Assembling job results from Stage "CREATE_FE".
+[STDOUT] 
+[STDOUT] 
+[STDOUT] -----------------------------------------------------------
+[STDOUT] Evaluate expressions
+[STDOUT] -----------------------------------------------------------
+[STDOUT] Pre run: Number of response-variables = 0
+[STDOUT] 
+[STDOUT]   Skipping replacement step
+[STDOUT] 
+[STDOUT] ===========================================================
+[STDOUT] 
+[STDOUT] E X T R A C T I O N  repair task
+[STDOUT] 
+[STDOUT]     Solver job had  N o r m a l  termination ---->
+[STDOUT] 
+[STDOUT] 
+[STDOUT] ===========================================================
+[STDOUT] Simulation job done.
+[STDOUT] ===========================================================
+[STDOUT] 
+[STDOUT] 
+[STDOUT]  _____________________________________________________
+[STDOUT]  |                                                   |
+[STDOUT]  |     Livermore Software Technology Corporation     |
+[STDOUT]  |                                                   |
+[STDOUT]  |                L S - P R E P O S T                |
+[STDOUT]  |                                                   |
+[STDOUT]  |    Advanced Pre- and Post-Processor for LS-DYNA   |
+[STDOUT]  |                                                   |
+[STDOUT]  |         LS-PrePost(R) V4.8.25 - 04Jan2022         |
+[STDOUT]  |                                                   |
+[STDOUT]  |           Ansys Copyright (C) 1999-2020           |
+[STDOUT]  |                All Rights Reserved                |
+[STDOUT]  |___________________________________________________|
+[STDOUT] 
+[STDOUT]  OpenGL version 3.1 Mesa 21.1.5
+[STDOUT] bgstyle fade
+[STDOUT] openc command "get_AvgDisp.cfile" nodialog
+[STDOUT] open d3plot d3plot
+[STDOUT] Reading binary plot files
+[STDOUT]  DES Format - version 2 detected
+[STDOUT] DES Format: version 2 detected!
+[STDOUT]  LS-DYNA - LS-DYNA keyword deck by LS-PrePost
+[STDOUT]  Total no. of Nodal points    = 39796
+[STDOUT]  Total no. of Solid  elements = 11746
+[STDOUT]  Total number of states = 31
+[STDOUT]  Total no. of active parts    = 6
+[STDOUT] Finished reading model
+[STDOUT] ac
+[STDOUT] genselect target node
+[STDOUT] loadstate 1;
+[STDOUT] loadquat 0.000000 0.000000 0.000000 1.000000;
+[STDOUT] loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+[STDOUT] loadzoom 0.409600;
+[STDOUT] loadpan 52.876713 0.227008;
+[STDOUT] loadeyepos 0.000000 0.000000 0.000000;
+[STDOUT] loadupvect 0.000000 1.000000 0.000000;
+[STDOUT] genselect node add box in 130.9 -1000.000000 -0.100000 135.000000 1000.000000 2.0
+[STDOUT] ntime 8
+[STDOUT] xyplot 1 operation average_curves all
+[STDOUT] xyplot 1 savefile xypair LsoptHistory 1
+[STDOUT] Writing XY data to file: LsoptHistory
+[STDOUT] deletewin 1
+[STDOUT] quit
+[STDOUT] Save Config. parameters to file /home/andrieso/LSTC/LS-PrePost4.8/lsppconf
+[STDOUT] Checking log file:
+[STDOUT] 
+[STDOUT]   /home/andrieso/Simulations/LS-OPT/X-opt-2P/RUN_DYNA/4.6/job_log
+[STDOUT] 
+[STDOUT] Marker found in
+[STDOUT] 
+[STDOUT]   /home/andrieso/Simulations/LS-OPT/X-opt-2P/RUN_DYNA/4.6/job_log.
+[STDOUT] 
+[STDOUT] (Time to find marker = 1 seconds)
+[STDOUT] 
+[STDOUT] NORMAL termination signal found in
+[STDOUT] 
+[STDOUT]   /home/andrieso/Simulations/LS-OPT/X-opt-2P/RUN_DYNA/4.6/job_log.
+[STDOUT] 
+[STDOUT] 
+[STDOUT] ===========================================================
+[STDOUT] Extractor post-processor.
+[STDOUT] ===========================================================
+[STDOUT] 
+[STDOUT] ===========================================================
+[STDOUT] Data will be extracted to "history.n", "result.n", 
+[STDOUT]      "matrix.n" and "response.n" files.
+[STDOUT] ===========================================================
+[STDOUT] 
+[STDOUT] System command "lsprepost48 c=get_AvgDisp.cfile -nographics" successful
+[STDOUT] 
+[STDOUT] 
+[STDOUT] Current directory: /home/andrieso/Simulations/LS-OPT/X-opt-2P/RUN_DYNA/4.6
+[STDOUT] 
+[STDOUT] 
+[STDOUT] 
+[STDOUT] ===========================================================
+[STDOUT] No d3plot database compression requested
+[STDOUT] ===========================================================
+[STDOUT] 
+[STDOUT] 
+[STDOUT] -----------------------------------------------------------
+[STDOUT] Evaluate expressions
+[STDOUT] -----------------------------------------------------------
+[STDOUT] 
+[STDOUT] Fri Apr  8 12:18:46 2022 : Reading /home/andrieso/Simulations/LS-OPT/X-opt-2P/RUN_DYNA/4.6/JobResults.CREATE_FE.lsda ...
+[STDOUT] 
+[STDOUT] Fri Apr  8 12:18:46 2022 : Reading /home/andrieso/Simulations/LS-OPT/X-opt-2P/RUN_DYNA/4.6/JobResults.CREATE_FE.lsda completed.
+[STDOUT] 
+[STDOUT] Assembling job results from Stage "CREATE_FE".
+[STDOUT] 
+[STDOUT] Post run: Number of response-variables = 0
+[STDOUT] 
+[STDOUT] RESPONSE VALUES:
+[STDOUT] 
+[STDOUT]     Response '                                                         AvgDisp' =    0.46555
+[STDOUT] 
+[STDOUT] DEFINE_CURVE files:
+[STDOUT] 
+[STDOUT]     No *DEFINE_CURVE requests
+[STDOUT] 
+[STDOUT] Fri Apr  8 12:18:46 2022 : Writing JobResults.RUN_DYNA.lsda ...
+[STDOUT] Fri Apr  8 12:18:46 2022 : Writing JobResults.RUN_DYNA.lsda completed.
+[STDOUT] 
+[STDOUT] ===========================================================
+[STDOUT] 
+[STDOUT] ===========================================================
+[STDOUT] End of Shell execution
+[STDOUT] ===========================================================
+[STDOUT] 
+[STDOUT] Finalizing extractor ...
+[STDOUT] Finalization complete!
+[STDOUT] 
+[STDOUT] Fri Apr  8 12:18:46 2022 : Exiting extractor shell.
+[STDOUT] 
+Solver command has finished.
+Performing 0 file operation(s) after job

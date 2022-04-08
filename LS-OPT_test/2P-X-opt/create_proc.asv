@@ -1,6 +1,6 @@
 clc; close all; clear all;
 %%
-plot_figs = 'no';
+plot_figs = 'yes';
 run_LS    = 'yes';
 
 %%
@@ -11,7 +11,7 @@ t = 2*hmax;
 % t   = 0.025*Lx;      % Wall thickness
 % hmax = 0.2;        % max element size
 
-ny  = 5;            % Number of vertical repeating cells
+ny  = 4;            % Number of vertical repeating cells
 
 dx = 100;           % horizontal position wall
 
@@ -27,7 +27,7 @@ Cds = [0 0  Lx 2*Lx 2*Lx Lx 0.5*Lx 1.5*Lx
 % 2 = fix y
 % 3 = fix xy
 %        1 2 3 4 5 6 7 8   
-Ctype = [3 0 0 0 3 3 0 0]; 
+Ctype = [0 0 0 0 0 0 0 0]; 
 
 Lines = [1 2 3 6 6 3 4 5 1 4
          7 7 7 7 8 8 8 8 2 5];
@@ -54,10 +54,13 @@ for n = 1:ny-1
     Lines  = [Lines line];
     nLines = nLines + 10; 
 end
+
+Perimeter
+
 %% Alter node types
-Ctype(end-4) = 3;
-Ctype(end-2) = 3;
-Ctype(end-3) = 3;
+Ctype(end-4) = 0;
+Ctype(end-2) = 0;
+Ctype(end-3) = 0;
 %% Determine triangles
 nTri = ny*2;
 nSqu = ny + (ny-1)*2;
@@ -197,6 +200,7 @@ for i = 1:length(Sq)
 end
 fprintf(fid,'genselect clear\n');
 
+fprintf(fid,'skip\n');
 
 fprintf(fid,'// DELETE UNNECESSARY LINEs\n');
 fprintf(fid,'genselect clear\n');
@@ -224,17 +228,21 @@ fprintf(fid,'sketch setpln 0.00000000 0.00000000 0.00000000 0.00000000 0.0000000
 fprintf(fid,'ac\n');
 fprintf(fid,'sketch line\n');
 fprintf(fid,'change to sketch\n');
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,1)-t/2    ,Cds(2,1)]-t/2);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-4)-t/2,Cds(2,end-4)]+t/2);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-1)    ,Cds(2,end-1)]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-3)    ,Cds(2,end-3)]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end)      ,Cds(2,end)]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-2)+t/2,Cds(2,end-2)]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,5)+t/2    ,Cds(2,5)]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,8)        ,Cds(2,8)]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,6)        ,Cds(2,6)]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,7)        ,Cds(2,7)]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,1)-t/2    ,Cds(2,1)]);
+
+
+theta = atan2(Lx/2,Ly);
+ty = 2*t*cos(theta);
+fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,1)-t/2    ,Cds(2,1)-ty]);
+fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-4)-t/2,Cds(2,end-4)+ty]);
+fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-1)    ,Cds(2,end-1)+ty]);
+fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-3)    ,Cds(2,end-3)+ty]);
+fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end)      ,Cds(2,end)+ty]);
+fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-2)+t/2,Cds(2,end-2)+ty]);
+fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,5)+t/2    ,Cds(2,5)-ty]);
+fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,8)        ,Cds(2,8)-ty]);
+fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,6)        ,Cds(2,6)-ty]);
+fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,7)        ,Cds(2,7)-ty]);
+fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,1)-t/2    ,Cds(2,1)-ty]);
 fprintf(fid,'sketch close\n');
 fprintf(fid,'genselect target occobject\n');
 fprintf(fid,'occfilter clear\n');
@@ -356,11 +364,11 @@ fprintf(fid,'genselect clear\n');
 fprintf(fid,'Coincident nodes found. Select node ID\n');
 
 
-p1 = [Cds(1,1)+TOL_g Cds(2,1)+TOL_g -TOL_g];
-p2 = [Cds(1,1)-TOL_g-t/2 Cds(2,1)-TOL_g-t/2 hmax+TOL_g];
+p1 = [Cds(1,1)+TOL_g     Cds(2,1)+TOL_g-ty -TOL_g];
+p2 = [Cds(1,1)-TOL_g-t/2 Cds(2,1)-TOL_g-ty  hmax+TOL_g];
 fprintf(fid,'genselect node add box in %.5f %.5f %.5f %.5f %.5f %.5f\n',[p1, p2]);
-p1 = [Cds(1,end-4)+TOL_g Cds(2,end-4)+TOL_g+t/2 -TOL_g];
-p2 = [Cds(1,end-4)-TOL_g-t/2 Cds(2,end-4)-TOL_g hmax+TOL_g];
+p1 = [Cds(1,end-4)+TOL_g     Cds(2,end-4)+TOL_g+ty     -TOL_g];
+p2 = [Cds(1,end-4)-TOL_g-t/2 Cds(2,end-4)-TOL_g+ty      hmax+TOL_g];
 fprintf(fid,'genselect node add box in %.5f %.5f %.5f %.5f %.5f %.5f\n',[p1 p2]);
 fprintf(fid,'setnode createset 5 1 0 0 0 0 "Fix XY Wall" \n');
 fprintf(fid,'genselect clear\n');
@@ -376,6 +384,6 @@ fclose(fid);
 fclose(fid2);
 %%
 if strcmp(run_LS,'yes')
-    command = 'lsprepost4.8_x64 create_mesh_wall.cfile -nographics';
+    command = 'lsprepost4.8_x64 create_mesh_wall.cfile';
     dos(command);
 end

@@ -4,8 +4,8 @@ plot_figs = 'yes';
 run_LS    = 'no';
 
 %%
-Lx  = 13.33;            % Horizontal length of one strut
-Ly  = 13.33;
+Lx  = 15;            % Horizontal length of one strut
+Ly  = 15;
 hmax = 0.25;
 t = 2*hmax;
 % t   = 0.025*Lx;      % Wall thickness
@@ -54,6 +54,16 @@ for n = 1:ny-1
     Lines  = [Lines line];
     nLines = nLines + 10; 
 end
+
+perimeterLines = [8 5 4 1 9];
+for i = 1:ny-1
+    perimeterLines = [perimeterLines 9+10*i];
+end
+perimeterLines = [perimeterLines nLines-8 nLines-7 nLines-4 nLines-3 nLines];
+for i = 1:ny-1
+   perimeterLines = [perimeterLines nLines-i*10]; 
+end
+
 %% Alter node types
 Ctype(end-4) = 0;
 Ctype(end-2) = 0;
@@ -101,7 +111,7 @@ ybot = min(Cds(2,:));
 dy = (ytop + ybot)/2;
 Cds(2,:) = Cds(2,:) - dy;
 
-Cds(1,:) = Cds(1,:) + dx;
+Cds(1,:) = Cds(1,:) + dx + t;
      
 %% Plot shape
 if strcmp(plot_figs,'yes')
@@ -175,7 +185,6 @@ for i = 1:length(Tri)
    fprintf(fid,'offsetgeom  planeedgewire %.3f invert tags 2 0 0 %de %d %d\n',[t,Tri(1,i),Tri(2,i),Tri(3,i)]);
 end
 
-
 % fprintf(fid,'skip\n');
 
 
@@ -197,6 +206,26 @@ for i = 1:length(Sq)
 end
 fprintf(fid,'genselect clear\n');
 
+% fprintf(fid,'skip\n');
+
+fprintf(fid,'//\n');
+fprintf(fid,'// OUTER PERIMETER\n');
+fprintf(fid,'// %d\n',i);
+fprintf(fid,'genselect target occobject\n');
+fprintf(fid,'occfilter clear\n');
+fprintf(fid,'occfilter add Edge Wire\n');
+fprintf(fid,'undogeom enter\n');
+
+for i = 1:length(perimeterLines)
+    fprintf(fid,'genselect occobject add occobject  %de\n',perimeterLines(i));    
+end
+fprintf(fid,'offsetgeom planeedgewire %.3f tags 2 0 0 %de ',[t,perimeterLines(1)]);
+for i = 2:length(perimeterLines)
+   fprintf(fid,'%d ',perimeterLines(i)); 
+end
+fprintf(fid,'\ngenselect clear\n');
+
+% fprintf(fid,'skip\n');
 
 fprintf(fid,'// DELETE UNNECESSARY LINEs\n');
 fprintf(fid,'genselect clear\n');
@@ -210,42 +239,42 @@ fprintf(fid,'//\n');
 
 % fprintf(fid,'skip\n');
 
-fprintf(fid,'//\n');
-fprintf(fid,'//\n');
-fprintf(fid,'// DRAW OUTER PERIMETER BOX\n');
-fprintf(fid,'genselect target occobject\n');
-fprintf(fid,'occfilter clear\n');
-fprintf(fid,'occfilter add Edge Face Wire RefPlane\n');
-fprintf(fid,'undogeom enter\n');
-fprintf(fid,'sketch loadall\n');
-fprintf(fid,'genselect target occobject\n');
-fprintf(fid,'occfilter add edge vertex RefAxis\n');
-fprintf(fid,'sketch setpln 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 1.00000000 1.00000000 0.00000000 0.00000000\n');
-fprintf(fid,'ac\n');
-fprintf(fid,'sketch line\n');
-fprintf(fid,'change to sketch\n');
-
-
+% fprintf(fid,'//\n');
+% fprintf(fid,'//\n');
+% fprintf(fid,'// DRAW OUTER PERIMETER BOX\n');
+% fprintf(fid,'genselect target occobject\n');
+% fprintf(fid,'occfilter clear\n');
+% fprintf(fid,'occfilter add Edge Face Wire RefPlane\n');
+% fprintf(fid,'undogeom enter\n');
+% fprintf(fid,'sketch loadall\n');
+% fprintf(fid,'genselect target occobject\n');
+% fprintf(fid,'occfilter add edge vertex RefAxis\n');
+% fprintf(fid,'sketch setpln 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 1.00000000 1.00000000 0.00000000 0.00000000\n');
+% fprintf(fid,'ac\n');
+% fprintf(fid,'sketch line\n');
+% fprintf(fid,'change to sketch\n');
+% 
+% 
 theta = atan2(Lx/2,Ly);
 ty = 2*t*cos(theta);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,1)-t/2    ,Cds(2,1)-ty]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-4)-t/2,Cds(2,end-4)+ty]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-1)    ,Cds(2,end-1)+ty]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-3)    ,Cds(2,end-3)+ty]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end)      ,Cds(2,end)+ty]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-2)+t/2,Cds(2,end-2)+ty]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,5)+t/2    ,Cds(2,5)-ty]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,8)        ,Cds(2,8)-ty]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,6)        ,Cds(2,6)-ty]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,7)        ,Cds(2,7)-ty]);
-fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,1)-t/2    ,Cds(2,1)-ty]);
-fprintf(fid,'sketch close\n');
-fprintf(fid,'genselect target occobject\n');
-fprintf(fid,'occfilter clear\n');
-fprintf(fid,'occfilter add Edge Face Wire RefPlane\n');
-fprintf(fid,'ac\n');
-fprintf(fid,'//\n');
-fprintf(fid,'//\n');
+% fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,1)-t/2    ,Cds(2,1)-ty]);
+% fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-4)-t/2,Cds(2,end-4)+ty]);
+% fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-1)    ,Cds(2,end-1)+ty]);
+% fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-3)    ,Cds(2,end-3)+ty]);
+% fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end)      ,Cds(2,end)+ty]);
+% fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,end-2)+t/2,Cds(2,end-2)+ty]);
+% fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,5)+t/2    ,Cds(2,5)-ty]);
+% fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,8)        ,Cds(2,8)-ty]);
+% fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,6)        ,Cds(2,6)-ty]);
+% fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,7)        ,Cds(2,7)-ty]);
+% fprintf(fid,'sketch point coord (%.4f, %.4f)\n',[Cds(1,1)-t/2    ,Cds(2,1)-ty]);
+% fprintf(fid,'sketch close\n');
+% fprintf(fid,'genselect target occobject\n');
+% fprintf(fid,'occfilter clear\n');
+% fprintf(fid,'occfilter add Edge Face Wire RefPlane\n');
+% fprintf(fid,'ac\n');
+% fprintf(fid,'//\n');
+% fprintf(fid,'//\n');
 
 
 % fprintf(fid,'skip\n');
@@ -261,8 +290,8 @@ fprintf(fid,'nlmesh2 sizepara 0 %.5f\n',hmax);
 fprintf(fid,'genselect clear\n');
 fprintf(fid,'nlmesh2 clearsel\n');
 fprintf(fid,'nlmesh2 clearsel\n');
-fprintf(fid,'genselect occobject add occobjectcheck  %dw\n',nSqu+nTri+2);
-fprintf(fid,'nlmesh2 seledge %dw 0 1\n',nSqu+nTri+2);
+fprintf(fid,'genselect occobject add occobjectcheck  %dw\n',nSqu+nTri+1);
+fprintf(fid,'nlmesh2 seledge %dw 0 1\n',nSqu+nTri+1);
 
 
 fprintf(fid,'genselect clear\n');
@@ -272,11 +301,11 @@ fprintf(fid,'genselect occobject add occobjectcheck  1w ');
 for i = 2:nSqu+nTri
     fprintf(fid,'%d ',i);
 end
-fprintf(fid,'%d\n',nSqu+nTri+2);
+fprintf(fid,'%d\n',nSqu+nTri+1);
 for i = 1:nSqu+nTri
     fprintf(fid,'nlmesh2 seledge %dw 0 1\n',i);
 end
-fprintf(fid,'nlmesh2 seledge %dw 0 1\n',nSqu+nTri+2);
+fprintf(fid,'nlmesh2 seledge %dw 0 1\n',nSqu+nTri+1);
     
 fprintf(fid,'nlmesh2 mesh 1 4 0\n');
 fprintf(fid,'nlmesh2 accept 1\n');
@@ -304,7 +333,7 @@ fprintf(fid,'geomag delnoundo 1w ');
 for i = 2:nSqu+nTri
    fprintf(fid,'%d ',i); 
 end
-fprintf(fid,'%d\n',nSqu+nTri+2);
+fprintf(fid,'%d\n',nSqu+nTri+1);
 
 fprintf(fid,'//\n');
 fprintf(fid,'//\n');
@@ -360,11 +389,14 @@ fprintf(fid,'genselect clear\n');
 fprintf(fid,'Coincident nodes found. Select node ID\n');
 
 
-p1 = [Cds(1,1)+TOL_g     Cds(2,1)+TOL_g-ty -TOL_g];
-p2 = [Cds(1,1)-TOL_g-t/2 Cds(2,1)-TOL_g-ty  hmax+TOL_g];
+offset = getOffset([Cds(:,1),Cds(:,2),Cds(:,7)],t,'out');
+ty = abs(offset(2,1) - Cds(2,1));
+
+p1 = [Cds(1,1)-t+TOL_g     Cds(2,1)+TOL_g-ty -TOL_g];
+p2 = [Cds(1,1)-t-TOL_g Cds(2,1)-TOL_g-ty  hmax+TOL_g];
 fprintf(fid,'genselect node add box in %.5f %.5f %.5f %.5f %.5f %.5f\n',[p1, p2]);
-p1 = [Cds(1,end-4)+TOL_g     Cds(2,end-4)+TOL_g+ty     -TOL_g];
-p2 = [Cds(1,end-4)-TOL_g-t/2 Cds(2,end-4)-TOL_g+ty      hmax+TOL_g];
+p1 = [Cds(1,end-4)-t+TOL_g     Cds(2,end-4)+TOL_g+ty     -TOL_g];
+p2 = [Cds(1,end-4)-t-TOL_g Cds(2,end-4)-TOL_g+ty      hmax+TOL_g];
 fprintf(fid,'genselect node add box in %.5f %.5f %.5f %.5f %.5f %.5f\n',[p1 p2]);
 fprintf(fid,'setnode createset 5 1 0 0 0 0 "Fix XY Wall" \n');
 fprintf(fid,'genselect clear\n');

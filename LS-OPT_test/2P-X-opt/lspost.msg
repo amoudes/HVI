@@ -1,109 +1,41 @@
-bgstyle fade
-C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\d3plot"
-Reading binary plot files
-DES Format: version 2 detected!
+openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key"
+save keywordversion 2
+save keywordversion 12
+Time to read keyword file = 0.230 seconds
+Time to process element data = 0.062 seconds
 Finished reading model
-ac
 home
-anim forward
-zoomhere 0.141873 0.002857 0.800000;
-zoomhere 0.141873 0.004286 0.640000;
-state +1;
-anim forward
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state -1;
-state -1;
-zoomhere 0.094353 -0.257143 0.512000;
-zoomhere 0.177686 -0.245714 0.640000;
-zoomhere 0.191460 -0.245714 0.800000;
-zoomhere 0.194904 -0.247143 1.000000;
-zoomhere 0.196281 -0.248571 1.250000;
-zoomhere 0.196281 -0.248571 1.562500;
-zoomhere 0.196281 -0.248571 1.953125;
-zoomhere 0.196970 -0.230000 1.562500;
-zoomhere 0.196281 -0.230000 1.250000;
-zoomhere 0.201791 -0.247143 1.562500;
-zoomhere 0.201791 -0.247143 1.953125;
-zoomhere 0.201791 -0.247143 2.441406;
-zoomhere 0.201791 -0.247143 3.051758;
-zoomhere 0.201791 -0.247143 3.814698;
-zoomhere 0.219008 -0.258571 3.051758;
-zoomhere 0.219008 -0.262857 2.441406;
-pan -81.701874 37.804424;
-zoomhere 0.219008 -0.197143 1.953125;
-zoomhere 0.203857 -0.181429 1.562500;
-zoomhere 0.201102 -0.181429 1.250000;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-zoomhere 0.107438 -0.122857 1.000000;
-zoomhere 0.130165 -0.087143 1.250000;
-zoomhere 0.130165 -0.087143 1.562500;
-zoomhere 0.130165 -0.087143 1.953125;
-zoomhere 0.130165 -0.087143 1.562500;
-zoomhere 0.130165 -0.088571 1.250000;
-zoomhere 0.130165 -0.088571 1.000000;
-zoomhere 0.130165 -0.088571 0.800000;
-zoomhere 0.130165 -0.088571 0.640000;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
-state +1;
+mesh
+zoomhere 0.240056 -0.082857 0.800000;
+zoomhere 0.239358 -0.082857 0.640000;
+zoomhere 0.239358 -0.082857 0.800000;
+zoomhere 0.238660 -0.082857 0.640000;
+zoomhere 0.237962 -0.082857 0.512000;
+zoomhere 0.236567 -0.082857 0.409600;
+pan 44.381329 -14.227919;
+zoomhere 0.104676 -0.112857 0.512000;
+zoomhere 0.104676 -0.112857 0.640000;
+pan 37.961254 8.234649;
+pan 38.968304 -1.961880;
+zoomhere 0.078158 -0.117143 0.512000;
+zoomhere 0.078158 -0.118571 0.409600;
+zoomhere 0.076762 -0.120000 0.327680;
+zoomhere 0.076762 -0.120000 0.262144;
+zoomhere 0.076762 -0.120000 0.209715;
+zoomhere 0.076762 -0.120000 0.167772;
+zoomhere 0.076762 -0.120000 0.134218;
+zoomhere 0.069086 -0.115714 0.167773;
+zoomhere 0.067690 -0.115714 0.209716;
+zoomhere 0.066992 -0.117143 0.262145;
+zoomhere 0.066992 -0.117143 0.327681;
+zoomhere 0.066294 -0.117143 0.409601;
+zoomhere 0.064899 -0.117143 0.512001;
+measure select 1
+genselect target element
+measure type 11
+genselect target part
+genselect part add part 2/0 
+Solid PART ID= 2
+Volume of Solid Part #2 = 137.152
+measure select 0
 Save Config. parameters to file C:\Users\s148946\AppData\Roaming\LSTC\LS-PrePost4.8\lsppconf
