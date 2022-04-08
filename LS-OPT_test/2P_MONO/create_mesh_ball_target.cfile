@@ -1,0 +1,146 @@
+// 2 PLATE COMMAND FILE
+// TARGET PLATE = SOLID
+// WITNESS PLATE (SHIELD) = STRUCTURE
+//
+//
+//
+// BALL
+meshing cylindersolid create 2.500000 0.25 64 1 -5.000000 0.000000,0.000000,0.000000,0.000000,1.000000,0,0.000000
+ac
+meshing cylindersolid accept 3 1 1 ball
+ac
+//
+// THE FRONT PLATE
+meshing boxsolid create -2.000000 -10.000000 0.000000 0.000000 10.000000 0.25 8 80 1 0.000000
+ac
+meshing boxsolid accept 1 5000 10000 boxsolid
+ac
+//
+//create mono target
+meshing boxsolid create 102.000000 -40.000000 0.000000 109.7 40.000000 0.250000 15 160 1 0.000000
+ac
+meshing boxsolid accept 2 11000 16000 monobackplate
+ac
+//
+// NODE SETS
+//
+//
+skip
+// FIX Z SET
+genselect target part
+setnode
+genselect target node
+genselect clear
+genselect clear
+genselect target node
+genselect clear
+genselect clear
+genselect whole
+setnode createset 1 1 0 0 0 0 "Fix Z Target + Ball" 
+genselect clear
+// TARGET TOP
+setnode
+genselect target node
+genselect clear
+genselect clear
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.900000;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.387025 0.667781 0.513982 0.710145
+//0.612003 0.987143 0.505932 1.007143
+setnode createset 2 1 0 0 0 0 "Target Top" 
+genselect clear
+// TARGET BOTTOM
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.900000;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.532438 0.220736 0.331096 0.258640
+//0.608514 0.012857 0.491277 -0.010000
+setnode createset 3 1 0 0 0 0 "Target Bottom" 
+genselect clear
+endskip
+
+
+//
+genselect target node
+genselect clear
+genselect clear
+pan -16.374174 2.950011;
+genselect node add part 3/0 
+genselect node add part 1/0 
+genselect node add part 2/0 
+setnode createset 1 1 0 0 0 0 "all" 
+genselect clear
+genselect clear all
+selectentity All
+selectentity None
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.077310;
+loadpan -48.200077 9.380099;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.148434 0.555184 0.820246 0.629877
+setnode createset 2 1 0 0 0 0 "top" 
+genselect clear
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.096638;
+loadpan -49.355724 -7.707903;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.132327 0.318841 0.554251 0.283166
+setnode createset 3 1 0 0 0 0 "bottom" 
+genselect clear
+//x and y corner nodes
+entlistset operationtype 5 2
+spcdata operationtype 2
+genselect target node
+genselect clear
+genselect node add node 18576/0 
+Coincident nodes found. Select node ID
+Coincident nodes found. Select node ID
+genselect node add node 18560/0 
+spcdata createnodeset 4 1 NODESET(SPC) 4
+genselect clear
+spcdata create set 4 0 1 1 0 0 0 0
+
+
+//
+//
+// EDIT PART PARAMETERS
+KEYWORD INPUT 1
+*PART
+$#                                                                         title
+Target plate
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         1         1         2         2         0         0         0         0
+*END
+keyword updatekind
+PART_PART
+KEYWORD INPUT 2
+*PART
+$#                                                                         title
+Ball
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         3         2         1         2         0         0         0         0
+*END
+keyword updatekind
+// EDIT PART PARAMETERS
+KEYWORD INPUT 3
+*PART
+$#                                                                         title
+mono wall
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         2         1         2         2         0         0         0         0
+*END
+//
+save keyword "mesh_ball_target.key"

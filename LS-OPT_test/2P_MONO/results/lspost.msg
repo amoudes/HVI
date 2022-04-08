@@ -1,0 +1,145 @@
+open d3plot "C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P_MONO\results\d3plot"
+Reading binary plot files
+DES Format: version 2 detected!
+Finished reading model
+ac
+home
+anim forward
+zoomhere 0.299217 0.053512 1.250000;
+zoomhere 0.299217 0.053512 1.562500;
+zoomhere 0.299217 0.053512 1.953125;
+pan -28.940783 -7.718250;
+anim backward
+zoomhere 0.233221 0.020067 1.562500;
+zoomhere 0.232103 0.020067 1.250000;
+zoomhere 0.216443 0.006689 1.000000;
+anim forward
+anim backward
+zoomhere 0.172260 -0.197324 0.800000;
+zoomhere 0.173378 -0.204013 0.640000;
+anim forward
+anim backward
+zoomhere 0.073826 -0.361204 0.512000;
+zoomhere 0.073266 -0.360089 0.409600;
+zoomhere 0.073266 -0.358974 0.327680;
+zoomhere 0.073266 -0.358974 0.262144;
+zoomhere 0.073266 -0.358974 0.209715;
+zoomhere 0.076622 -0.358974 0.167772;
+zoomhere 0.107942 -0.361204 0.134218;
+zoomhere 0.217562 -0.280936 0.107374;
+zoomhere 0.217562 -0.280936 0.085899;
+zoomhere 0.217562 -0.279822 0.068719;
+zoomhere 0.217002 -0.278707 0.054975;
+anim forward
+anim backward
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state +1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+state -1;
+zoomhere 0.205817 -0.117057 0.068719;
+zoomhere 0.206935 -0.114827 0.085899;
+zoomhere 0.212528 -0.101449 0.107374;
+zoomhere 0.213087 -0.101449 0.134217;
+zoomhere 0.213087 -0.101449 0.167771;
+zoomhere 0.213647 -0.101449 0.209714;
+zoomhere 0.213647 -0.101449 0.262142;
+zoomhere 0.233781 -0.098105 0.327678;
+zoomhere 0.233781 -0.098105 0.409597;
+zoomhere 0.233781 -0.098105 0.511996;
+zoomhere 0.233781 -0.098105 0.639995;
+zoomhere 0.242729 -0.072464 0.799994;
+zoomhere 0.242729 -0.072464 0.999992;
+zoomhere 0.242729 -0.072464 1.249990;
+zoomhere 0.242729 -0.071349 1.562487;
+zoomhere 0.251678 -0.093645 1.953109;
+zoomhere 0.148770 -0.243032 2.441386;
+zoomhere 0.141499 -0.240803 3.051732;
+pan -39.420357 52.183041;
+pan 96.143295 10.562626;
+anim backward
+zoomhere -0.055369 -0.031215 2.441386;
+zoomhere -0.053691 -0.023411 1.953109;
+zoomhere -0.053132 -0.021182 1.562487;
+zoomhere -0.053132 -0.017837 1.249990;
+zoomhere -0.053132 -0.014493 0.999992;
+zoomhere -0.053132 -0.013378 0.799994;
+zoomhere -0.050336 -0.018952 0.639995;
+zoomhere -0.048658 -0.017837 0.511996;
+zoomhere -0.048658 -0.017837 0.409597;
+zoomhere -0.048658 -0.017837 0.327678;
+zoomhere -0.048658 -0.017837 0.262142;
+pan 58.841095 4.308319;
+zoomhere -0.036913 -0.256410 0.327678;
+zoomhere -0.036913 -0.256410 0.409597;
+zoomhere -0.036913 -0.256410 0.511996;
+zoomhere -0.036913 -0.256410 0.639995;
+zoomhere -0.036913 -0.256410 0.799994;
+zoomhere -0.036913 -0.256410 0.999992;
+zoomhere -0.036913 -0.236343 1.249990;
+zoomhere -0.036913 -0.236343 1.562487;
+zoomhere -0.036913 -0.236343 1.953109;
+zoomhere -0.036913 -0.236343 2.441386;
+zoomhere -0.036913 -0.236343 3.051732;
+zoomhere -0.036913 -0.236343 3.814665;
+zoomhere -0.032998 -0.245262 4.768331;
+zoomhere -0.032998 -0.245262 5.960414;
+zoomhere -0.032998 -0.246377 7.450517;
+zoomhere -0.032438 -0.247492 9.313146;
+zoomhere -0.032438 -0.248606 11.641432;
+zoomhere -0.032438 -0.249721 14.551790;
+zoomhere -0.032438 -0.265329 11.641432;
+zoomhere -0.032438 -0.266444 9.313145;
+zoomhere -0.032438 -0.266444 7.450516;
+zoomhere -0.032438 -0.266444 5.960413;
+zoomhere -0.032438 -0.266444 4.768330;
+zoomhere -0.032438 -0.241918 3.814664;
+zoomhere -0.032438 -0.241918 3.051731;
+zoomhere -0.032438 -0.240803 2.441385;
+zoomhere -0.032998 -0.238573 1.953108;
+zoomhere -0.033557 -0.236343 1.562486;
+zoomhere -0.033557 -0.235229 1.249989;
+zoomhere -0.033557 -0.234114 0.999991;
+zoomhere -0.033557 -0.216276 0.799993;
+zoomhere -0.033557 -0.216276 0.639994;
+zoomhere -0.033557 -0.216276 0.511995;
+zoomhere -0.033557 -0.216276 0.409596;
+ident select 1
+genselect target node
+genselect node add node 19583/0 
+NODE ID= 19583 ,  xyz= 109.7, -9, 0.25
+ident echo off
+ident select 0
+genselect target node
+switch2selection
+ntime 8
