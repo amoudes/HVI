@@ -48,6 +48,6 @@ end
 
 
 grid on;
-xlabel('iteration [-]'); ylabel('Averge Displacement [mm]');
+xlabel('iteration [-]'); ylabel('Average Displacement [mm]');
 ylim([0 1.5]);
 xlim([1 23])

@@ -68,3 +68,22 @@ state 1;
 home
 anim forward
 anim backward
+home
+genselect target part
+genselect target node
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.409600;
+loadpan 46.224689 0.259813;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add region in 0.617517 0.933110 0.669069 0.032330
+ntime 1 
+xyplot 1 operation average_curves all
+genselect node add node 11133/3 
+home
+anim forward
+home
+home
+findhist Node 83439
