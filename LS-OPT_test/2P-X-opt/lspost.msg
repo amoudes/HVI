@@ -221,4 +221,100 @@ Warning -Duplicate keyword: SOLID_ELEM input with ID=44
   Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 45 from file mesh_ball_target.key
 Data input seq. 1901 from file mesh_wall.key
-Last
+Last one will be used
+Warning -Duplicate keyword: SOLID_ELEM input with ID=45 
+  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+Data input seq. 46 from file mesh_ball_target.key
+Data input seq. 1902 from file mesh_wall.key
+Last one will be used
+Warning -Duplicate keyword: SOLID_ELEM input with ID=46 
+  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+Data input seq. 47 from file mesh_ball_target.key
+Data input seq. 1903 from file mesh_wall.key
+Last one will be used
+Warning -Duplicate keyword: SOLID_ELEM input with ID=47 
+  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+Data input seq. 48 from file mesh_ball_target.key
+Data input seq. 1904 from file mesh_wall.key
+Last one will be used
+Warning -Duplicate keyword: SOLID_ELEM input with ID=48 
+  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+Data input seq. 49 from file mesh_ball_target.key
+Data input seq. 1905 from file mesh_wall.key
+Last one will be used
+Warning -Duplicate keyword: SOLID_ELEM input with ID=49 
+  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+Data input seq. 50 from file mesh_ball_target.key
+Data input seq. 1906 from file mesh_wall.key
+Last one will be used
+Warning -Duplicate keyword: SOLID_ELEM input with ID=50 
+  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+Data input seq. 51 from file mesh_ball_target.key
+Data input seq. 1907 from file mesh_wall.key
+Last one will be used
+Warning -Duplicate keyword: more than 50 SOLID_ELEM use duplicate ID 
+  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+Data input seq. 52 from file mesh_ball_target.key
+Data input seq. 1908 from file mesh_wall.key
+Last one will be used
+Warning -Duplicate keyword: PART input with ID=3 
+  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+Data input seq. 6 from file mesh_ball_target.key
+Data input seq. 8 from file mesh_wall.key
+Last one will be used
+Warning -Duplicate keyword: SET_NODE input with ID=1 
+  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+Data input seq. 3 from file mesh_ball_target.key
+Data input seq. 6 from file mesh_wall.key
+Last one will be used
+Warning -Duplicate keyword: SET_NODE input with ID=2 
+  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+Data input seq. 4 from file mesh_ball_target.key
+Data input seq. 7 from file mesh_wall.key
+Last one will be used
+Warning -Duplicate keyword: SET_NODE input with ID=3 
+  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+Data input seq. 5 from file mesh_ball_target.key
+Data input seq. 8 from file mesh_wall.key
+Last one will be used
+Time to process element data = 0.590 seconds
+Finished reading model
+home
+zoomhere 0.193459 0.255295 0.800000;
+zoomhere 0.195676 0.248606 0.640000;
+zoomhere 0.198448 0.235229 0.512000;
+zoomhere 0.206763 0.187291 0.409600;
+zoomhere 0.226164 0.072464 0.327680;
+zoomhere 0.205654 -0.057971 0.409600;
+zoomhere 0.203991 -0.061315 0.512000;
+zoomhere 0.202882 -0.062430 0.640000;
+zoomhere 0.201774 -0.064660 0.800000;
+zoomhere 0.201220 -0.064660 1.000000;
+zoomhere 0.200665 -0.064660 1.250000;
+quat -0.023662 -0.073962 0.022881 0.996718;
+quat -0.023662 -0.073962 0.022881 0.996718;
+open d3plot "F:\3dfinal\d3plot"
+Reading binary plot files
+DES Format: version 2 detected!
+Finished reading model
+ac
+home
+anim forward
+state 1;
+anim forward
+quat -0.223717 -0.154566 -0.048629 0.961091;
+mesh
+animatemode 0
+animatemode 1
+animatemode 0
+state 29;
+anim forward
+anim stop; state 5;
+home
+genselect target node
+zoomhere 0.283814 0.117057 0.800000;
+zoomhere 0.283814 0.113712 0.640000;
+pan 38.395416 -2.754077;
+mesh
+zoomhere 0.178492 0.473802 0.512000;
+zoomhere 0.177938 0.476031 0
