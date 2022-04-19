@@ -1,3 +1,0 @@
-#!/bin/bash
-/home/andrieso/Simulations/LS-OPT/X-opt-2P/lsdyna  i=DynaOpt.key
-echo "*** COMMAND IS STARTED DIRECTLY, WITHOUT THIS SCRIPT ***"
