@@ -1,6 +1,70 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Apr-8-2022 (13:54:16)
-openc keyword "structure.key"
-save keywordversion 2
-save keywordversion 12
+$# Created on Apr-19-2022 (09:44:30)
+open command "C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P_MONO3D\create_mesh_ball_target.cfile"
+skip
+endskip
+
+endskip
+
+genselect target node
+genselect clear
+meshing spheresolid create -7 0 0 2.5 15 1 0 0 0 1 0
+ac
+meshing spheresolid accept 3 1 1 ball
+No duplicated nodes found!
+ac
+genselect target node
+genselect clear
+meshing boxsolid create 0.000000 -10.000000 -10.000000 2.000000 10.000000 10.000000 8 80 80 0.000000
+ac
+meshing boxsolid accept 2 23626 24377 frontplate
+genselect clear
+genselect clear
+ac
+meshing boxsolid create 102.000000 -40.000000 -40.000000 109.7 40.000000 40.000000 13 160 160 0.000000
+ac
+meshing boxsolid accept 1 74826 83426 backplate
+genselect clear
+genselect clear
+ac
+skip
+endskip
+
+endskip
+
+KEYWORD INPUT 1
+keyword updatekind
+KEYWORD INPUT 2
+keyword updatekind
+KEYWORD INPUT 3
+save keyword "mesh_ball_target.key"
+open d3plot "C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P_MONO3D\results\d3plot"
+ac
+anim forward
 home
+anim backward
+anim forward
+open d3plot "C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P_MONO\results\d3plot"
+ac
+home
+anim forward
+anim backward
+anim forward
+genselect node add node 24223/2 
+open d3plot "C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P_MONO\results\d3plot"
+ac
+open d3plot "F:\2plate3dmono\d3plot"
+ac
+home
+anim forward
+anim backward
+anim forward
+anim backward
+new
+new
+anim forward
+anim forward
+state 1;
+home
+anim forward
+anim backward
