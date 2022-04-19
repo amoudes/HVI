@@ -8,7 +8,7 @@ Lx  = 15;            % Horizontal length of one strut
 Ly  = 15;
 hmax = 0.25;
 t = 2*hmax;
-% t   = 0.025*Lx;      % Wall thickness
+% t   = 0.025*Lx;    % Wall thickness
 % hmax = 0.2;        % max element size
 
 ny  = 5;            % Number of vertical repeating cells
@@ -28,6 +28,7 @@ Cds = [0 0  Lx 2*Lx 2*Lx Lx 0.5*Lx 1.5*Lx
 % 3 = fix xy
 %        1 2 3 4 5 6 7 8   
 Ctype = [0 0 0 0 0 0 0 0]; 
+Plottype = [3 1 0 1 3 2 0 0];
 
 Lines = [1 2 3 6 6 3 4 5 1 4
          7 7 7 7 8 8 8 8 2 5];
@@ -40,6 +41,7 @@ for n = 1:ny-1
           Cds(2,2)+n*Ly Cds(2,3)+n*Ly Cds(2,4)+n*Ly Cds(2,7)+n*Ly Cds(2,8)+n*Ly];
     %              1 2 3 4 5
     Ctype = [Ctype 0 0 0 0 0];
+    Plottype = [Plottype 1 0 1 0 0];
     
     nCds = nCds + 5;
     Cds = [Cds cd];
@@ -68,6 +70,13 @@ end
 Ctype(end-4) = 0;
 Ctype(end-2) = 0;
 Ctype(end-3) = 0;
+
+Plottype(end-4) = 3;
+Plottype(end-2) = 2;
+Plottype(end-3) = 3;
+
+Plottype(17) = 2;
+Plottype(18) = 2;
 %% Determine triangles
 nTri = ny*2;
 nSqu = ny + (ny-1)*2;
@@ -126,15 +135,32 @@ if strcmp(plot_figs,'yes')
         x = [cd1(1) cd2(1)];
         y = [cd1(2) cd2(2)];
         
-        plot(x,y,'k.-');
+        plot(x,y,'k-');
         hold on; axis equal;
         
-        text(mean(x),mean(y),num2str(i),'color','r','Fontsize',7.5);
+        %         text(mean(x),mean(y),num2str(i),'color','r','Fontsize',7.5);
     end
-
+    
     for i = 1:length(Cds)
-        text(Cds(1,i),Cds(2,i),num2str(i));
+        if ismember(i,1:13)|| i == 17 || i == 18
+            if Plottype(i) == 1
+                plot(Cds(1,i),Cds(2,i),'b.','MarkerSize',15);
+            elseif Plottype(i) == 2
+                plot(Cds(1,i),Cds(2,i),'r.','MarkerSize',15);
+            elseif Plottype(i) == 3
+                plot(Cds(1,i),Cds(2,i),'g.','MarkerSize',15);
+            else
+                plot(Cds(1,i),Cds(2,i),'m.','MarkerSize',15);
+            end
+        else
+            plot(Cds(1,i),Cds(2,i),'k.','MarkerSize',15);
+        end
+        
+        text(Cds(1,i)+1,Cds(2,i),num2str(i));
     end
+    axis off
+    %
+    plot([95 135],[0 0],'k--');
 end
 %% Write file
 fid = fopen('create_mesh_wall.cfile','w');
