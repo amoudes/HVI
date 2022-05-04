@@ -1,0 +1,510 @@
+openc command "create_ply_mesh.cfile" nodialog
+bgstyle plain
+cemptymodel
+genselect target node
+genselect clear
+meshing boxsolid create 0.00 -55.00 -55.00 0.20 55.00 55.00 1 150 150 0.0
+ac
+meshing boxsolid accept 1 1 22501 ply1
+genselect clear
+genselect clear
+ac
+meshing boxsolid create 0.20 -55.00 -55.00 0.40 55.00 55.00 1 150 150 0.0
+ac
+meshing boxsolid accept 2 22501 45001 ply2
+genselect clear
+genselect clear
+ac
+meshing boxsolid create 0.40 -55.00 -55.00 0.60 55.00 55.00 1 150 150 0.0
+ac
+meshing boxsolid accept 3 45001 67501 ply3
+genselect clear
+genselect clear
+ac
+meshing boxsolid create 0.60 -55.00 -55.00 0.80 55.00 55.00 1 150 150 0.0
+ac
+meshing boxsolid accept 4 67501 90001 ply4
+genselect clear
+genselect clear
+ac
+meshing boxsolid create 0.80 -55.00 -55.00 1.00 55.00 55.00 1 150 150 0.0
+ac
+meshing boxsolid accept 5 90001 112501 ply5
+genselect clear
+genselect clear
+ac
+meshing boxsolid create 1.00 -55.00 -55.00 1.20 55.00 55.00 1 150 150 0.0
+ac
+meshing boxsolid accept 6 112501 135001 ply6
+genselect clear
+genselect clear
+ac
+meshing boxsolid create 1.20 -55.00 -55.00 1.40 55.00 55.00 1 150 150 0.0
+ac
+meshing boxsolid accept 7 135001 157501 ply7
+genselect clear
+genselect clear
+ac
+meshing boxsolid create 1.40 -55.00 -55.00 1.60 55.00 55.00 1 150 150 0.0
+ac
+meshing boxsolid accept 8 157501 180001 ply8
+genselect clear
+genselect clear
+ac
+meshing boxsolid create 1.60 -55.00 -55.00 1.80 55.00 55.00 1 150 150 0.0
+ac
+meshing boxsolid accept 9 180001 202501 ply9
+genselect clear
+genselect clear
+ac
+meshing boxsolid create 1.80 -55.00 -55.00 2.00 55.00 55.00 1 150 150 0.0
+ac
+meshing boxsolid accept 10 202501 225001 ply10
+genselect clear
+genselect clear
+ac
+meshing boxsolid create 2.00 -55.00 -55.00 2.20 55.00 55.00 1 150 150 0.0
+ac
+meshing boxsolid accept 11 225001 247501 ply11
+genselect clear
+genselect clear
+ac
+meshing boxsolid create 2.20 -55.00 -55.00 2.40 55.00 55.00 1 150 150 0.0
+ac
+meshing boxsolid accept 12 247501 270001 ply12
+genselect clear
+genselect clear
+ac
+genselect target node
+genselect clear
+meshing spheresolid create -4.00 0.00 0.00 3 10 1 0 0 0 1 0
+ac
+meshing spheresolid accept 13 292501 1462505 ball
+No duplicated nodes found!
+ac
+-M 2
+-M 3
+-M 4
+-M 5
+-M 6
+-M 7
+-M 8
+-M 9
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 0.19 -56.00 -56.00 0.21 56.00 56.00
+setsegment createset 1 1 0 0 0 0 "1"
+assembly on fem 1
+-M 1
+-M 3
+-M 4
+-M 5
+-M 6
+-M 7
+-M 8
+-M 9
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 0.19 -56.00 -56.00 0.21 56.00 56.00
+setsegment createset 2 1 0 0 0 0 "2"
+assembly on fem 1
+-M 1
+-M 3
+-M 4
+-M 5
+-M 6
+-M 7
+-M 8
+-M 9
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 0.39 -56.00 -56.00 0.41 56.00 56.00
+setsegment createset 3 1 0 0 0 0 "3"
+assembly on fem 1
+-M 1
+-M 2
+-M 4
+-M 5
+-M 6
+-M 7
+-M 8
+-M 9
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 0.39 -56.00 -56.00 0.41 56.00 56.00
+setsegment createset 4 1 0 0 0 0 "4"
+assembly on fem 1
+-M 1
+-M 2
+-M 4
+-M 5
+-M 6
+-M 7
+-M 8
+-M 9
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 0.59 -56.00 -56.00 0.61 56.00 56.00
+setsegment createset 5 1 0 0 0 0 "5"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 5
+-M 6
+-M 7
+-M 8
+-M 9
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 0.59 -56.00 -56.00 0.61 56.00 56.00
+setsegment createset 6 1 0 0 0 0 "6"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 5
+-M 6
+-M 7
+-M 8
+-M 9
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 0.79 -56.00 -56.00 0.81 56.00 56.00
+setsegment createset 7 1 0 0 0 0 "7"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 4
+-M 6
+-M 7
+-M 8
+-M 9
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 0.79 -56.00 -56.00 0.81 56.00 56.00
+setsegment createset 8 1 0 0 0 0 "8"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 4
+-M 6
+-M 7
+-M 8
+-M 9
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 0.99 -56.00 -56.00 1.01 56.00 56.00
+setsegment createset 9 1 0 0 0 0 "9"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 4
+-M 5
+-M 7
+-M 8
+-M 9
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 0.99 -56.00 -56.00 1.01 56.00 56.00
+setsegment createset 10 1 0 0 0 0 "10"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 4
+-M 5
+-M 7
+-M 8
+-M 9
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 1.19 -56.00 -56.00 1.21 56.00 56.00
+setsegment createset 11 1 0 0 0 0 "11"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 4
+-M 5
+-M 6
+-M 8
+-M 9
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 1.19 -56.00 -56.00 1.21 56.00 56.00
+setsegment createset 12 1 0 0 0 0 "12"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 4
+-M 5
+-M 6
+-M 8
+-M 9
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 1.39 -56.00 -56.00 1.41 56.00 56.00
+setsegment createset 13 1 0 0 0 0 "13"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 4
+-M 5
+-M 6
+-M 7
+-M 9
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 1.39 -56.00 -56.00 1.41 56.00 56.00
+setsegment createset 14 1 0 0 0 0 "14"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 4
+-M 5
+-M 6
+-M 7
+-M 9
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 1.59 -56.00 -56.00 1.61 56.00 56.00
+setsegment createset 15 1 0 0 0 0 "15"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 4
+-M 5
+-M 6
+-M 7
+-M 8
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 1.59 -56.00 -56.00 1.61 56.00 56.00
+setsegment createset 16 1 0 0 0 0 "16"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 4
+-M 5
+-M 6
+-M 7
+-M 8
+-M 10
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 1.79 -56.00 -56.00 1.81 56.00 56.00
+setsegment createset 17 1 0 0 0 0 "17"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 4
+-M 5
+-M 6
+-M 7
+-M 8
+-M 9
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 1.79 -56.00 -56.00 1.81 56.00 56.00
+setsegment createset 18 1 0 0 0 0 "18"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 4
+-M 5
+-M 6
+-M 7
+-M 8
+-M 9
+-M 11
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 1.99 -56.00 -56.00 2.01 56.00 56.00
+setsegment createset 19 1 0 0 0 0 "19"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 4
+-M 5
+-M 6
+-M 7
+-M 8
+-M 9
+-M 10
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 1.99 -56.00 -56.00 2.01 56.00 56.00
+setsegment createset 20 1 0 0 0 0 "20"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 4
+-M 5
+-M 6
+-M 7
+-M 8
+-M 9
+-M 10
+-M 12
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 2.19 -56.00 -56.00 2.21 56.00 56.00
+setsegment createset 21 1 0 0 0 0 "21"
+assembly on fem 1
+-M 1
+-M 2
+-M 3
+-M 4
+-M 5
+-M 6
+-M 7
+-M 8
+-M 9
+-M 10
+-M 11
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 2.19 -56.00 -56.00 2.21 56.00 56.00
+setsegment createset 22 1 0 0 0 0 "22"
+assembly on fem 1
+KEYWORD INPUT 1
+keyword updatekind
+KEYWORD INPUT 1
+keyword updatekind
+KEYWORD INPUT 2
+keyword updatekind
+KEYWORD INPUT 3
+keyword updatekind
+KEYWORD INPUT 4
+keyword updatekind
+KEYWORD INPUT 5
+keyword updatekind
+KEYWORD INPUT 6
+keyword updatekind
+KEYWORD INPUT 7
+keyword updatekind
+KEYWORD INPUT 8
+keyword updatekind
+KEYWORD INPUT 9
+keyword updatekind
+KEYWORD INPUT 10
+keyword updatekind
+KEYWORD INPUT 11
+keyword updatekind
+KEYWORD INPUT 12
+keyword updatekind
+save keyword "mesh_ply_ball.key"
+Finished reading command file!
+exit
+Save Config. parameters to file C:\Users\s148946\AppData\Roaming\LSTC\LS-PrePost4.8\lsppconf
