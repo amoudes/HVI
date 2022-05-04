@@ -181,9 +181,8 @@ else:
 
 if run_prepost == "yes":
     system(cmd)
-    
-remove('lspost.msg')
-remove('lspost.cfile')
+    remove('lspost.msg')
+    remove('lspost.cfile')
 
 print('done')
     
