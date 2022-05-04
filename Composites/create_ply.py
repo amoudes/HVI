@@ -9,6 +9,7 @@ from os import remove, system
 run_prepost = "yes"
 graphics    = "no"
 
+print('running')
 ##############################################################################
 # model input
 
@@ -32,8 +33,9 @@ nt = 1   # nr elements t
 nelemply = nW*nH*nt # nr of elements per ply
 
 # ply information
-sym = "yes"
-orientations = [45,-45,0,90,90,0]
+sym = "no"
+#orientations = [45,-45,0,90,90,0]
+orientations = [45,45]
 
 if sym == "yes":
     orientations.extend(orientations[::-1])
@@ -169,14 +171,16 @@ fid.close()
 ##############################################################################
 
 if graphics == "yes":
-    cmd = 'cmd /k "lsprepost4.8_x64 ' + filename + '"'
+    cmd = 'cmd /c "lsprepost4.8_x64 ' + filename + '"'
 else:
-    cmd = 'cmd /k "lsprepost4.8_x64 ' + filename + ' -nographics"'
+    cmd = 'cmd /c "lsprepost4.8_x64 ' + filename + ' -nographics"'
 
 
 if run_prepost == "yes":
     system(cmd)
     
+    
+print('done')
     
     
     
