@@ -1,0 +1,15 @@
+open d3plot d3plot
+genselect target node
+loadstate 1;
+loadquat 0.000000 0.000000 0.000000 1.000000;
+loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
+loadzoom 0.409600;
+loadpan 52.876713 0.227008;
+loadeyepos 0.000000 0.000000 0.000000;
+loadupvect 0.000000 1.000000 0.000000;
+genselect node add box in 130.9 -1000.000000 -0.100000 135.000000 1000.000000 2.0
+ntime 8
+xyplot 1 operation average_curves all
+xyplot 1 savefile xypair LsoptHistory 1
+deletewin 1
+quit
