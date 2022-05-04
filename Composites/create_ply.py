@@ -34,6 +34,10 @@ nt = 1   # nr elements t
 nelemply = nW*nH*nt # nr of elements per ply
 
 # ply information
+# -45 -> matID = 2
+#  45 -> matID = 3
+#  90 -> matID = 4
+#   0 -> matID = 5
 sym = "yes"
 orientations = [45]
 
@@ -142,13 +146,13 @@ fid.write('CONTACT_AUTOMATIC_ONE_WAY_SURFACE_TO_SURFACE_TIEBREAK\n')
 
 for i in range(nply):
     if orientations[i] == -45:
-        matID = 1
-    elif orientations[i] == 45:
         matID = 2
-    elif orientations[i] == 90:
+    elif orientations[i] == 45:
         matID = 3
-    elif orientations[i] == 0:
+    elif orientations[i] == 90:
         matID = 4
+    elif orientations[i] == 0:
+        matID = 5
     
     fid.write('*PART\n')
     fid.write('KEYWORD INPUT %d\n' %(i+2))
