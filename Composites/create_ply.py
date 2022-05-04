@@ -33,7 +33,7 @@ nt = 1   # nr elements t
 nelemply = nW*nH*nt # nr of elements per ply
 
 # ply information
-sym = "no"
+sym = "yes"
 #orientations = [45,-45,0,90,90,0]
 orientations = [45,45]
 
@@ -52,6 +52,19 @@ if exists(filename):
     remove(filename)
 
 fid = open(filename,'w')
+
+##############################################################################
+# implement sphere
+eend   = 30000
+
+
+fid.write('genselect target node\n')
+fid.write('genselect clear\n')
+fid.write('meshing spheresolid create %.2f %.2f %.2f %d %d 1 0 0 0 1 0\n' %(xP,yP,zP,R,nR))
+fid.write('ac\n')
+fid.write('meshing spheresolid accept 1 1 %d ball\n' %(eend))
+fid.write('ac\n')
+
 ##############################################################################
 # create plies
 
@@ -62,9 +75,9 @@ fid.write('genselect clear\n')
 
 t1 = 0.0
 t2 = t
-estart = 1
-eend   = nelemply+1
-for i in range(1,nply+1):
+estart = eend+1
+eend   = estart+nelemply+1
+for i in range(2,nply+2):
     fid.write('meshing boxsolid create %.2f %.2f %.2f %.2f %.2f %.2f %d %d %d 0.0\n' %(t1,-W/2,-H/2,t2,W/2,H/2,nt,nW,nH))
     fid.write('ac\n')
     fid.write('meshing boxsolid accept %d %d %d ply%d\n' %(i, estart,eend,i))
@@ -76,15 +89,6 @@ for i in range(1,nply+1):
     estart += nelemply
     eend   += nelemply
 
-##############################################################################
-# implement sphere
-
-fid.write('genselect target node\n')
-fid.write('genselect clear\n')
-fid.write('meshing spheresolid create %.2f %.2f %.2f %d %d 1 0 0 0 1 0\n' %(xP,yP,zP,R,nR))
-fid.write('ac\n')
-fid.write('meshing spheresolid accept %d %d %d ball\n' %(nply+1,eend,5*eend))
-fid.write('ac\n')
 
 ##############################################################################
 # create data sets for tiebrakes
@@ -98,8 +102,8 @@ for i in range(1,ntiebrakes+1):
     for j in range(0,2):
         itb += 1
         
-        for k in range(1,nply+1):
-            if i + j != k:
+        for k in range(2,nply+2):
+            if i + j +1 != k:
                 fid.write('-M %d\n' %(k))
                 
 
@@ -150,16 +154,16 @@ for i in range(nply):
         matID = 4
     
     fid.write('*PART\n')
-    fid.write('KEYWORD INPUT %d\n' %(i+1))
+    fid.write('KEYWORD INPUT %d\n' %(i+2))
     fid.write('*PART\n')
     fid.write('$#                                                                         title\n')
     fid.write('ply %d\n' %(i+1))
     fid.write('$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid\n')
     
     if i+1 < 10:
-        fid.write('         %d         1         %d         1         0         0         0         0\n' %(i+1,matID))
+        fid.write('         %d         1         %d         1         0         0         0         0\n' %(i+2,matID))
     else:
-        fid.write('        %d         1         %d         1         0         0         0         0\n' %(i+1,matID))
+        fid.write('        %d         1         %d         1         0         0         0         0\n' %(i+2,matID))
     fid.write('*END\n')
     fid.write('keyword updatekind\n')
     fid.write('PART_PART\n')

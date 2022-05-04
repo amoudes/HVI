@@ -1,24 +1,36 @@
+genselect target node
+genselect clear
+meshing spheresolid create -4.00 0.00 0.00 3 10 1 0 0 0 1 0
+ac
+meshing spheresolid accept 1 1 30000 ball
+ac
 bgstyle plain
 cemptymodel
 genselect target node
 genselect clear
 meshing boxsolid create 0.00 -55.00 -55.00 0.20 55.00 55.00 1 150 150 0.0
 ac
-meshing boxsolid accept 1 1 22501 ply1
+meshing boxsolid accept 2 30001 52502 ply2
 genselect clear
 ac
 meshing boxsolid create 0.20 -55.00 -55.00 0.40 55.00 55.00 1 150 150 0.0
 ac
-meshing boxsolid accept 2 22501 45001 ply2
+meshing boxsolid accept 3 52501 75002 ply3
 genselect clear
 ac
-genselect target node
+meshing boxsolid create 0.40 -55.00 -55.00 0.60 55.00 55.00 1 150 150 0.0
+ac
+meshing boxsolid accept 4 75001 97502 ply4
 genselect clear
-meshing spheresolid create -4.00 0.00 0.00 3 10 1 0 0 0 1 0
 ac
-meshing spheresolid accept 3 67501 337505 ball
+meshing boxsolid create 0.60 -55.00 -55.00 0.80 55.00 55.00 1 150 150 0.0
 ac
--M 2
+meshing boxsolid accept 5 97501 120002 ply5
+genselect clear
+ac
+-M 3
+-M 4
+-M 5
 setsegment
 genselect target segment
 genselect clear
@@ -26,13 +38,57 @@ genselect clear
 genselect element add box in 0.19 -56.00 -56.00 0.21 56.00 56.00
 setsegment createset 1 1 0 0 0 0 "1"
 assembly on fem 1
--M 1
+-M 2
+-M 4
+-M 5
 setsegment
 genselect target segment
 genselect clear
 genselect clear
 genselect element add box in 0.19 -56.00 -56.00 0.21 56.00 56.00
 setsegment createset 2 1 0 0 0 0 "2"
+assembly on fem 1
+// next tiebreak
+-M 2
+-M 4
+-M 5
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 0.39 -56.00 -56.00 0.41 56.00 56.00
+setsegment createset 3 1 0 0 0 0 "3"
+assembly on fem 1
+-M 2
+-M 3
+-M 5
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 0.39 -56.00 -56.00 0.41 56.00 56.00
+setsegment createset 4 1 0 0 0 0 "4"
+assembly on fem 1
+// next tiebreak
+-M 2
+-M 3
+-M 5
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 0.59 -56.00 -56.00 0.61 56.00 56.00
+setsegment createset 5 1 0 0 0 0 "5"
+assembly on fem 1
+-M 2
+-M 3
+-M 4
+setsegment
+genselect target segment
+genselect clear
+genselect clear
+genselect element add box in 0.59 -56.00 -56.00 0.61 56.00 56.00
+setsegment createset 6 1 0 0 0 0 "6"
 assembly on fem 1
 // next tiebreak
 KEYWORD INPUT 1
@@ -47,26 +103,70 @@ $#     sfs       sfm       sst       mst      sfst      sfmt       fsf       vsf
   1.000000  1.000000     0.000     0.000  1.000000  1.000000  1.000000  1.000000
 $#  option      nfls      sfls     param    eraten    erates     ct2cn        
          9 35.000000 45.000000  1.450000  0.250000  0.750000  1.000000     0.000
+KEYWORD INPUT 1
+*CONTACT_AUTOMATIC_ONE_WAY_SURFACE_TO_SURFACE_TIEBREAK_ID
+$#     cid                                                                 title
+        2 tiebrake 2                                                          
+$#    ssid      msid     sstyp     mstyp    sboxid    mboxid       spr       mpr
+        3        2         0         0         0         0         1         1
+$#      fs        fd        dc        vc       vdc    penchk        bt        dt
+     0.000     0.000     0.000     0.000     0.000         0     0.0001.0000E+20
+$#     sfs       sfm       sst       mst      sfst      sfmt       fsf       vsf
+  1.000000  1.000000     0.000     0.000  1.000000  1.000000  1.000000  1.000000
+$#  option      nfls      sfls     param    eraten    erates     ct2cn        
+         9 35.000000 45.000000  1.450000  0.250000  0.750000  1.000000     0.000
+KEYWORD INPUT 1
+*CONTACT_AUTOMATIC_ONE_WAY_SURFACE_TO_SURFACE_TIEBREAK_ID
+$#     cid                                                                 title
+        3 tiebrake 3                                                          
+$#    ssid      msid     sstyp     mstyp    sboxid    mboxid       spr       mpr
+        4        3         0         0         0         0         1         1
+$#      fs        fd        dc        vc       vdc    penchk        bt        dt
+     0.000     0.000     0.000     0.000     0.000         0     0.0001.0000E+20
+$#     sfs       sfm       sst       mst      sfst      sfmt       fsf       vsf
+  1.000000  1.000000     0.000     0.000  1.000000  1.000000  1.000000  1.000000
+$#  option      nfls      sfls     param    eraten    erates     ct2cn        
+         9 35.000000 45.000000  1.450000  0.250000  0.750000  1.000000     0.000
 *END
 keyword updatekind
 CONTACT_AUTOMATIC_ONE_WAY_SURFACE_TO_SURFACE_TIEBREAK
 *PART
-KEYWORD INPUT 1
+KEYWORD INPUT 2
 *PART
 $#                                                                         title
 ply 1
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-         1         1         2         1         0         0         0         0
+         2         1         2         1         0         0         0         0
 *END
 keyword updatekind
 PART_PART
 *PART
-KEYWORD INPUT 2
+KEYWORD INPUT 3
 *PART
 $#                                                                         title
 ply 2
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-         2         1         2         1         0         0         0         0
+         3         1         2         1         0         0         0         0
+*END
+keyword updatekind
+PART_PART
+*PART
+KEYWORD INPUT 4
+*PART
+$#                                                                         title
+ply 3
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         4         1         2         1         0         0         0         0
+*END
+keyword updatekind
+PART_PART
+*PART
+KEYWORD INPUT 5
+*PART
+$#                                                                         title
+ply 4
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
+         5         1         2         1         0         0         0         0
 *END
 keyword updatekind
 PART_PART
