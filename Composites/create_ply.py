@@ -106,7 +106,6 @@ for i in range(1,ntiebrakes+1):
             if i + j +1 != k:
                 fid.write('-M %d\n' %(k))
                 
-
         fid.write('setsegment\n')
         fid.write('genselect target segment\n')
         fid.write('genselect clear\n')
