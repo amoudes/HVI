@@ -6,8 +6,9 @@ from os import remove, system
 ##############################################################################
 # plotting settings
 
-run_prepost = "yes"
-graphics    = "no"
+run_prepost  = "yes"
+graphics     = "no"
+delete_cfile = "yes"
 
 print('running')
 ##############################################################################
@@ -34,8 +35,7 @@ nelemply = nW*nH*nt # nr of elements per ply
 
 # ply information
 sym = "yes"
-#orientations = [45,-45,0,90,90,0]
-orientations = [45,45]
+orientations = [45]
 
 if sym == "yes":
     orientations.extend(orientations[::-1])
@@ -138,9 +138,7 @@ fid.write('keyword updatekind\n')
 fid.write('CONTACT_AUTOMATIC_ONE_WAY_SURFACE_TO_SURFACE_TIEBREAK\n')
 
 ##############################################################################
-# create orientation information
-
-#fid.write('KEYWORD INPUT 1\n')
+# create orientation information by specifying part
 
 for i in range(nply):
     if orientations[i] == -45:
@@ -159,7 +157,7 @@ for i in range(nply):
     fid.write('ply %d\n' %(i+1))
     fid.write('$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid\n')
     
-    if i+1 < 10:
+    if i+2 < 10:
         fid.write('         %d         1         %d         0         0         0         0         0\n' %(i+2,matID))
     else:
         fid.write('        %d         1         %d         0         0         0         0         0\n' %(i+2,matID))
@@ -167,6 +165,17 @@ for i in range(nply):
     fid.write('keyword updatekind\n')
     fid.write('PART_PART\n')
 
+
+# sphere part information
+fid.write('KEYWORD INPUT 1\n')
+fid.write('*PART\n')
+fid.write('$#                                                                         title\n')
+fid.write('ball\n')
+fid.write('$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid\n')
+fid.write('         1         1         1         1         0         0         0         0\n')
+fid.write('*END\n')
+fid.write('keyword updatekind\n')
+fid.write('PART_PART\n')
 
 ##############################################################################
 fid.write('save keyword "mesh_ply_ball.key"')
@@ -183,6 +192,9 @@ if run_prepost == "yes":
     system(cmd)
     remove('lspost.msg')
     remove('lspost.cfile')
+    
+if delete_cfile == "yes":
+    remove(filename)
 
 print('done')
     
