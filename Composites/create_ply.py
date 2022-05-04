@@ -38,7 +38,8 @@ nelemply = nW*nH*nt # nr of elements per ply
 #  45 -> matID = 3
 #  90 -> matID = 4
 #   0 -> matID = 5
-sym = "yes"
+
+sym = "yes" # symmetry
 orientations = [45]
 
 if sym == "yes":
