@@ -1,63 +1,11 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on Apr-19-2022 (11:16:40)
-open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key"
+$# Created on May-3-2022 (11:26:24)
+openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key"
 save keywordversion 2
 save keywordversion 12
 home
-open d3plot "F:\3dfinal\d3plot"
-ac
-home
-anim forward
-state 1;
-anim forward
-mesh
-animatemode 0
-animatemode 1
-animatemode 0
-state 29;
-anim forward
-anim stop; state 5;
-home
-genselect target node
-mesh
-loadstate 5;
-loadquat 0.000000 0.000000 0.000000 1.000000;
-loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
-loadzoom 0.327680;
-loadpan 53.997066 17.933281;
-loadeyepos 0.000000 0.000000 0.000000;
-loadupvect 0.000000 1.000000 0.000000;
-genselect node add region in 0.675721 0.963211 0.681818 0.954292
-loadstate 5;
-loadquat 0.000000 0.000000 0.000000 1.000000;
-loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
-loadzoom 0.327680;
-loadpan 53.997066 17.933281;
-loadeyepos 0.000000 0.000000 0.000000;
-loadupvect 0.000000 1.000000 0.000000;
-genselect node add region in 0.674058 0.962096 0.741685 -0.050167
-loadstate 5;
-loadquat 0.000000 0.000000 0.000000 1.000000;
-loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
-loadzoom 0.327680;
-loadpan 58.937134 -19.142738;
-loadeyepos 0.000000 0.000000 0.000000;
-loadupvect 0.000000 1.000000 0.000000;
-genselect node add region in 0.619180 0.068004 0.627494 0.057971
-loadstate 5;
-loadquat 0.000000 0.000000 0.000000 1.000000;
-loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
-loadzoom 0.327680;
-loadpan 58.937134 -19.142738;
-loadeyepos 0.000000 0.000000 0.000000;
-loadupvect 0.000000 1.000000 0.000000;
-genselect node add region in 0.619180 0.072464 0.638027 0.078038
-loadstate 5;
-loadquat 0.000000 0.000000 0.000000 1.000000;
-loadgrot 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 ;
-loadzoom 0.327680;
-loadpan 58.937134 -19.142738;
-loadeyepos 0.000000 0.000000 0.000000;
-loadupvect 0.000000 1.000000 0.000000;
-genselect node add region in 0.619734 0.063545 0.686253 0.801561
-ntime 1 
+measure select 1
+measure dist N4686/0 N303235/0 ;
+measure select 0
+measure type 0
+measure type 0

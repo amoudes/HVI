@@ -1,320 +1,321 @@
-open keyword "C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key"
+openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key"
 save keywordversion 2
 save keywordversion 12
-Time to read keyword file = 0.184 seconds
+Time to read keyword file = 0.250 seconds
 Warning -Duplicate keyword: SOLID_ELEM input with ID=1 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 2 from file mesh_ball_target.key
 Data input seq. 1858 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=2 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 3 from file mesh_ball_target.key
 Data input seq. 1859 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=3 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 4 from file mesh_ball_target.key
 Data input seq. 1860 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=4 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 5 from file mesh_ball_target.key
 Data input seq. 1861 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=5 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 6 from file mesh_ball_target.key
 Data input seq. 1862 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=6 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 7 from file mesh_ball_target.key
 Data input seq. 1863 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=7 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 8 from file mesh_ball_target.key
 Data input seq. 1864 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=8 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 9 from file mesh_ball_target.key
 Data input seq. 1865 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=9 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 10 from file mesh_ball_target.key
 Data input seq. 1866 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=10 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 11 from file mesh_ball_target.key
 Data input seq. 1867 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=11 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 12 from file mesh_ball_target.key
 Data input seq. 1868 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=12 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 13 from file mesh_ball_target.key
 Data input seq. 1869 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=13 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 14 from file mesh_ball_target.key
 Data input seq. 1870 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=14 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 15 from file mesh_ball_target.key
 Data input seq. 1871 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=15 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 16 from file mesh_ball_target.key
 Data input seq. 1872 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=16 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 17 from file mesh_ball_target.key
 Data input seq. 1873 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=17 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 18 from file mesh_ball_target.key
 Data input seq. 1874 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=18 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 19 from file mesh_ball_target.key
 Data input seq. 1875 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=19 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 20 from file mesh_ball_target.key
 Data input seq. 1876 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=20 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 21 from file mesh_ball_target.key
 Data input seq. 1877 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=21 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 22 from file mesh_ball_target.key
 Data input seq. 1878 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=22 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 23 from file mesh_ball_target.key
 Data input seq. 1879 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=23 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 24 from file mesh_ball_target.key
 Data input seq. 1880 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=24 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 25 from file mesh_ball_target.key
 Data input seq. 1881 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=25 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 26 from file mesh_ball_target.key
 Data input seq. 1882 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=26 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 27 from file mesh_ball_target.key
 Data input seq. 1883 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=27 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 28 from file mesh_ball_target.key
 Data input seq. 1884 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=28 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 29 from file mesh_ball_target.key
 Data input seq. 1885 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=29 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 30 from file mesh_ball_target.key
 Data input seq. 1886 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=30 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 31 from file mesh_ball_target.key
 Data input seq. 1887 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=31 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 32 from file mesh_ball_target.key
 Data input seq. 1888 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=32 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 33 from file mesh_ball_target.key
 Data input seq. 1889 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=33 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 34 from file mesh_ball_target.key
 Data input seq. 1890 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=34 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 35 from file mesh_ball_target.key
 Data input seq. 1891 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=35 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 36 from file mesh_ball_target.key
 Data input seq. 1892 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=36 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 37 from file mesh_ball_target.key
 Data input seq. 1893 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=37 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 38 from file mesh_ball_target.key
 Data input seq. 1894 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=38 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 39 from file mesh_ball_target.key
 Data input seq. 1895 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=39 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 40 from file mesh_ball_target.key
 Data input seq. 1896 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=40 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 41 from file mesh_ball_target.key
 Data input seq. 1897 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=41 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 42 from file mesh_ball_target.key
 Data input seq. 1898 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=42 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 43 from file mesh_ball_target.key
 Data input seq. 1899 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=43 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 44 from file mesh_ball_target.key
 Data input seq. 1900 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=44 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 45 from file mesh_ball_target.key
 Data input seq. 1901 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=45 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 46 from file mesh_ball_target.key
 Data input seq. 1902 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=46 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 47 from file mesh_ball_target.key
 Data input seq. 1903 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=47 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 48 from file mesh_ball_target.key
 Data input seq. 1904 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=48 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 49 from file mesh_ball_target.key
 Data input seq. 1905 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=49 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 50 from file mesh_ball_target.key
 Data input seq. 1906 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SOLID_ELEM input with ID=50 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 51 from file mesh_ball_target.key
 Data input seq. 1907 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: more than 50 SOLID_ELEM use duplicate ID 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 52 from file mesh_ball_target.key
 Data input seq. 1908 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: PART input with ID=3 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 6 from file mesh_ball_target.key
 Data input seq. 8 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SET_NODE input with ID=1 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 3 from file mesh_ball_target.key
 Data input seq. 6 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SET_NODE input with ID=2 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 4 from file mesh_ball_target.key
 Data input seq. 7 from file mesh_wall.key
 Last one will be used
 Warning -Duplicate keyword: SET_NODE input with ID=3 
-  Warning occurs in file C:\Users\Kayleigh\Documents\HVI share\HVI\LS-OPT_test\2P-X-opt\structure.key
+  Warning occurs in file C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key
 Data input seq. 5 from file mesh_ball_target.key
 Data input seq. 8 from file mesh_wall.key
 Last one will be used
-Time to process element data = 0.590 seconds
+Time to process element data = 0.938 seconds
 Finished reading model
 home
-zoomhere 0.193459 0.255295 0.800000;
-zoomhere 0.195676 0.248606 0.640000;
-zoomhere 0.198448 0.235229 0.512000;
-zoomhere 0.206763 0.187291 0.409600;
-zoomhere 0.226164 0.072464 0.327680;
-zoomhere 0.205654 -0.057971 0.409600;
-zoomhere 0.203991 -0.061315 0.512000;
-zoomhere 0.202882 -0.062430 0.640000;
-zoomhere 0.201774 -0.064660 0.800000;
-zoomhere 0.201220 -0.064660 1.000000;
-zoomhere 0.200665 -0.064660 1.250000;
-quat -0.023662 -0.073962 0.022881 0.996718;
-quat -0.023662 -0.073962 0.022881 0.996718;
-open d3plot "F:\3dfinal\d3plot"
-Reading binary plot files
-DES Format: version 2 detected!
-Finished reading model
-ac
-home
-anim forward
-state 1;
-anim forward
-quat -0.223717 -0.154566 -0.048629 0.961091;
-mesh
-animatemode 0
-animatemode 1
-animatemode 0
-state 29;
-anim forward
-anim stop; state 5;
-home
-genselect target node
-zoomhere 0.283814 0.117057 0.800000;
-zoomhere 0.283814 0.113712 0.640000;
-pan 38.395416 -2.754077;
-mesh
-zoomhere 0.178492 0.473802 0.512000;
-zoomhere 0.177938 0.476031 0
+zoomhere -0.258200 -0.057143 0.800000;
+zoomhere -0.264480 -0.061429 0.640000;
+zoomhere -0.264480 -0.062857 0.512000;
+zoomhere -0.263084 -0.062857 0.409600;
+zoomhere -0.261689 -0.062857 0.327680;
+zoomhere -0.167481 0.040000 0.262144;
+zoomhere -0.167481 0.042857 0.209715;
+zoomhere -0.166085 0.048571 0.167772;
+zoomhere -0.164689 0.051429 0.134218;
+zoomhere -0.163992 0.058571 0.107374;
+zoomhere -0.090719 -0.042857 0.085899;
+zoomhere -0.090719 -0.045714 0.068719;
+zoomhere -0.090719 -0.047143 0.054975;
+zoomhere -0.090719 -0.048571 0.043980;
+zoomhere -0.089323 -0.054286 0.054975;
+zoomhere -0.089323 -0.054286 0.068719;
+zoomhere -0.089323 -0.054286 0.085899;
+zoomhere -0.089323 -0.054286 0.107374;
+pan -61.240593 -1.994442;
+zoomhere -0.046755 -0.162857 0.134217;
+zoomhere -0.046755 -0.162857 0.167771;
+zoomhere -0.074669 -0.412857 0.134217;
+zoomhere -0.074669 -0.421429 0.107374;
+zoomhere -0.074669 -0.424286 0.085899;
+zoomhere -0.074669 -0.424286 0.068719;
+zoomhere -0.074669 -0.424286 0.054975;
+zoomhere -0.074669 -0.424286 0.043980;
+zoomhere 0.013957 -0.344286 0.035184;
+zoomhere 0.013957 -0.344286 0.043980;
+zoomhere 0.014655 -0.344286 0.035184;
+measure select 1
+Nid#    4686, xyz=-2,-10,0.25
+Nid#  303235, xyz=0,-10,0.25
+measure dist N4686/0 N303235/0 ;
+Nid#    4686, xyz=-2,-10,0.25
+Nid#  303235, xyz=0,-10,0.25
+dx=2 dy=0 dz=0 dist=2
+measure select 0
+Save Config. parameters to file C:\Users\s148946\AppData\Roaming\LSTC\LS-PrePost4.8\lsppconf
