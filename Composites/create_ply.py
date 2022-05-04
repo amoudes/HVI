@@ -160,9 +160,9 @@ for i in range(nply):
     fid.write('$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid\n')
     
     if i+1 < 10:
-        fid.write('         %d         1         %d         1         0         0         0         0\n' %(i+2,matID))
+        fid.write('         %d         1         %d         0         0         0         0         0\n' %(i+2,matID))
     else:
-        fid.write('        %d         1         %d         1         0         0         0         0\n' %(i+2,matID))
+        fid.write('        %d         1         %d         0         0         0         0         0\n' %(i+2,matID))
     fid.write('*END\n')
     fid.write('keyword updatekind\n')
     fid.write('PART_PART\n')
