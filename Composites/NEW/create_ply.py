@@ -2,6 +2,7 @@
 
 from os.path import exists
 from os import remove, system
+import math
 
 ##############################################################################
 # plotting settings
@@ -100,8 +101,8 @@ for i in range(2,nply+2):
 
 ntiebrakes = nply - 1
 itb = 0
-
 t1 = t
+iKW = 1
 
 for i in range(1,ntiebrakes+1):
     for j in range(0,2):
@@ -155,8 +156,9 @@ for i in range(nply):
     elif orientations[i] == 0:
         matID = 5
     
+    iKW += 1
     fid.write('*PART\n')
-    fid.write('KEYWORD INPUT %d\n' %(i+2))
+    fid.write('KEYWORD INPUT %d\n' %(iKW))
     fid.write('*PART\n')
     fid.write('$#                                                                         title\n')
     fid.write('ply %d\n' %(i+1))
@@ -171,8 +173,9 @@ for i in range(nply):
     fid.write('PART_PART\n')
 
 
-
+##############################################################################
 #ply particle info
+    
 for j in range(nply):
     if orientations[j] == -45:
         matID = 2
@@ -183,8 +186,9 @@ for j in range(nply):
     elif orientations[j] == 0:
         matID = 5
     
+    iKW += 1
     fid.write('*PART\n')
-    fid.write('KEYWORD INPUT %d\n' %(i+j+3))
+    fid.write('KEYWORD INPUT %d\n' %(iKW))
     fid.write('*PART\n')
     fid.write('$#                                                                         title\n')
     fid.write('particles ply %d\n' %(j+1))
@@ -198,9 +202,11 @@ for j in range(nply):
     fid.write('keyword updatekind\n')
     fid.write('PART_PART\n')
 
-
+##############################################################################
 # sphere part information
-fid.write('KEYWORD INPUT 1\n')
+
+iKW += 1
+fid.write('KEYWORD INPUT %d\n' %(iKW))
 fid.write('*PART\n')
 fid.write('$#                                                                         title\n')
 fid.write('ball\n')
@@ -211,8 +217,9 @@ fid.write('keyword updatekind\n')
 fid.write('PART_PART\n')
 
 
+iKW += 1
 # sphere particles part information
-fid.write('KEYWORD INPUT 100\n')
+fid.write('KEYWORD INPUT %d\n' %(iKW))
 fid.write('*PART\n')
 fid.write('$#                                                                         title\n')
 fid.write('particle ball\n')
@@ -222,6 +229,88 @@ fid.write('*END\n')
 fid.write('keyword updatekind\n')
 fid.write('PART_PART\n')
 
+##############################################################################
+# create part lists
+
+# particles
+iKW += 1
+fid.write('KEYWORD INPUT %d\n' %(iKW))
+fid.write('*SET_NODE_GENERAL_TITLE\n')
+fid.write('Particles\n')
+fid.write('$#     sid       da1       da2       da3       da4    solver \n')     
+fid.write('      5000       0.0       0.0       0.0       0.0MECH\n')
+fid.write('$#  option        e1        e2        e3        e4        e5        e6        e7\n')
+
+rows = math.ceil((nply+1)/7)
+
+iPart = 1
+for row in range(rows):
+    
+    if iPart < 9:
+        fid.write('PART             ')
+    else:
+        fid.write('PART            ')
+        
+    for i in range(7):
+        
+        if iPart > nply+1:
+            iPart = 0
+            
+        fid.write('%d' %(iPart*100))
+        
+        if iPart == nply + 1:
+            fid.write('         ')
+        elif iPart < 9:
+            fid.write('       ')
+        else:
+            fid.write('      ')
+            
+        if iPart != 0:
+            iPart += 1
+            
+    fid.write('\n')
+fid.write('*END\n')
+fid.write('keyword updatekind\n')
+fid.write('SET_NODE_GENERAL\n')
+
+# parts
+iKW += 1
+fid.write('KEYWORD INPUT %d\n' %(iKW))
+fid.write('*SET_PART_LIST_TITLE\n')
+fid.write('Parts\n')
+fid.write('$#     sid       da1       da2       da3       da4    solver \n')     
+fid.write('      4000       0.0       0.0       0.0       0.0MECH\n')
+fid.write('$#    pid1      pid2      pid3      pid4      pid5      pid6      pid7      pid8\n')
+
+rows = math.ceil((nply+1)/8)
+
+iPart = 1
+for row in range(rows):
+    
+    if iPart < 10:
+        fid.write('         ')
+    else:
+        fid.write('        ')
+        
+    for i in range(8):
+        
+        if iPart > nply+1:
+            iPart = 0
+            
+        fid.write('%d' %(iPart))
+        
+        if iPart < 9 or iPart == nply+1:
+            fid.write('         ')
+        else:
+            fid.write('        ')
+            
+        if iPart != 0:
+            iPart += 1
+            
+    fid.write('\n')
+fid.write('*END\n')
+fid.write('keyword updatekind\n')
+fid.write('SET_PART_LIST\n')
 
 
 
