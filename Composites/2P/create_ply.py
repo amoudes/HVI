@@ -9,7 +9,7 @@ import math
 
 run_prepost  = "yes"
 graphics     = "no"
-delete_cfile = "no"
+delete_cfile = "yes"
 
 print('running')
 ##############################################################################
@@ -28,11 +28,21 @@ zP = 0    # z-coord
 
 nR = 16   # nr elements radial direction
 
+# target plate properties
+tgW = 30
+tgH = 30
+tgt = 0.2
+ntgW = 40
+ntgH = 40
+ntgt = 1
+
 # mesh properties
 nW = 150 # nr elements W
 nH = 150 # nr elements H
 nt = 1   # nr elements t
 nelemply = nW*nH*nt # nr of elements per ply
+
+lstandoff = 100
 
 # ply information
 # -45 -> matID = 2
@@ -41,7 +51,7 @@ nelemply = nW*nH*nt # nr of elements per ply
 #   0 -> matID = 5
 
 sym = "yes" # symmetry
-orientations = [45,-45,0,90,90,0]
+orientations = [45,-45]
 
 if sym == "yes":
     orientations.extend(orientations[::-1])
@@ -71,6 +81,21 @@ fid.write('ac\n')
 fid.write('meshing spheresolid accept 1 1 %d ball\n' %(eend))
 fid.write('ac\n')
 
+
+
+estart = eend+1
+eend   = estart + ntgW*ntgH*ntgt
+
+fid.write('bgstyle plain\n')
+fid.write('cemptymodel\n')
+fid.write('genselect target node\n')
+fid.write('genselect clear\n')
+fid.write('meshing boxsolid create %.2f %.2f %.2f %.2f %.2f %.2f %d %d %d 0.0\n' %(0,-tgW/2,-tgH/2,ntgt,tgW/2,tgH/2,ntgt,ntgW,ntgH))
+fid.write('ac\n')
+fid.write('meshing boxsolid accept 2 %d %d target\n' %(estart,eend))
+fid.write('genselect clear\n')
+fid.write('ac\n')
+
 ##############################################################################
 # create plies
 
@@ -79,14 +104,14 @@ fid.write('cemptymodel\n')
 fid.write('genselect target node\n')
 fid.write('genselect clear\n')
 
-t1 = 0.0
-t2 = t
+t1 = lstandoff
+t2 = lstandoff + t
 estart = eend+1
 eend   = estart+nelemply+1
-for i in range(2,nply+2):
+for i in range(3,nply+3):
     fid.write('meshing boxsolid create %.2f %.2f %.2f %.2f %.2f %.2f %d %d %d 0.0\n' %(t1,-W/2,-H/2,t2,W/2,H/2,nt,nW,nH))
     fid.write('ac\n')
-    fid.write('meshing boxsolid accept %d %d %d ply%d\n' %(i, estart,eend,i))
+    fid.write('meshing boxsolid accept %d %d %d ply%d\n' %(i, estart,eend,i-2))
     fid.write('genselect clear\n')
     fid.write('ac\n')
     
@@ -101,22 +126,20 @@ for i in range(2,nply+2):
 
 ntiebrakes = nply - 1
 itb = 0
-t1 = t
-iKW = 1
+t1 = lstandoff + t
+iKW = 2
 
 for i in range(1,ntiebrakes+1):
     for j in range(0,2):
         itb += 1
+        fid.write('assembly off fem 1\n')
+        fid.write('+M %d\n' %(2+i+j))
         
-        for k in range(2,nply+2):
-            if i + j +1 != k:
-                fid.write('-M %d\n' %(k))
-                
         fid.write('setsegment\n')
         fid.write('genselect target segment\n')
         fid.write('genselect clear\n')
         fid.write('genselect clear\n')
-        fid.write('genselect element add box in %.2f %.2f %.2f %.2f %.2f %.2f\n' %(t1-0.01,-W/2-1,-H/2-1,t1+0.01,W/2+1,H/2+1))        
+        fid.write('genselect element add box in %.2f %.2f %.2f %.2f %.2f %.2f\n' %(t1-0.02,-W/2-1,-H/2-1,t1+0.02,W/2+1,H/2+1))        
         fid.write('setsegment createset %d 1 0 0 0 0 "%d"\n' %(itb,itb))
         
         fid.write('assembly on fem 1\n')
@@ -143,6 +166,7 @@ fid.write('*END\n')
 fid.write('keyword updatekind\n')
 fid.write('CONTACT_AUTOMATIC_ONE_WAY_SURFACE_TO_SURFACE_TIEBREAK\n')
 
+
 ##############################################################################
 # create orientation information by specifying part
 
@@ -164,13 +188,14 @@ for i in range(nply):
     fid.write('ply %d\n' %(i+1))
     fid.write('$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid\n')
     
-    if i+2 < 10:
-        fid.write('         %d         1         %d         0         0         0         0         0\n' %(i+2,matID))
+    if i+3 < 10:
+        fid.write('         %d         1         %d         0         0         0         0         0\n' %(i+3,matID))
     else:
-        fid.write('        %d         1         %d         0         0         0         0         0\n' %(i+2,matID))
+        fid.write('        %d         1         %d         0         0         0         0         0\n' %(i+3,matID))
     fid.write('*END\n')
     fid.write('keyword updatekind\n')
     fid.write('PART_PART\n')
+    
 
 
 ##############################################################################
@@ -195,12 +220,14 @@ for j in range(nply):
     fid.write('$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid\n')
     
     if i+2 < 10:
-        fid.write('       %d         1         %d         0         0         0         0         0\n' %((j+2)*100,matID))
+        fid.write('       %d         1         %d         0         0         0         0         0\n' %((j+3)*100,matID))
     else:
-        fid.write('      %d         1         %d         0         0         0         0         0\n' %((j+2)*100,matID))
+        fid.write('      %d         1         %d         0         0         0         0         0\n' %((j+3)*100,matID))
     fid.write('*END\n')
     fid.write('keyword updatekind\n')
     fid.write('PART_PART\n')
+
+
 
 ##############################################################################
 # sphere part information
@@ -216,7 +243,6 @@ fid.write('*END\n')
 fid.write('keyword updatekind\n')
 fid.write('PART_PART\n')
 
-
 iKW += 1
 # sphere particles part information
 fid.write('KEYWORD INPUT %d\n' %(iKW))
@@ -225,6 +251,35 @@ fid.write('$#                                                                   
 fid.write('particle ball\n')
 fid.write('$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid\n')
 fid.write('       100         1         1         1         0         0         0         0\n')
+fid.write('*END\n')
+fid.write('keyword updatekind\n')
+fid.write('PART_PART\n')
+
+
+
+##############################################################################
+# target part information
+
+
+iKW += 1
+fid.write('KEYWORD INPUT %d\n' %(iKW))
+fid.write('*PART\n')
+fid.write('$#                                                                         title\n')
+fid.write('target\n')
+fid.write('$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid\n')
+fid.write('         2         2         6         2         0         0         0         0\n')
+fid.write('*END\n')
+fid.write('keyword updatekind\n')
+fid.write('PART_PART\n')
+
+iKW += 1
+# sphere particles part information
+fid.write('KEYWORD INPUT %d\n' %(iKW))
+fid.write('*PART\n')
+fid.write('$#                                                                         title\n')
+fid.write('particle target\n')
+fid.write('$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid\n')
+fid.write('       200         1         6         2         0         0         0         0\n')
 fid.write('*END\n')
 fid.write('keyword updatekind\n')
 fid.write('PART_PART\n')
@@ -241,7 +296,7 @@ fid.write('$#     sid       da1       da2       da3       da4    solver \n')
 fid.write('      5000       0.0       0.0       0.0       0.0MECH\n')
 fid.write('$#  option        e1        e2        e3        e4        e5        e6        e7\n')
 
-rows = math.ceil((nply+1)/7)
+rows = math.ceil((nply+2)/7)
 
 iPart = 1
 for row in range(rows):
@@ -253,12 +308,12 @@ for row in range(rows):
         
     for i in range(7):
         
-        if iPart > nply+1:
+        if iPart > nply+2:
             iPart = 0
             
         fid.write('%d' %(iPart*100))
         
-        if iPart == nply + 1:
+        if iPart == nply + 2:
             fid.write('         ')
         elif iPart < 9:
             fid.write('       ')
@@ -282,7 +337,7 @@ fid.write('$#     sid       da1       da2       da3       da4    solver \n')
 fid.write('      4000       0.0       0.0       0.0       0.0MECH\n')
 fid.write('$#    pid1      pid2      pid3      pid4      pid5      pid6      pid7      pid8\n')
 
-rows = math.ceil((nply+1)/8)
+rows = math.ceil((nply+2)/8)
 
 iPart = 1
 for row in range(rows):
@@ -294,12 +349,12 @@ for row in range(rows):
         
     for i in range(8):
         
-        if iPart > nply+1:
+        if iPart > nply+2:
             iPart = 0
             
         fid.write('%d' %(iPart))
         
-        if iPart < 9 or iPart == nply+1:
+        if iPart < 9 or iPart == nply+2:
             fid.write('         ')
         else:
             fid.write('        ')
@@ -315,7 +370,7 @@ fid.write('SET_PART_LIST\n')
 ##############################################################################
 #solid to des
 
-for iPart in range(nply):
+for iPart in range(nply+2):
 
 
     if iPart == 0 :
@@ -335,9 +390,6 @@ for iPart in range(nply):
     fid.write('*END\n')
     fid.write('keyword updatekind\n')
     fid.write('DEFINE_ADAPTIVE_SOLID_TO_DES\n')
-
-
-
 
 
 ##############################################################################
