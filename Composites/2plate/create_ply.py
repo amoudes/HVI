@@ -9,15 +9,15 @@ import math
 
 run_prepost  = "yes"
 graphics     = "no"
-delete_cfile = "no"
+delete_cfile = "yes"
 
 print('running')
 ##############################################################################
 # model input
 
 # Geometric properties ply
-W = 80 # width
-H = 80 # height
+W = 110 # width
+H = 110.0 # height
 t = 0.2   # wall thickness
 
 # projectile properties
@@ -26,11 +26,11 @@ xP = -4   # x-coord
 yP = 0    # y-coord
 zP = 0    # z-coord
 
-nR = 16   # nr elements radial direction
+nR = 10   # nr elements radial direction
 
 # mesh properties
-nW = 150 # nr elements W
-nH = 150 # nr elements H
+nW = 50 # nr elements W
+nH = 50 # nr elements H
 nt = 1   # nr elements t
 nelemply = nW*nH*nt # nr of elements per ply
 
@@ -311,32 +311,6 @@ for row in range(rows):
 fid.write('*END\n')
 fid.write('keyword updatekind\n')
 fid.write('SET_PART_LIST\n')
-
-##############################################################################
-#solid to des
-
-for iPart in range(nply):
-
-
-    if iPart == 0 :
-        isdes=2
-    else:
-        isdes=1
-
-    
-    iKW += 1
-    fid.write('KEYWORD INPUT %d\n' %(iKW))
-    fid.write('*DEFINE_ADAPTIVE_SOLID_TO_DES\n')
-    fid.write('$#    ipid     itype        nq     ipdes     isdes       rsf    outdes     ibond\n')     
-    if iPart+1 < 10:    
-        fid.write('         %d         0         1       %d         %d       1.0         0         0\n' %(iPart+1,(iPart+1)*100,isdes))
-    else:    
-        fid.write('        %d         0         1      %d         %d       1.0         0         0\n' %(iPart+1,(iPart+1)*100,isdes))
-    fid.write('*END\n')
-    fid.write('keyword updatekind\n')
-    fid.write('DEFINE_ADAPTIVE_SOLID_TO_DES\n')
-
-
 
 
 
