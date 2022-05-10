@@ -1,0 +1,8 @@
+//
+// PARAMETER FILE
+//
+parameter NFLS 35
+parameter SFLS 45
+parameter PARAM 1.45
+parameter ERATEN 0.25
+parameter ERATES 0.75
