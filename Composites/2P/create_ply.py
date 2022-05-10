@@ -8,7 +8,7 @@ import math
 # plotting settings
 
 run_prepost  = "yes"
-graphics     = "no"
+graphics     = "yes"
 delete_cfile = "yes"
 
 print('running')
