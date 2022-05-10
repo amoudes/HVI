@@ -1,6 +1,14 @@
 $# LS-PrePost command file created by LS-PrePost(R) V4.8.25 - 04Jan2022 -64bit-Window
-$# Created on May-4-2022 (14:21:37)
+$# Created on May-9-2022 (12:49:52)
 openc keyword "C:\Users\s148946\OneDrive\Documenten\Internship\Project\Shared folder\HVI\GitHub\LS-OPT_test\2P-X-opt\structure.key"
-save keywordversion 2
 save keywordversion 12
-selectentity None
+home
+measure select 1
+measure select 0
+measure type 0
+measure type 0
+ident select 1
+genselect target node
+genselect node add node 22562/0 
+genselect node add node 24448/0 
+ident select 0
