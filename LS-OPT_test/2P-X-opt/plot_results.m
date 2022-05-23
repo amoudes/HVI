@@ -31,15 +31,15 @@ design = 0;
 for i = 1:length(sim)
    if i == 1
        design = design + 1;
-       plot(i,AvgDisp(i),'r.','MarkerSize',14); hold on;
-       text(i,AvgDisp(i)+0.04,num2str(design));
+       plot(i,AvgDisp(i),'r.','MarkerSize',29); hold on;
+       text(i,AvgDisp(i)+0.04,num2str(design),'FontSize',18);
    else
        if AvgDisp(i-1) == AvgDisp(i)
-           plot(i,AvgDisp(i),'k.','MarkerSize',10); hold on;
+           plot(i,AvgDisp(i),'k.','MarkerSize',26); hold on;
        else
            design = design + 1;
-           plot(i,AvgDisp(i),'r.','MarkerSize',14); hold on;
-           text(i,AvgDisp(i)+0.04,num2str(design));
+           plot(i,AvgDisp(i),'r.','MarkerSize',29); hold on;
+           text(i,AvgDisp(i)+0.04,num2str(design),'FontSize',18);
        end
    end
     
@@ -48,6 +48,7 @@ end
 
 
 grid on;
-xlabel('iteration [-]'); ylabel('Average Displacement [mm]');
+xlabel('Iteration','FontSize',50); ylabel('Average Displacement (mm)','FontSize',50);
 ylim([0 1.5]);
 xlim([1 23])
+set(gca,'FontSize',25)
